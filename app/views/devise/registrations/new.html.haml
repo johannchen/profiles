@@ -1,0 +1,17 @@
+%h2= t('registration.sign_up_heading')
+
+%p.push-down
+  = link_to image_tag('fb_login.png', alt: 'registration.sign_up_with_facebook', style: 'vertical-align:middle;'),
+    user_omniauth_authorize_path(:facebook)
+
+%hr
+
+= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |form|
+  %p= t('registration.sign_up_with_email_intro')
+  = form.input :email
+  = form.input :password, :required => true
+  = form.input :password_confirmation, :required => true
+  %fieldset.actions
+    = form.submit t('registration.sign_up_button'), :class => 'btn primary'
+
+= render :partial => "devise/shared/links"

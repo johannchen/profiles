@@ -1,0 +1,19 @@
+- unless @profile.visible?
+  .alert-message.warning= t('profile.not_visible_warning_html')
+
+.row
+  .span5.columns
+    %p
+      = profile_pic_tag(@profile)
+    %p
+      - if can? :edit, @profile
+        = link_to t('profile.edit_button'), edit_profile_path(@profile), :class => 'btn'
+  .span10.columns
+    %h2= @profile.name
+    - if @profile.headline
+      %p.headline= @profile.headline
+    %p= @profile.phone
+    - if @profile.birthday
+      %p= l @profile.birthday, :format => :short
+    - if @profile.facebook_url
+      %p= link_to image_tag('facebook.png'), @profile.facebook_url

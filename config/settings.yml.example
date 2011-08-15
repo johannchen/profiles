@@ -1,0 +1,10 @@
+community:
+  name: OneChurch
+  main_site_url: http://example.com
+site:
+  name: OneChurch
+  tagline: Welcome home.
+auth:
+  facebook:
+    app_id: 
+    secret:

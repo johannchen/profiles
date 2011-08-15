@@ -1,0 +1,27 @@
+
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: profiles_dev
+  pool: 5
+  username: postgres
+  password:
+  template: template0
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: profiles_test
+  pool: 5
+  username: postgres
+  password:
+  template: template0
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: profiles_production
+  pool: 5
+  username: postgres
+  password:
+  template: template0

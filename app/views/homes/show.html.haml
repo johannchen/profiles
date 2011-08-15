@@ -1,0 +1,8 @@
+- @push_down = false
+
+#home-container
+  #home-image
+    .row
+      .span5.columns.offset11
+        #welcome
+          = t('home.welcome_html', main_site_url: s('community.main_site_url'), community_name: s('community.name'), fb_login_url: user_omniauth_authorize_path(:facebook), :login_url => new_user_session_path)

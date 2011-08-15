@@ -1,0 +1,91 @@
+# Localization file for English (US). Add more files in this directory for other locales.
+
+en-US:
+  activerecord:
+    attributes:
+      profile:
+        name: Name
+        headline: Headline
+        gender: Gender
+        birthday: Birthday
+        phone: Phone
+      user:
+        email: Email
+        timezone: Time Zone
+        password: Password
+        password_confirmation: Password (confirm)
+    errors: 
+      models: 
+        profile: 
+          attributes: 
+            user_id: 
+              taken: This user already has a profile.
+
+  app:
+    powered_by_html: Powered by <a href="http://church.io">Church.IO Profiles</a>
+
+  feedback:
+    form_errors_heading: There were errors.
+
+  helpers:
+    label:
+      user:
+        name: Full Name
+        email: Email
+        password: Password
+        password_confirmation: Password (again)
+
+  home:
+    welcome_html:
+      <h2>Welcome to our community.</h2>
+      <p>
+        This site is meant to help members of %{community_name} communicate
+        and connect with one another easily.
+      </p>
+      <p>
+        If you're wanting more information about us, be sure to take a look at our
+        main site <a href="%{main_site_url}">here</a>.
+      </p>
+      <p class="login-buttons">
+        <a href="%{fb_login_url}"><img src="/assets/fb_login.png" alt="Log in with Facebook" style="vertical-align:middle;"/></a><br/>
+        or <a href="%{login_url}">log in by email...</a>
+      </p>
+
+  nav:
+    home: Home
+    profile: Profile
+    search: Search
+    search_placeholder: Search by name
+    log_in: Log In
+    log_out: Log Out
+
+  profile:
+    default_headline: Christ Follower
+    attributes:
+      phone: 
+    edit_button: Edit Profile
+    edit_form:
+      account_section_heading: Account Settings
+      cancel: Cancel
+      contact_section_heading: Contact Information
+      gender_selection:
+        m: Male
+        f: Female
+        nil: Unspecified
+      save: Save
+      save_success: Your profile has been saved.
+    not_visible_warning_html: Your profile isn't yet visible, because it's pending review.
+  
+  registration:
+    create_profile_message: Please create your profile in order to continue.
+    sign_up_button: Sign Up
+    sign_up_heading: Sign Up
+    sign_up_with_email_intro: Optionally, you can sign up by providing your email address and choosing a password.
+    sign_up_with_facebook: Log in with Facebook
+
+  session:
+    log_in_button: Log In
+    log_in_heading: Log In
+    log_in_with_email_intro: Optionally, you can log in with your email address and password.
+    log_in_with_facebook: Log in with Facebook
+    success: You are now logged in.

@@ -1,0 +1,16 @@
+= simple_form_for @profile do |form|
+  = errors_for form, :only => [:base, :user_id]
+  %fieldset
+    %legend= t('profile.edit_form.contact_section_heading')
+    = form.input :name
+    = form.input :headline
+    = form.input :gender, :collection => t('profile.edit_form.gender_selection').invert, :as => :radio
+    = form.input :birthday, :start_year => 1900, :end_year => Date.today.year
+    = form.input :phone
+  %fieldset
+    %legend= t('profile.edit_form.account_section_heading')
+    = simple_fields_for @profile.user do |user_fields|
+      = user_fields.input :timezone, :as => :time_zone
+  %fieldset.actions
+    = form.submit t('profile.edit_form.save'), :class => 'btn primary'
+    = link_to t('profile.edit_form.cancel'), @profile, :class => 'btn'

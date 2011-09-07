@@ -21,7 +21,10 @@ class Profile < ActiveRecord::Base
 
   attr_accessible :name, :headline, :gender, :birthday, :location, :phone, :facebook_id, :facebook_url, :image_url
 
+  blank_to_nil
+
   def gender=(g)
+    # FIXME this is hacky
     g = nil if g == 'nil'
     write_attribute(:gender, g)
   end

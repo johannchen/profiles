@@ -4,6 +4,7 @@ community:
 site:
   name: OneChurch
   tagline: Welcome home.
+  default_timezone: Central Time (US & Canada)
 auth:
   facebook:
     app_id: 

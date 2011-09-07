@@ -45,16 +45,18 @@ This app is still under heavy development, so instructions below are meant for r
 1. Install Ruby 1.9.2 and bundler (`gem install bundler`).
 2. Install PostgreSQL.
 3. Create a Facebook app for your community [here](https://developers.facebook.com/apps) (choose the website option) and give it the site URL of `http://localhost:3000`.
-5. Now run the following commands:
+4. Now run the following commands:
 
-    cd profiles
-    cp config/settings.yml{.example,}
-    vim config/settings.yml
-    cp config/database.yml{.example,}
-    vim config/database.yml
-    bundle install
-    rake db:reset
-    rails server
+```shell
+cd profiles
+cp config/settings.yml{.example,}
+vim config/settings.yml
+cp config/database.yml{.example,}
+vim config/database.yml
+bundle install
+rake db:reset
+rails server
+```
 
 ## Contact
 

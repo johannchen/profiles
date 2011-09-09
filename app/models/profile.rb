@@ -1,13 +1,20 @@
 class Profile < ActiveRecord::Base
   include Workflow
   workflow do
-    state :pending_review
-    state :visible
-    state :hidden
-    state :rejected
-    event :approve, :transitions_to => :visible
-    event :reject,  :transitions_to => :rejected
-    event :hide,    :transitions_to => :hidden
+    state :pending_review do
+      event :approve, :transitions_to => :visible
+      event :reject,  :transitions_to => :rejected
+    end
+    state :visible do
+      event :hide,    :transitions_to => :hidden
+      event :reject,  :transitions_to => :rejected
+    end
+    state :hidden do
+      event :unhide,  :transitions_to => :visible
+    end
+    state :rejected do
+      event :approve, :transitions_to => :visible
+    end
   end
 
   belongs_to :user

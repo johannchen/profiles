@@ -56,6 +56,7 @@ ActiveRecord::Schema.define(:version => 20110909030026) do
     t.string   "authentication_token"
     t.boolean  "validated",                             :default => false
     t.string   "timezone",               :limit => 50
+    t.string   "fb_token",               :limit => 100
   end
 
   add_index "users", ["authentication_token"], :name => "index_users_on_authentication_token", :unique => true

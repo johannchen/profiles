@@ -15,26 +15,21 @@ class User < ActiveRecord::Base
     data = access_token['extra']['user_hash']
     user = User.find_by_provider_and_uid('facebook', access_token["uid"]) ||
       User.find_by_email(data["email"]) ||
-      User.create!(
-        :provider => 'facebook',
-        :uid      => access_token["uid"],
-        :email    => data["email"],
-        :password => Devise.friendly_token[0,20]
-      )
-    user.update_profile_from_access_token!(access_token)
+      User.new do |u|
+        u.provider = 'facebook'
+        u.uid      = access_token["uid"]
+        u.email    = data["email"]
+        u.password = Devise.friendly_token[0,20]
+      end
+    user.fb_token = access_token["credentials"]["token"]
+    user.save!
+    user.update_profile_from_oauth_access_token!(access_token)
+    user.profile.update_friends!
     return user
   end
 
-  # FIXME move this to the profile model
-  def update_profile_from_access_token!(access_token)
-    data = access_token['extra']['user_hash']
+  def update_profile_from_oauth_access_token!(access_token)
     profile = self.profile || build_profile
-    profile.image_url    = access_token["user_info"]["image"]
-    profile.gender       = {"male" => "m", "female" => "f"}[data["gender"].downcase]
-    profile.facebook_url = data["link"]
-    profile.name         = data["name"]
-    profile.location     = data["location"] && data["location"]["name"]
-    profile.phone        = data["phone"]
-    profile.save!
+    profile.update_from_oauth_access_token!(access_token)
   end
 end

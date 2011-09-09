@@ -10,6 +10,7 @@ class CreateUsers < ActiveRecord::Migration
       t.token_authenticatable
       t.boolean :validated, :default => false
       t.string :timezone, :limit => 50
+      t.string :fb_token, :limit => 100
     end
 
     add_index :users, :email,                :unique => true

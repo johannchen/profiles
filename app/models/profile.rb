@@ -18,6 +18,9 @@ class Profile < ActiveRecord::Base
   end
 
   belongs_to :user
+  has_many :friendships
+  has_many :friends, :through => :friendships
+
   validates_presence_of :name
   validates_length_of :name, :maximum => 255
   validates_length_of :headline, :maximum => 50

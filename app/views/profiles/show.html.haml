@@ -5,9 +5,11 @@
   .span5.columns
     %p
       = profile_pic_tag(@profile)
-    %p
-      - if can? :edit, @profile
-        = link_to t('profile.edit_button'), edit_profile_path(@profile), :class => 'btn'
+    - if @profile.friends.any?
+      %h3= t('profile.friends')
+      %p
+        - @profile.friends.each do |friend|
+          = link_to(image_tag(friend.image_url, :alt => friend.name), friend)
   .span10.columns
     %h2= @profile.name
     - if @profile.headline
@@ -17,3 +19,6 @@
       %p= l @profile.birthday, :format => :short
     - if @profile.facebook_url
       %p= link_to image_tag('facebook.png'), @profile.facebook_url
+    %p
+      - if can? :edit, @profile
+        = link_to t('profile.edit_button'), edit_profile_path(@profile), :class => 'btn'

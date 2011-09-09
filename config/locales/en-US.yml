@@ -74,6 +74,7 @@ en-US:
         nil: Unspecified
       save: Save
       save_success: Your profile has been saved.
+    friends: Friends
     not_visible_warning_html: Your profile isn't yet visible, because it's pending review.
   
   registration:

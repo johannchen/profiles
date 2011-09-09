@@ -29,6 +29,7 @@ This app was birthed out of [OneBody](https://github.com/seven1m/onebody), a mon
 * [PostgreSQL](http://www.postgresql.org/)
 * [Devise](https://github.com/plataformatec/devise)
 * [OmniAuth](https://github.com/intridea/omniauth)
+* [FbGraph](https://github.com/nov/fb_graph)
 * [HAML](http://haml-lang.com/)
 * [Compass](http://compass-style.org/)
 * [Bootstrap](http://twitter.github.com/bootstrap/)

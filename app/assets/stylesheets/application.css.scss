@@ -71,6 +71,12 @@ body {
       margin-right: 5px;
     }
   }
+  .hint, .help-inline {
+    display: block;
+    margin: 5px 0 0 150px;
+    font-size: smaller;
+    color: #777;
+  }
   .error .error {
     display: block;
     margin-left: 150px;

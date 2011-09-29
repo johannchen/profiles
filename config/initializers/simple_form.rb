@@ -2,6 +2,7 @@
 
 SimpleForm.wrapper_class = 'clearfix'
 SimpleForm.wrapper_error_class = 'error'
+SimpleForm.error_class = 'help-inline'
 SimpleForm.item_wrapper_tag = 'li'
 
 # override default label to wrap input with div.input

@@ -1,6 +1,17 @@
 # Localization file for English (US). Add more files in this directory for other locales.
 
 en-US:
+  account:
+    edit_button: Change Email/Password
+    edit_form:
+      delete_heading: Delete Account
+      delete_button: Delete My Account Now!
+      delete_action_confirm: Are you sure? (There's no going back.)
+      heading: Edit Account
+      intro: Change your account email address and/or password below.
+      password_change_note: leave blank if you don't want to change it
+      save_button: Save Changes
+
   activerecord:
     attributes:
       profile:
@@ -10,10 +21,11 @@ en-US:
         birthday: Birthday
         phone: Phone
       user:
+        current_password: Current Password
         email: Email
+        password: New Password
+        password_confirmation: New Password Again
         timezone: Time Zone
-        password: Password
-        password_confirmation: Password (confirm)
     errors: 
       models: 
         profile: 

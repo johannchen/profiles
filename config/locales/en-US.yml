@@ -72,9 +72,10 @@ en-US:
     log_out: Log Out
 
   profile:
-    default_headline: Christ Follower
     attributes:
       phone: 
+    birthday: born on %{birthday}
+    default_headline: Christ Follower
     edit_button: Edit Profile
     edit_form:
       account_section_heading: Account Settings

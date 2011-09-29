@@ -16,7 +16,7 @@
       %p.headline= @profile.headline
     %p= @profile.phone
     - if @profile.birthday
-      %p= l @profile.birthday, :format => :short
+      %p= t('profile.birthday', :birthday => l(@profile.birthday, :format => :short))
     - if @profile.facebook_url
       %p= link_to image_tag('facebook.png'), @profile.facebook_url
     %p

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110909030026) do
+ActiveRecord::Schema.define(:version => 20110929030121) do
 
   create_table "friendships", :force => true do |t|
     t.integer  "profile_id"
@@ -23,12 +23,12 @@ ActiveRecord::Schema.define(:version => 20110909030026) do
   create_table "profiles", :force => true do |t|
     t.integer  "user_id"
     t.string   "name"
-    t.string   "headline",       :limit => 50
-    t.string   "gender",         :limit => 1
+    t.string   "headline",        :limit => 50
+    t.string   "gender",          :limit => 1
     t.date     "birthday"
-    t.string   "phone",          :limit => 50
-    t.string   "location",       :limit => 50
-    t.string   "image_url"
+    t.string   "phone",           :limit => 50
+    t.string   "location",        :limit => 50
+    t.string   "small_image_url"
     t.string   "facebook_id"
     t.string   "facebook_url"
     t.string   "twitter_id"
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(:version => 20110909030026) do
     t.string   "workflow_state"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "full_image_url"
   end
 
   create_table "users", :force => true do |t|

@@ -29,7 +29,7 @@ class Profile < ActiveRecord::Base
   validates_length_of :phone, :maximum => 50
   validates_uniqueness_of :user_id
 
-  attr_accessible :name, :headline, :gender, :birthday, :location, :phone, :facebook_id, :facebook_url, :image_url
+  attr_accessible :name, :headline, :gender, :birthday, :location, :phone, :facebook_id, :facebook_url, :small_image_url, :full_image_url
 
   blank_to_nil
 
@@ -50,12 +50,14 @@ class Profile < ActiveRecord::Base
 
   def update_from_oauth_access_token!(access_token)
     data = access_token['extra']['user_hash']
-    self.image_url    = access_token["user_info"]["image"]
-    self.gender       = {"male" => "m", "female" => "f"}[data["gender"].downcase]
-    self.facebook_url = data["link"]
-    self.name         = data["name"]
-    self.location     = data["location"] && data["location"]["name"]
-    self.phone        = data["phone"]
+    p access_token
+    self.small_image_url = "http://graph.facebook.com/#{access_token['uid']}/picture?type=square"
+    self.full_image_url  = "http://graph.facebook.com/#{access_token['uid']}/picture?type=large"
+    self.gender          = {"male" => "m", "female" => "f"}[data["gender"].downcase]
+    self.facebook_url    = data["link"]
+    self.name            = data["name"]
+    self.location        = data["location"] && data["location"]["name"]
+    self.phone           = data["phone"]
     save!
   end
 

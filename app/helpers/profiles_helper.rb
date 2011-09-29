@@ -1,10 +1,17 @@
 module ProfilesHelper
+
+  SILHOUETTE_IMAGES = {
+    'm' => 'manoutline.png',
+    'f' => 'womanoutline.png',
+    nil => 'questionoutline.png'
+  }
+
   def profile_pic_tag(profile)
-    img = {
-      'm' => 'manoutline.png',
-      'f' => 'womanoutline.png',
-      nil => 'questionoutline.png'
-    }[profile.gender]
-    image_tag(img, :alt => profile.name)
+    if profile.full_image_url
+      image_tag(profile.full_image_url, :alt => profile.name)
+    else
+      image_tag(SILHOUETTE_IMAGES[profile.gender], :alt => profile.name)
+    end
   end
+
 end

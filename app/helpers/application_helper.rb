@@ -29,4 +29,8 @@ module ApplicationHelper
       end
     end
   end
+
+  def simple_url(url)
+    url.sub(/^https?:\/\/(www\.)?/, '')
+  end
 end

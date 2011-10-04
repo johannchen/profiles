@@ -88,7 +88,7 @@ en-US:
       save: Save
       save_success: Your profile has been saved.
     friends: Friends
-    not_visible_warning_html: Your profile isn't yet visible, because it's pending review.
+    not_visible_warning_html: Your profile isn't visible yet, because it's pending review by an administrator.
   
   registration:
     create_profile_message: Please create your profile in order to continue.

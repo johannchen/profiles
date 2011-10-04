@@ -50,7 +50,6 @@ class Profile < ActiveRecord::Base
 
   def update_from_oauth_access_token!(access_token)
     data = access_token['extra']['user_hash']
-    p access_token
     self.small_image_url = "http://graph.facebook.com/#{access_token['uid']}/picture?type=square"
     self.full_image_url  = "http://graph.facebook.com/#{access_token['uid']}/picture?type=large"
     self.gender          = {"male" => "m", "female" => "f"}[data["gender"].downcase]
@@ -64,9 +63,7 @@ class Profile < ActiveRecord::Base
   # should only be called when the user is logged in
   # (effectively self.user is expected to be the current_user with an updated fb_token)
   def update_friends!
-    me = FbGraph::User.me(user.fb_token)
-    ids = me.friends.map(&:identifier)
-    # FIXME is the coupling between Profile and User ok here?
+    ids = user.graph.friends.map(&:identifier)
     profiles = User.includes(:profile).where(
       'users.provider'          => 'facebook',
       'users.uid'               => ids,

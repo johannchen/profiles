@@ -92,6 +92,8 @@ en-US:
   
   registration:
     create_profile_message: Please create your profile in order to continue.
+    forgot_password_heading: Forgot your password?
+    forgot_password_button: Send me reset password instructions.
     sign_up_button: Sign Up
     sign_up_heading: Sign Up
     sign_up_with_email_intro: Optionally, you can sign up by providing your email address and choosing a password.

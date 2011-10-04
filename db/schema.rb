@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110929030121) do
+ActiveRecord::Schema.define(:version => 20111004011341) do
 
   create_table "friendships", :force => true do |t|
     t.integer  "profile_id"
@@ -37,6 +37,11 @@ ActiveRecord::Schema.define(:version => 20110929030121) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "full_image_url"
+    t.string   "address",         :limit => 100
+    t.string   "address2",        :limit => 100
+    t.string   "city",            :limit => 100
+    t.string   "state",           :limit => 2
+    t.string   "postal_code",     :limit => 10
   end
 
   create_table "users", :force => true do |t|

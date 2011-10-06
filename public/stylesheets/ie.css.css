@@ -1,0 +1,32 @@
+/* line 1, ../../app/assets/stylesheets/ie.css.scss */
+#common-nav li.last-child:after {
+  content: none;
+}
+
+/* line 4, ../../app/assets/stylesheets/ie.css.scss */
+.favorites-inline li.last-child:after {
+  content: none;
+}
+
+/* line 7, ../../app/assets/stylesheets/ie.css.scss */
+h2.first-child, h3.first-child {
+  margin-top: 0;
+}
+
+/* line 10, ../../app/assets/stylesheets/ie.css.scss */
+input[type=button], input[type=submit], a.button {
+  border: 1px solid #ccc;
+  background-color: #dfdfdf;
+  filter: none;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+/* line 16, ../../app/assets/stylesheets/ie.css.scss */
+input[type=button]:hover, input[type=button].active, input[type=submit]:hover, input[type=submit].active, a.button:hover, a.button.active {
+  filter: none;
+}
+
+/* line 20, ../../app/assets/stylesheets/ie.css.scss */
+#nav {
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#dddddd', GradientType=0 );
+}

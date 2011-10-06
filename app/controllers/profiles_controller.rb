@@ -2,6 +2,7 @@ class ProfilesController < ApplicationController
   before_filter :authenticate_user!
   before_filter :redirect_without_id!, :only => :show
   load_and_authorize_resource # sets @profile
+  before_filter :create_theme_if_missing!
 
   respond_to :html
 
@@ -41,4 +42,9 @@ class ProfilesController < ApplicationController
       false
     end
   end
+
+  def create_theme_if_missing!
+    @profile.create_theme! unless @profile.theme
+  end
+
 end

@@ -7,7 +7,10 @@ Profiles::Application.routes.draw do
   get '/users/auth/:provider' => 'sessions#passthru'
 
   match 'profile' => 'profiles#show', :as => :my_profile
-  resources :profiles
+  resources :profiles do
+    resource :theme
+  end
+
 
   resource :search
   resource :home

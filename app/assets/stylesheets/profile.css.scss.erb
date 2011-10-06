@@ -1,0 +1,75 @@
+@import "compass/css3/gradient";
+@import "compass/css3/border-radius";
+@import "compass/css3/text-shadow";
+
+<% if @theme.bg_image %>
+  <% if @theme.bg_image_tiled? %>
+    body {
+      background: url(<%= @theme.bg_image %>) top left repeat;
+    }
+  <% else %>
+    html, body {
+      height: 100%;
+    }
+    body {
+      background: url(<%= @theme.bg_image %>) top left no-repeat;
+      -o-background-size: cover;
+      -webkit-background-size: cover;
+      -khtml-background-size: cover;
+      -moz-background-size: cover;
+      background-size: cover;
+    }
+  <% end %>
+  #bg-byline {
+    position: fixed;
+    right: 5px;
+    bottom: 5px;
+    font-size: smaller;
+  }
+  .light #bg-byline { color: #333; }
+  .dark  #bg-byline { color: #aaa; }
+  .mixed #bg-byline { color: #fff; @include single-text-shadow(#000, 1px, 1px, 0); }
+<% elsif @theme.bg_color_top %>
+  html, body {
+    height: 100%;
+  }
+  body {
+    @include background-image(linear-gradient(<%= @theme.bg_color_top %>, <%= @theme.bg_color_bottom || "lighten(#{@theme.bg_color_top}, 15%)" %>))
+  }
+<% end %>
+
+#profile-box {
+  background-color: rgba(red(<%= @theme.box_bg_color %>), green(<%= @theme.box_bg_color %>), blue(<%= @theme.box_bg_color %>), <%= @theme.box_bg_opacity %>);
+  @include border-radius(5px);
+  .content {
+    padding: 10px;
+    color: #fff;
+  }
+  .pic {
+    margin-right: 15px;
+    float: left;
+    img {
+      width: 120px;
+    }
+  }
+  .name {
+    font: <%= font_style(@theme, 'name') %>;
+    color: <%= @theme.name_color %>;
+    margin: 5px 5px 10px 0;
+  }
+  .headline {
+    font: <%= font_style(@theme, 'headline') %>;
+    color: <%= @theme.headline_color %>;
+    margin-bottom: 10px;
+  }
+  .bio {
+    font: <%= font_style(@theme, 'bio') %>;
+    color: <%= @theme.bio_color %>;
+    margin-bottom: 10px;
+  }
+  .map {
+    margin-top: 20px;
+    width: 380px;
+    height: 150px;
+  }
+}

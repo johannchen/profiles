@@ -2,9 +2,26 @@
 
 @import "compass/css3/border-radius";
 @import "compass/css3/opacity";
+@import "compass/css3/box-shadow";
+
+$default-box-shadow-color: rgba(0, 0, 0, 0.25);
+$default-box-shadow-v-offset: 4px;
+
+/* Generic - - - - - - - - - */
 
 body {
   color: #333;
+}
+
+// override bootstrap weirdness
+html,body{background:none;}
+
+.alert-message.block-message {
+  h2 {
+    font-size: 16pt;
+    margin-bottom: 5px;
+  }
+  @include single-box-shadow;
 }
 
 /* Layout - - - - - - - - - */
@@ -19,9 +36,23 @@ body {
 }
 
 #footer {
-  border-top: 1px solid #ccc;
-  text-align: center;
-  padding: 25px;
+  position: fixed;
+  left: 50%;
+  margin-left: -250px;
+  bottom: 0;
+  background-color: rgba(8, 8, 8, 0.5);
+  color: #fff;
+  width: 500px;
+  @include border-top-left-radius(5px);
+  @include border-top-right-radius(5px);
+  .content {
+    text-align: center;
+    padding: 3px;
+    a {
+      color: #fff;
+      text-decoration: underline;
+    }
+  }
 }
 
 #search-form {
@@ -62,21 +93,22 @@ body {
   font-style: italic;
 }
 
-#map {
-  width: 180px;
-  height: 160px;
-}
-
-.facebook-link {
-  display: inline-block;
-  border: 1px solid #ccc;
-  background: #eee url(/assets/facebook.png) top left no-repeat;
-  @include border-radius(5px);
-  color: #555;
-  height: 18px;
-  padding: 5px 10px 5px 37px;
-  &:hover {
+.links {
+  a {
+    display: inline-block;
+    border: 1px solid #ccc;
+    @include border-radius(5px);
+    color: #555;
+    height: 18px;
+    padding: 5px 10px 5px 37px;
+    max-width: 195px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     text-decoration: none;
+    &.facebook {
+      background: #eee url(/assets/facebook.png) top left no-repeat;
+    }
   }
 }
 

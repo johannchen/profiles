@@ -20,6 +20,7 @@ class Profile < ActiveRecord::Base
   belongs_to :user
   has_many :friendships
   has_many :friends, :through => :friendships
+  has_one :theme, :order => 'id'
 
   validates_presence_of :name
   validates_length_of :name, :maximum => 255
@@ -70,5 +71,10 @@ class Profile < ActiveRecord::Base
       'profiles.workflow_state' => 'visible'
     ).map(&:profile)
     self.friends = profiles
+  end
+
+  def create_theme!
+    Theme.build_random(:profile => self).save!
+    reload
   end
 end

@@ -89,6 +89,17 @@ en-US:
       save_success: Your profile has been saved.
     friends: Friends
     not_visible_warning_html: Your profile isn't visible yet, because it's pending review by an administrator.
+    theme:
+      bg_image_byline_html: Image by %{byline}
+    alert_first_login:
+      heading: Welcome!
+      body_html: <strong>Your profile has been created.</strong> Now would be a great time to edit your profile and add other information you want people to know about you.
+      edit_profile_button: Edit your profile...
+    alert_new_profile_design:
+      heading: Your Profile Design
+      body_html: <strong>We've selected a profile design for you.</strong> You can select a different random design or make your own...
+      new_button: Another design please!
+      edit_button: Let me make my own...
   
   registration:
     create_profile_message: Please create your profile in order to continue.

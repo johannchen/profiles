@@ -33,4 +33,9 @@ module ApplicationHelper
   def simple_url(url)
     url.sub(/^https?:\/\/(www\.)?/, '')
   end
+
+  def bg_class
+    @profile && @profile.theme && @profile.theme.bg_class
+  end
+
 end

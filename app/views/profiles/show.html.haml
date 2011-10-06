@@ -1,38 +1,47 @@
+= theme_stylesheet_path
+
 - unless @profile.visible?
   .alert-message.warning= t('profile.not_visible_warning_html')
 
 .row
-  .span4.columns
-    %p
-      = profile_pic_tag(@profile)
-    #map
-    - if @profile.friends.any?
-      %h3= t('profile.friends')
-      %p
-        - @profile.friends.each do |friend|
-          = link_to(image_tag(friend.small_image_url, :alt => friend.name), friend)
-  .span10.columns
-    %h2= @profile.name
-    - if @profile.headline
-      %p.headline= @profile.headline
-    %p= @profile.phone
-    %p= @profile.location
-    - if @profile.birthday
-      %p= t('profile.birthday', :birthday => l(@profile.birthday, :format => :short))
-    - if @profile.facebook_url
-      %p= link_to simple_url(@profile.facebook_url), @profile.facebook_url, :class => 'facebook-link'
-  .span2.columns.right-controls
-    - if can? :edit, @profile
-      = link_to t('profile.edit_button'), edit_profile_path(@profile), :class => 'btn'
+  - layout_order(@profile.theme).each do |part|
+    -# align profile-box on left or right depending on theme selection...
+    - if 'profile-box' == part
+      .span7.columns
+        #profile-box
+          .content
+            = profile_pic_tag(@profile)
 
-- if @profile.location
-  = javascript_include_tag "http://maps.googleapis.com/maps/api/js?sensor=false"
-  :javascript
-    var opt = {zoom: 10, mapTypeId: google.maps.MapTypeId.ROADMAP, disableDefaultUI: true};
-    geocoder = new google.maps.Geocoder();
-    geocoder.geocode({address: '#{@profile.location}'}, function(results, status) {
-      if (status == google.maps.GeocoderStatus.OK) {
-        opt.center = results[0].geometry.location;
-        var map = new google.maps.Map($("#map")[0], opt);
-      }
-    });
+            %h2.name= @profile.name
+            - if @profile.headline
+              .headline= @profile.headline
+            - if @profile.facebook_url
+              .links= link_to simple_url(@profile.facebook_url), @profile.facebook_url, :class => 'facebook'
+            %br{:clear => 'left'}
+
+            %p= @profile.phone
+            %p= @profile.location
+            - if @profile.birthday
+              %p= t('profile.birthday', :birthday => l(@profile.birthday, :format => :short))
+
+            .map
+            -# needs styling work...
+            -#- if @profile.friends.any?
+              -#%h3= t('profile.friends')
+              -#%p
+                -#- @profile.friends.each do |friend|
+                  -#= link_to(image_tag(friend.small_image_url, :alt => friend.name), friend)
+    - if 'alerts' == part
+      .span9.columns
+        #alerts
+          = alert_block(:success, :alert_first_login,        [link_to(t('profile.alert_first_login.edit_profile_button'), edit_profile_path(@profile), :class => 'btn small')])
+          = alert_block(:info,    :alert_new_profile_design, [link_to(t('profile.alert_new_profile_design.new_button'), profile_theme_path(@profile), :method => :delete, :class => 'btn small'), link_to(t('profile.alert_new_profile_design.edit_button'), edit_profile_path(@profile), :class => 'btn small', :onclick => "alert('not working yet'); return false")])
+          / don't collapse
+          &nbsp;
+
+= render :partial => 'map_js'
+
+= theme_body_markup(@profile.theme)
+
+- content_for(:head) do
+  = theme_head_markup(@profile.theme)

@@ -7,7 +7,8 @@
   = stylesheet_link_tag    "application"
   = javascript_include_tag "application"
   = csrf_meta_tags
-%body
+  = yield(:head)
+%body{:class => bg_class}
 
   .topbar
     .fill
@@ -46,7 +47,8 @@
 
   .container
     #footer
-      == &copy; #{Date.today.year}, #{s 'community.name'} &middot;
-      %a{'href' => '/pages/privacy_policy'}= t('pages.privacy_policy')
-      &middot;
-      = t('app.powered_by_html')
+      .content
+        == &copy; #{Date.today.year}, #{s 'community.name'} &middot;
+        %a{'href' => '/pages/privacy_policy'}= t('pages.privacy_policy')
+        &middot;
+        = t('app.powered_by_html')

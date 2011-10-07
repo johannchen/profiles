@@ -96,11 +96,11 @@ html,body{background:none;}
 .links {
   a {
     display: inline-block;
-    border: 1px solid #ccc;
     @include border-radius(5px);
     color: #555;
     height: 18px;
     padding: 5px 10px 5px 37px;
+    margin-bottom: 5px;
     max-width: 195px;
     overflow: hidden;
     white-space: nowrap;
@@ -108,6 +108,9 @@ html,body{background:none;}
     text-decoration: none;
     &.facebook {
       background: #eee url(/assets/facebook.png) top left no-repeat;
+    }
+    &.phone {
+      background: #eee url(/assets/phone.png) top left no-repeat;
     }
   }
 }

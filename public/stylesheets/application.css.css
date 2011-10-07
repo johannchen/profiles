@@ -115,7 +115,6 @@ html, body {
 /* line 97, ../../app/assets/stylesheets/application.css.scss */
 .links a {
   display: inline-block;
-  border: 1px solid #ccc;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   -o-border-radius: 5px;
@@ -125,6 +124,7 @@ html, body {
   color: #555;
   height: 18px;
   padding: 5px 10px 5px 37px;
+  margin-bottom: 5px;
   max-width: 195px;
   overflow: hidden;
   white-space: nowrap;
@@ -135,55 +135,59 @@ html, body {
 .links a.facebook {
   background: #eeeeee url(/assets/facebook.png) top left no-repeat;
 }
+/* line 112, ../../app/assets/stylesheets/application.css.scss */
+.links a.phone {
+  background: #eeeeee url(/assets/phone.png) top left no-repeat;
+}
 
-/* line 115, ../../app/assets/stylesheets/application.css.scss */
+/* line 118, ../../app/assets/stylesheets/application.css.scss */
 .right-controls {
   text-align: right;
 }
 
 /* Forms - - - - - - - - - */
-/* line 121, ../../app/assets/stylesheets/application.css.scss */
+/* line 124, ../../app/assets/stylesheets/application.css.scss */
 .simple_form {
   /* temporary until HTML5 elements are included in Bootstrap
      See https://github.com/twitter/bootstrap/pull/28 */
 }
-/* line 122, ../../app/assets/stylesheets/application.css.scss */
+/* line 125, ../../app/assets/stylesheets/application.css.scss */
 .simple_form select.date {
   width: auto;
 }
-/* line 126, ../../app/assets/stylesheets/application.css.scss */
+/* line 129, ../../app/assets/stylesheets/application.css.scss */
 .simple_form .radio input {
   margin-right: 5px;
 }
-/* line 130, ../../app/assets/stylesheets/application.css.scss */
+/* line 133, ../../app/assets/stylesheets/application.css.scss */
 .simple_form .hint, .simple_form .help-inline {
   display: block;
   margin: 5px 0 0 150px;
   font-size: smaller;
   color: #777;
 }
-/* line 136, ../../app/assets/stylesheets/application.css.scss */
+/* line 139, ../../app/assets/stylesheets/application.css.scss */
 .simple_form .error .error {
   display: block;
   margin-left: 150px;
   color: red;
   font-weight: bold;
 }
-/* line 144, ../../app/assets/stylesheets/application.css.scss */
+/* line 147, ../../app/assets/stylesheets/application.css.scss */
 .simple_form form div.error input[type=tel] {
   border-color: #c87872;
   -webkit-box-shadow: 0 0 3px rgba(171, 41, 32, 0.25);
   -moz-box-shadow: 0 0 3px rgba(171, 41, 32, 0.25);
   box-shadow: 0 0 3px rgba(171, 41, 32, 0.25);
 }
-/* line 145, ../../app/assets/stylesheets/application.css.scss */
+/* line 148, ../../app/assets/stylesheets/application.css.scss */
 .simple_form form div.error input[type=tel]:focus {
   border-color: #b9554d;
   -webkit-box-shadow: 0 0 6px rgba(171, 41, 32, 0.5);
   -moz-box-shadow: 0 0 6px rgba(171, 41, 32, 0.5);
   box-shadow: 0 0 6px rgba(171, 41, 32, 0.5);
 }
-/* line 146, ../../app/assets/stylesheets/application.css.scss */
+/* line 149, ../../app/assets/stylesheets/application.css.scss */
 .simple_form input[type=tel]:focus {
   outline: none;
   border-color: rgba(82, 168, 236, 0.8);
@@ -191,7 +195,7 @@ html, body {
   -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
 }
-/* line 147, ../../app/assets/stylesheets/application.css.scss */
+/* line 150, ../../app/assets/stylesheets/application.css.scss */
 .simple_form input[type=tel] {
   -webkit-transition: border linear 0.2s,box-shadow linear 0.2s;
   -moz-transition: border linear 0.2s,box-shadow linear 0.2s;
@@ -200,7 +204,7 @@ html, body {
   -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
 }
-/* line 148, ../../app/assets/stylesheets/application.css.scss */
+/* line 151, ../../app/assets/stylesheets/application.css.scss */
 .simple_form input[type=tel] {
   display: inline-block;
   width: 210px;

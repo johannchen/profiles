@@ -13,11 +13,13 @@
             %h2.name= @profile.name
             - if @profile.headline
               .headline= @profile.headline
-            - if @profile.facebook_url
-              .links= link_to simple_url(@profile.facebook_url), @profile.facebook_url, :class => 'facebook'
+            .links
+              - if @profile.facebook_url
+                = link_to simple_url(@profile.facebook_url), @profile.facebook_url, :class => 'facebook'
+              - if @profile.phone
+                = link_to @profile.phone, "tel:#{@profile.phone}", :class => 'phone'
             %br{:clear => 'left'}
 
-            %p= @profile.phone
             %p= @profile.location
             - if @profile.birthday
               %p= t('profile.birthday', :birthday => l(@profile.birthday, :format => :short))

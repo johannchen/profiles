@@ -1,4 +1,5 @@
 class Profile < ActiveRecord::Base
+
   include Workflow
   workflow do
     state :pending_review do
@@ -42,8 +43,8 @@ class Profile < ActiveRecord::Base
     save(:validate => false)
   end
 
+  # FIXME this is hacky
   def gender=(g)
-    # FIXME this is hacky
     g = nil if g == 'nil'
     write_attribute(:gender, g)
   end

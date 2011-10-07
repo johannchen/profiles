@@ -17,7 +17,7 @@ module ThemesHelper
     end
   end
 
-  def theme_stylesheet_path
+  def theme_stylesheet_link_tag
     return unless @profile && @profile.theme
     stylesheet_link_tag(profile_theme_path(@profile, :m => @profile.theme.updated_at.to_f))
   end

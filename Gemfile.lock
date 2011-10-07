@@ -34,6 +34,8 @@ GEM
     arel (2.2.1)
     attr_required (0.0.3)
     bcrypt-ruby (3.0.0)
+    bitmask_attributes (0.2.2)
+      activerecord (~> 3.0)
     bourne (1.0)
       mocha (= 0.9.8)
     builder (3.0.0)
@@ -219,6 +221,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bitmask_attributes
   bourne
   cancan
   coffee-rails (~> 3.1.0)

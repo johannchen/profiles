@@ -34,6 +34,14 @@ class Profile < ActiveRecord::Base
 
   blank_to_nil
 
+  # alerts
+  bitmask :alerts, :as => [:new, :new_theme]
+  before_create { alerts << :new }
+  def new_theme_alert!
+    alerts << :new_theme
+    save(:validate => false)
+  end
+
   def gender=(g)
     # FIXME this is hacky
     g = nil if g == 'nil'

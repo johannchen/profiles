@@ -12,6 +12,7 @@ gem 'cancan'
 gem 'simple_form'
 gem 'jquery-rails'
 gem 'rails-i18n'
+gem 'bitmask_attributes'
 
 group :assets do
   gem 'sass-rails', '~> 3.1.0'

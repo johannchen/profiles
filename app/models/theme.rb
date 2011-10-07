@@ -15,6 +15,8 @@ class Theme < ActiveRecord::Base
   validates_format_of :box_bg_color, :name_color, :headline_color, :bio_color, :bg_color_top, :bg_color_bottom,
                       :with => /^#[0-9a-f]{3}[0-9a-f]{3}?$/, :allow_nil => true
 
+  after_create { profile.new_theme_alert! }
+
   blank_to_nil
 
   def self.background_images

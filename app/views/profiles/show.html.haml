@@ -34,8 +34,7 @@
     - if 'alerts' == part
       .span9.columns
         #alerts
-          = alert_block(:success, :alert_first_login,        [link_to(t('profile.alert_first_login.edit_profile_button'), edit_profile_path(@profile), :class => 'btn small')])
-          = alert_block(:info,    :alert_new_profile_design, [link_to(t('profile.alert_new_profile_design.new_button'), profile_theme_path(@profile), :method => :delete, :class => 'btn small'), link_to(t('profile.alert_new_profile_design.edit_button'), edit_profile_path(@profile), :class => 'btn small', :onclick => "alert('not working yet'); return false")])
+          = profile_alerts
           / don't collapse
           &nbsp;
 

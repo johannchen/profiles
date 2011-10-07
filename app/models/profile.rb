@@ -19,9 +19,9 @@ class Profile < ActiveRecord::Base
   end
 
   belongs_to :user
-  has_many :friendships
+  has_many :friendships, :dependent => :destroy
   has_many :friends, :through => :friendships
-  has_one :theme, :order => 'id'
+  has_one :theme, :order => 'id', :dependent => :destroy
 
   validates_presence_of :name
   validates_length_of :name, :maximum => 255

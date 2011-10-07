@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   extend ActiveSupport::Memoizable
 
-  has_one :profile
+  has_one :profile, :dependent => :destroy
 
   validates_presence_of :email
 

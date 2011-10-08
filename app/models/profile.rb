@@ -83,7 +83,9 @@ class Profile < ActiveRecord::Base
   end
 
   def create_theme!
-    Theme.build_random(:profile => self).save!
+    theme = Theme.build_random
+    theme.profile = self
+    theme.save!
     reload
   end
 end

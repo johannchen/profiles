@@ -27,16 +27,6 @@ class Theme < ActiveRecord::Base
     background_images.select { |img| img['format'] == 'tiled' }
   end
 
-  def self.build_image_byline(img)
-    img['credit'] + (img['license-short'] ? " (#{img['license-short']})" : '')
-  end
-
-  def self.build_random_color
-    # FIXME select a random color from a pre-defined list
-    # (sometimes the truly random color is UGLY)
-    '#' + (1..3).map { (rand(128) + 128).to_s(16) }.join
-  end
-
   def self.build_with_defaults
     theme = Theme.new(
       :box_bg_color         => '#000',
@@ -54,22 +44,30 @@ class Theme < ActiveRecord::Base
     )
   end
 
-  # yes, we're putting style info in the data layer
-  # but I've justified it since this is data-driven theming ;-)
-  def self.build_random(attributes)
-    theme = build_with_defaults
-    theme.box_pos           = VALID_BOX_POSITIONS.sample
+  # not truly random -- it only chooses a color or a *tiled* background
+  def self.build_random
     if 'color' == %w(color image).sample
-      theme.bg_color_top    = build_random_color
-      theme.bg_class        = 'light'
+      build_random_color
     else
-      img = tiled_background_images.sample
-      theme.bg_image        = "/assets/bg/#{img['filename']}"
-      theme.bg_image_byline = build_image_byline(img)
-      theme.bg_image_tiled  = img['format'] == 'tiled'
-      theme.bg_class        = img['class']
+      build_from_image_info(tiled_background_images.sample)
     end
-    theme.attributes = attributes
-    theme
+  end
+
+  def self.build_random_color
+    build_with_defaults.tap do |theme|
+      theme.bg_color_top = '#' + (1..3).map { (rand(128) + 128).to_s(16) }.join
+      theme.bg_class     = 'light'
+      theme.box_pos      = VALID_BOX_POSITIONS.sample
+    end
+  end
+
+  def self.build_from_image_info(info)
+    build_with_defaults.tap do |theme|
+      theme.bg_image        = "/assets/bg/#{info['filename']}"
+      theme.bg_image_byline = info['credit'] + (info['license-short'] ? " (#{info['license-short']})" : '')
+      theme.bg_image_tiled  = info['format'] == 'tiled'
+      theme.bg_class        = info['class']
+      theme.box_pos         = info['box_pos']
+    end
   end
 end

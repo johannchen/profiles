@@ -66,7 +66,7 @@ class Profile < ActiveRecord::Base
     self.facebook_url    = data["link"]
     self.name            = data["name"]
     self.location        = data["location"] && data["location"]["name"]
-    self.phone           = data["phone"]
+    self.phone           = data["phone"] if data["phone"]
     save!
   end
 

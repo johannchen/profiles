@@ -46,22 +46,26 @@ html,body{background:none;}
 }
 
 #footer {
+  margin: 25px auto 0 auto;
+  .content {
+    text-align: center;
+    padding: 3px;
+  }
+}
+
+.profile #footer {
   position: fixed;
   left: 50%;
-  margin-left: -250px;
+  margin: 0 0 0 -250px;
   bottom: 0;
   background-color: rgba(8, 8, 8, 0.5);
   color: #fff;
   width: 500px;
   @include border-top-left-radius(5px);
   @include border-top-right-radius(5px);
-  .content {
-    text-align: center;
-    padding: 3px;
-    a {
-      color: #fff;
-      text-decoration: underline;
-    }
+  .content a {
+    color: #fff;
+    text-decoration: underline;
   }
 }
 

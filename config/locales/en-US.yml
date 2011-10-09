@@ -20,6 +20,7 @@ en-US:
         gender: Gender
         birthday: Birthday
         phone: Phone
+        bio: Bio
       user:
         current_password: Current Password
         email: Email
@@ -79,8 +80,9 @@ en-US:
     edit_button: Edit Profile
     edit_form:
       account_section_heading: Account Settings
+      bio_hint_html: Describe yourself in a few sentences. Some HTML allowed. (<span id="profile_bio_count_remaining">%{count}</span> characters left.)
       cancel: Cancel
-      contact_section_heading: Contact Information
+      heading: Profile Details
       gender_selection:
         m: Male
         f: Female

@@ -24,6 +24,16 @@ html,body{background:none;}
   @include single-box-shadow;
 }
 
+.char-count-warning {
+  color: #cc3;
+  font-weight: bold;
+}
+
+.char-count-overage {
+  color: red;
+  font-weight: bold;
+}
+
 /* Layout - - - - - - - - - */
 
 #main {
@@ -117,6 +127,11 @@ html,body{background:none;}
 
 .right-controls {
   text-align: right;
+}
+
+#profile_bio {
+  width: 450px;
+  height: 100px;
 }
 
 /* Forms - - - - - - - - - */

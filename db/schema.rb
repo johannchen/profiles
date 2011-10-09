@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111007185626) do
+ActiveRecord::Schema.define(:version => 20111009023447) do
 
   create_table "friendships", :force => true do |t|
     t.integer  "profile_id"
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(:version => 20111007185626) do
     t.string   "state",           :limit => 2
     t.string   "postal_code",     :limit => 10
     t.integer  "alerts"
+    t.text     "bio"
   end
 
   create_table "themes", :force => true do |t|

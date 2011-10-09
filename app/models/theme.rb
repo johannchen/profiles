@@ -40,7 +40,7 @@ class Theme < ActiveRecord::Base
       :headline_color       => '#fff',
       :bio_font_family      => 'Ubuntu',
       :bio_size             => 12,
-      :bio_color            => '#777'
+      :bio_color            => '#fff'
     )
   end
 

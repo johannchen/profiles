@@ -34,8 +34,17 @@ module ApplicationHelper
     url.sub(/^https?:\/\/(www\.)?/, '')
   end
 
-  def bg_class
-    @profile && @profile.theme && @profile.theme.bg_class
+  def body_class
+    [].tap do |classes|
+      if @profile
+        classes << 'profile'
+        classes << @profile.theme.bg_class if @profile.theme
+      end
+    end
+  end
+
+  def sanitize(html)
+    Sanitize.clean(html, Sanitize::Config::BASIC).html_safe
   end
 
 end

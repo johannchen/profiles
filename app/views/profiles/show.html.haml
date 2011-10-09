@@ -20,6 +20,9 @@
                 = link_to @profile.phone, "tel:#{@profile.phone}", :class => 'phone'
             %br{:clear => 'left'}
 
+            .bio
+              =sanitize @profile.bio
+
             %p= @profile.location
             - if @profile.birthday
               %p= t('profile.birthday', :birthday => l(@profile.birthday, :format => :short))

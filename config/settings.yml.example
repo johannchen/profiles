@@ -9,3 +9,5 @@ auth:
   facebook:
     app_id: 
     secret:
+profile:
+  bio_max_length: 500

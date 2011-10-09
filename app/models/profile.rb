@@ -31,7 +31,7 @@ class Profile < ActiveRecord::Base
   validates_length_of :phone, :maximum => 50
   validates_uniqueness_of :user_id
 
-  attr_accessible :name, :headline, :gender, :birthday, :location, :phone, :facebook_id, :facebook_url, :small_image_url, :full_image_url
+  attr_accessible :name, :headline, :bio, :gender, :birthday, :location, :phone, :facebook_id, :facebook_url, :small_image_url, :full_image_url
 
   blank_to_nil
 
@@ -47,6 +47,10 @@ class Profile < ActiveRecord::Base
   def gender=(g)
     g = nil if g == 'nil'
     write_attribute(:gender, g)
+  end
+
+  def bio=(b)
+    write_attribute(:bio, b.to_s[0...Setting.s('profile.bio_max_length')])
   end
 
   def update_attributes_with_user(attributes, user_attributes)

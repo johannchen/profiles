@@ -1,9 +1,10 @@
 = simple_form_for @profile do |form|
   = errors_for form, :only => [:base, :user_id]
   %fieldset
-    %legend= t('profile.edit_form.contact_section_heading')
+    %legend= t('profile.edit_form.heading')
     = form.input :name
     = form.input :headline
+    = form.input :bio, :hint => t('profile.edit_form.bio_hint_html', :count => s('profile.bio_max_length') - @profile.bio.to_s.size), :input_html => {'data-maxlength' => "#{s('profile.bio_max_length')} #profile_bio_count_remaining"}
     = form.input :gender, :collection => t('profile.edit_form.gender_selection').invert, :as => :radio
     = form.input :birthday, :start_year => 1900, :end_year => Date.today.year, :include_blank => true
     = form.input :phone

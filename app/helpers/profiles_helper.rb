@@ -16,6 +16,17 @@ module ProfilesHelper
     end
   end
 
+  def profile_bio(profile)
+    if profile.bio
+      if profile.bio =~ /\r?\n\r?\n/ and profile.bio !~ /<p>|<br\s*\/?>/
+        # replace \n\n with <br /><br />
+        sanitize profile.bio.gsub(/\r?\n\r?\n/, "<br />\n<br />\n")
+      else
+        sanitize profile.bio
+      end
+    end
+  end
+
   def layout_order(theme)
     {
       :left  => ['profile-box', 'alerts'],

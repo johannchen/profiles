@@ -21,7 +21,7 @@
             %br{:clear => 'left'}
 
             .bio
-              =sanitize @profile.bio
+              = profile_bio(@profile)
 
             %p= @profile.location
             - if @profile.birthday

@@ -19,6 +19,7 @@ class User < ActiveRecord::Base
   end
   memoize :graph
 
+  # FIXME this should not have side effects
   def self.find_for_facebook_oauth(access_token, signed_in_resource=nil)
     data = access_token['extra']['user_hash']
     user = User.find_by_provider_and_uid('facebook', access_token["uid"]) ||

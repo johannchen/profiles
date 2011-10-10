@@ -92,7 +92,7 @@ en-US:
     friends: Friends
     not_visible_warning_html: Your profile isn't visible yet, because it's pending review by an administrator.
     theme:
-      bg_image_byline_html: Image by %{byline}
+      bg_image_byline_html: "%{name} by %{byline}"
     alert_new:
       heading: Welcome!
       body_html: <strong>Your profile has been created.</strong> Now would be a great time to edit your profile and add other information you want people to know about you.

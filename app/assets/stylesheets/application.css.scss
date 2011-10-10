@@ -55,13 +55,12 @@ html,body{background:none;}
 
 .profile #footer {
   position: fixed;
-  left: 50%;
-  margin: 0 0 0 -250px;
+  left: 0;
+  margin: 0;
   bottom: 0;
   background-color: rgba(8, 8, 8, 0.5);
   color: #fff;
   width: 500px;
-  @include border-top-left-radius(5px);
   @include border-top-right-radius(5px);
   .content a {
     color: #fff;
@@ -105,6 +104,38 @@ html,body{background:none;}
 
 .headline {
   font-style: italic;
+}
+
+#profile-box {
+  @include border-radius(5px);
+  position: relative;
+  z-index: 100;
+  .content {
+    padding: 15px;
+  }
+  .name {
+    background-color: rgba(0, 0, 0, 0.4);
+    @include border-top-radius(5px);
+    padding: 5px 15px;
+  }
+  .pic {
+    margin-left: 15px;
+    float: right;
+    img {
+      width: 120px;
+    }
+  }
+  .headline {
+    margin-bottom: 10px;
+  }
+  .bio {
+    margin-bottom: 10px;
+  }
+  .map {
+    margin-top: 20px;
+    width: 370px;
+    height: 150px;
+  }
 }
 
 .links {

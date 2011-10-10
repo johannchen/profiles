@@ -59,18 +59,12 @@ html, body {
 /* line 56, ../../app/assets/stylesheets/application.css.scss */
 .profile #footer {
   position: fixed;
-  left: 50%;
-  margin: 0 0 0 -250px;
+  left: 0;
+  margin: 0;
   bottom: 0;
   background-color: rgba(8, 8, 8, 0.5);
   color: #fff;
   width: 500px;
-  -moz-border-radius-topleft: 5px;
-  -webkit-border-top-left-radius: 5px;
-  -o-border-top-left-radius: 5px;
-  -ms-border-top-left-radius: 5px;
-  -khtml-border-top-left-radius: 5px;
-  border-top-left-radius: 5px;
   -moz-border-radius-topright: 5px;
   -webkit-border-top-right-radius: 5px;
   -o-border-top-right-radius: 5px;
@@ -129,7 +123,63 @@ html, body {
   font-style: italic;
 }
 
-/* line 111, ../../app/assets/stylesheets/application.css.scss */
+/* line 110, ../../app/assets/stylesheets/application.css.scss */
+#profile-box {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  position: relative;
+  z-index: 100;
+}
+/* line 114, ../../app/assets/stylesheets/application.css.scss */
+#profile-box .content {
+  padding: 15px;
+}
+/* line 117, ../../app/assets/stylesheets/application.css.scss */
+#profile-box .name {
+  background-color: rgba(0, 0, 0, 0.4);
+  -moz-border-radius-topleft: 5px;
+  -webkit-border-top-left-radius: 5px;
+  -o-border-top-left-radius: 5px;
+  -ms-border-top-left-radius: 5px;
+  -khtml-border-top-left-radius: 5px;
+  border-top-left-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -o-border-top-right-radius: 5px;
+  -ms-border-top-right-radius: 5px;
+  -khtml-border-top-right-radius: 5px;
+  border-top-right-radius: 5px;
+  padding: 5px 15px;
+}
+/* line 122, ../../app/assets/stylesheets/application.css.scss */
+#profile-box .pic {
+  margin-left: 15px;
+  float: right;
+}
+/* line 125, ../../app/assets/stylesheets/application.css.scss */
+#profile-box .pic img {
+  width: 120px;
+}
+/* line 129, ../../app/assets/stylesheets/application.css.scss */
+#profile-box .headline {
+  margin-bottom: 10px;
+}
+/* line 132, ../../app/assets/stylesheets/application.css.scss */
+#profile-box .bio {
+  margin-bottom: 10px;
+}
+/* line 135, ../../app/assets/stylesheets/application.css.scss */
+#profile-box .map {
+  margin-top: 20px;
+  width: 370px;
+  height: 150px;
+}
+
+/* line 143, ../../app/assets/stylesheets/application.css.scss */
 .links a {
   display: inline-block;
   -moz-border-radius: 5px;
@@ -148,69 +198,69 @@ html, body {
   text-overflow: ellipsis;
   text-decoration: none;
 }
-/* line 123, ../../app/assets/stylesheets/application.css.scss */
+/* line 155, ../../app/assets/stylesheets/application.css.scss */
 .links a.facebook {
   background: #eeeeee url(/assets/facebook.png) top left no-repeat;
 }
-/* line 126, ../../app/assets/stylesheets/application.css.scss */
+/* line 158, ../../app/assets/stylesheets/application.css.scss */
 .links a.phone {
   background: #eeeeee url(/assets/phone.png) top left no-repeat;
 }
 
-/* line 132, ../../app/assets/stylesheets/application.css.scss */
+/* line 164, ../../app/assets/stylesheets/application.css.scss */
 .right-controls {
   text-align: right;
 }
 
-/* line 136, ../../app/assets/stylesheets/application.css.scss */
+/* line 168, ../../app/assets/stylesheets/application.css.scss */
 #profile_bio {
   width: 450px;
   height: 100px;
 }
 
 /* Forms - - - - - - - - - */
-/* line 143, ../../app/assets/stylesheets/application.css.scss */
+/* line 175, ../../app/assets/stylesheets/application.css.scss */
 .simple_form {
   /* temporary until HTML5 elements are included in Bootstrap
      See https://github.com/twitter/bootstrap/pull/28 */
 }
-/* line 144, ../../app/assets/stylesheets/application.css.scss */
+/* line 176, ../../app/assets/stylesheets/application.css.scss */
 .simple_form select.date {
   width: auto;
 }
-/* line 148, ../../app/assets/stylesheets/application.css.scss */
+/* line 180, ../../app/assets/stylesheets/application.css.scss */
 .simple_form .radio input {
   margin-right: 5px;
 }
-/* line 152, ../../app/assets/stylesheets/application.css.scss */
+/* line 184, ../../app/assets/stylesheets/application.css.scss */
 .simple_form .hint, .simple_form .help-inline {
   display: block;
   margin: 5px 0 0 150px;
   font-size: smaller;
   color: #777;
 }
-/* line 158, ../../app/assets/stylesheets/application.css.scss */
+/* line 190, ../../app/assets/stylesheets/application.css.scss */
 .simple_form .error .error {
   display: block;
   margin-left: 150px;
   color: red;
   font-weight: bold;
 }
-/* line 166, ../../app/assets/stylesheets/application.css.scss */
+/* line 198, ../../app/assets/stylesheets/application.css.scss */
 .simple_form form div.error input[type=tel] {
   border-color: #c87872;
   -webkit-box-shadow: 0 0 3px rgba(171, 41, 32, 0.25);
   -moz-box-shadow: 0 0 3px rgba(171, 41, 32, 0.25);
   box-shadow: 0 0 3px rgba(171, 41, 32, 0.25);
 }
-/* line 167, ../../app/assets/stylesheets/application.css.scss */
+/* line 199, ../../app/assets/stylesheets/application.css.scss */
 .simple_form form div.error input[type=tel]:focus {
   border-color: #b9554d;
   -webkit-box-shadow: 0 0 6px rgba(171, 41, 32, 0.5);
   -moz-box-shadow: 0 0 6px rgba(171, 41, 32, 0.5);
   box-shadow: 0 0 6px rgba(171, 41, 32, 0.5);
 }
-/* line 168, ../../app/assets/stylesheets/application.css.scss */
+/* line 200, ../../app/assets/stylesheets/application.css.scss */
 .simple_form input[type=tel]:focus {
   outline: none;
   border-color: rgba(82, 168, 236, 0.8);
@@ -218,7 +268,7 @@ html, body {
   -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
 }
-/* line 169, ../../app/assets/stylesheets/application.css.scss */
+/* line 201, ../../app/assets/stylesheets/application.css.scss */
 .simple_form input[type=tel] {
   -webkit-transition: border linear 0.2s,box-shadow linear 0.2s;
   -moz-transition: border linear 0.2s,box-shadow linear 0.2s;
@@ -227,7 +277,7 @@ html, body {
   -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
 }
-/* line 170, ../../app/assets/stylesheets/application.css.scss */
+/* line 202, ../../app/assets/stylesheets/application.css.scss */
 .simple_form input[type=tel] {
   display: inline-block;
   width: 210px;

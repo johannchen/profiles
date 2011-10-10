@@ -7,12 +7,13 @@
     - if 'profile-box' == part
       .span7.columns
         #profile-box
+          %h2.name= @profile.name
           .content
             = profile_pic_tag(@profile)
 
-            %h2.name= @profile.name
             - if @profile.headline
               .headline= @profile.headline
+
             .links
               - if @profile.facebook_url
                 = link_to simple_url(@profile.facebook_url), @profile.facebook_url, :class => 'facebook'
@@ -23,7 +24,6 @@
             .bio
               = profile_bio(@profile)
 
-            %p= @profile.location
             - if @profile.birthday
               %p= t('profile.birthday', :birthday => l(@profile.birthday, :format => :short))
 

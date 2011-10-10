@@ -12,7 +12,7 @@ module ThemesHelper
     # image byline
     if theme && theme.bg_image_byline
       content_tag(:div, :id => 'bg-byline') do
-        t('profile.theme.bg_image_byline_html', :byline => theme.bg_image_byline)
+        t('profile.theme.bg_image_byline_html', :name => theme.bg_image_name, :byline => theme.bg_image_byline)
       end
     end
   end

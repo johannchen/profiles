@@ -64,6 +64,7 @@ class Theme < ActiveRecord::Base
   def self.build_from_image_info(info)
     build_with_defaults.tap do |theme|
       theme.bg_image        = "/assets/bg/#{info['filename']}"
+      theme.bg_image_name   = info['name']
       theme.bg_image_byline = info['credit'] + (info['license-short'] ? " (#{info['license-short']})" : '')
       theme.bg_image_tiled  = info['format'] == 'tiled'
       theme.bg_class        = info['class']

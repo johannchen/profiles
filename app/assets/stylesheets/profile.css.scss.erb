@@ -44,40 +44,23 @@
 
 #profile-box {
   background-color: rgba(red(<%= @theme.box_bg_color %>), green(<%= @theme.box_bg_color %>), blue(<%= @theme.box_bg_color %>), <%= @theme.box_bg_opacity %>);
-  @include border-radius(5px);
   .content {
-    padding: 15px;
     color: #fff;
-  }
-  .pic {
-    margin-left: 15px;
-    float: right;
-    img {
-      width: 120px;
-    }
   }
   .name {
     font: <%= font_style(@theme, 'name') %>;
     color: <%= @theme.name_color %>;
-    margin-bottom: 10px;
   }
   .headline {
     font: <%= font_style(@theme, 'headline') %>;
     color: <%= @theme.headline_color %>;
-    margin-bottom: 10px;
   }
   .bio {
     font: <%= font_style(@theme, 'bio') %>;
     color: <%= @theme.bio_color %>;
-    margin-bottom: 10px;
     a {
       color: <%= @theme.bio_color %>;
       text-decoration: underline;
     }
-  }
-  .map {
-    margin-top: 20px;
-    width: 370px;
-    height: 150px;
   }
 }

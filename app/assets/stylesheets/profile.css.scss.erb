@@ -5,6 +5,7 @@
 @import "compass/css3/gradient";
 @import "compass/css3/border-radius";
 @import "compass/css3/text-shadow";
+@import "compass/css3/background-size";
 
 <% if @theme.bg_image %>
   <% if @theme.bg_image_tiled? %>
@@ -17,11 +18,7 @@
     }
     body {
       background: url(<%= @theme.bg_image %>) top left no-repeat;
-      -o-background-size: cover;
-      -webkit-background-size: cover;
-      -khtml-background-size: cover;
-      -moz-background-size: cover;
-      background-size: cover;
+      @include background-size(cover);
     }
   <% end %>
   #bg-byline {

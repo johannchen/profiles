@@ -41,10 +41,6 @@ html,body{background:none;}
   min-height: 600px;
 }
 
-.push-down {
-  margin-top: 25px;
-}
-
 #footer {
   margin: 25px auto 0 auto;
   .content {
@@ -53,18 +49,24 @@ html,body{background:none;}
   }
 }
 
-.profile #footer {
-  position: fixed;
-  left: 0;
-  margin: 0;
-  bottom: 0;
-  background-color: rgba(8, 8, 8, 0.5);
-  color: #fff;
-  width: 500px;
-  @include border-top-right-radius(5px);
-  .content a {
+.profile {
+  #main .container {
+    margin-top: 35px;
+  }
+
+  #footer {
+    position: fixed;
+    left: 0;
+    margin: 0;
+    bottom: 0;
+    background-color: rgba(8, 8, 8, 0.5);
     color: #fff;
-    text-decoration: underline;
+    width: 500px;
+    @include border-top-right-radius(5px);
+    .content a {
+      color: #fff;
+      text-decoration: underline;
+    }
   }
 }
 

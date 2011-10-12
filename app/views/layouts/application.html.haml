@@ -33,8 +33,9 @@
               = link_to t('nav.log_in'), new_user_session_path
 
   #main
-    .container{:class => @push_down == false ? nil : 'push-down'}
-      - if (sidebar = yield(:sidebar)).to_s.blank?
+    .container
+      - sidebar = yield(:sidebar).to_s
+      - if sidebar.blank?
         = flash_messages
         = yield
       - else

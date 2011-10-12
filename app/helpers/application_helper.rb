@@ -40,7 +40,7 @@ module ApplicationHelper
         classes << 'profile'
         classes << @profile.theme.bg_class if @profile.theme
       end
-    end
+    end.join(' ')
   end
 
   def sanitize(html)

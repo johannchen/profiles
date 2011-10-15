@@ -1,6 +1,6 @@
 module ApplicationHelper
   def flash_messages
-    [:info, :success, :warning, :error].map do |type|
+    [:info, :success, :warning, :error, :alert, :notice].map do |type|
       if flash[type]
         content_tag(:div, :class => "alert-message #{type}") do
           close_button + content_tag(:p, h(flash[type]))
@@ -38,6 +38,10 @@ module ApplicationHelper
       if @profile
         classes << 'profile'
         classes << @profile.theme.bg_class if @profile.theme
+      elsif request.path == '/'
+        classes << 'home'
+      else
+        classes << 'generic'
       end
     end.join(' ')
   end

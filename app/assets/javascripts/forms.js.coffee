@@ -30,7 +30,7 @@ $ ->
     else if remaining < 10
       countdown.addClass('char-count-warning')
 
-  $('textarea[data-maxlength]').bind 'keyup', (e) ->
+  $('textarea[data-maxlength]').live 'keyup', (e) ->
     charCountTicker $(e.target)
   .each ->
     charCountTicker $(@)

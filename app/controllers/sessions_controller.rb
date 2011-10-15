@@ -21,7 +21,6 @@ class SessionsController < ApplicationController
   private
 
   def after_sign_in_path_for(resource)
-    profile_path(current_user.profile)
+    resource ? resource.profile : '/'
   end
-
 end

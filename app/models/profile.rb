@@ -53,15 +53,6 @@ class Profile < ActiveRecord::Base
     write_attribute(:bio, b.to_s[0...Setting.s('profile.bio_max_length')])
   end
 
-  def update_attributes_with_user(attributes, user_attributes)
-    if update_attributes(attributes) && user.update_attributes(user_attributes)
-      true
-    else
-      user.errors.full_messages.each { |m| errors.add(:base, m) }
-      false
-    end
-  end
-
   def update_from_oauth_access_token!(access_token)
     data = access_token['extra']['user_hash']
     self.small_image_url = "http://graph.facebook.com/#{access_token['uid']}/picture?type=square"

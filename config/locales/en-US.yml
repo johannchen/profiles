@@ -7,9 +7,10 @@ en-US:
       delete_button: Delete My Account Now!
       delete_action_confirm: Are you sure? (There's no going back.)
       heading: Edit Account
-      intro: Change your account email address and/or password below.
-      password_change_note: leave blank if you don't want to change it
+      intro: Change your account email address and other settings below.
+      password_change_button: Change Password
       save_button: Save Changes
+      save_success: Your account settings has been saved.
 
   activerecord:
     attributes:
@@ -24,7 +25,7 @@ en-US:
         current_password: Current Password
         email: Email
         password: New Password
-        password_confirmation: New Password Again
+        password_confirmation: Repeat Password
         timezone: Time Zone
     errors: 
       models: 
@@ -89,6 +90,9 @@ en-US:
         nil: Unspecified
       save: Save
       save_success: Your profile has been saved.
+      tabs:
+        profile: Profile
+        theme: Theme
     friends: Friends
     not_visible_warning_html: Your profile isn't visible yet, because it's pending review by an administrator.
     theme:

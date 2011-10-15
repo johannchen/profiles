@@ -1,0 +1,29 @@
+%h2= t('account.edit_form.heading')
+
+= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |form|
+  %p= t('account.edit_form.intro')
+  = form.input :email, :required => true
+  = form.input :timezone, :as => :time_zone
+  .hint
+    %p{:style => 'display:none;'}
+      = link_to t('account.edit_form.password_change_button'), '#', :id => 'change_password_button', :class => 'btn'
+  #change_password
+    = form.input :current_password, :required => true
+    = form.input :password, :required => true
+    #password_confirmation_field
+      = form.input :password_confirmation, :required => true
+  %fieldset.actions
+    = form.submit t('account.edit_form.save_button'), :class => 'btn primary'
+
+%h3= t('account.edit_form.delete_heading')
+
+%p
+  = link_to t('account.edit_form.delete_button'), registration_path(resource_name), :confirm => t('account.edit_form.delete_action_confirm'), :method => :delete, :class => 'btn'
+
+- unless resource.errors.any?
+  :javascript
+    $('#change_password_button').click(function(){
+      $('#change_password').show().find('input[type=password]').attr('disabled', false);
+      $(this).hide();
+    }).parent('p').show();
+    $('#change_password').hide().find('input[type=password]').attr('disabled', true);

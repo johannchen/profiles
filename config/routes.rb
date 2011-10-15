@@ -2,7 +2,8 @@ Profiles::Application.routes.draw do
   root :to => 'homes#show'
 
   devise_for :users,
-    :controllers => {:omniauth_callbacks => 'sessions'}
+    :controllers => {:omniauth_callbacks => 'sessions',
+                     :registrations      => 'users'}
 
   get '/users/auth/:provider' => 'sessions#passthru'
 

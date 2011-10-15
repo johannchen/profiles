@@ -1,10 +1,10 @@
 = simple_form_for @profile, :remote => true do |form|
-  = errors_for form, :only => [:base, :user_id]
+  = errors_for form, :only => [:base]
   %ul.tabs{'data-tabs' => 'tabs'}
     %li.active
-      %a{:href => '#profile_details'}= t('profile.edit_form.heading')
+      %a{:href => '#profile_details'}= t('profile.edit_form.tabs.profile')
     %li
-      %a{:href => '#account_settings'}= t('profile.edit_form.account_section_heading')
+      %a{:href => '#theme'}= t('profile.edit_form.tabs.theme')
   .tab-content
     #profile_details.active
       = form.input :name
@@ -13,9 +13,8 @@
       = form.input :gender, :collection => t('profile.edit_form.gender_selection').invert, :as => :radio
       = form.input :birthday, :start_year => 1900, :end_year => Date.today.year, :include_blank => true
       = form.input :phone
-    #account_settings
-      = simple_fields_for @profile.user do |user_fields|
-        = user_fields.input :timezone, :as => :time_zone
+    #theme
+      foo
   .actions
     = form.submit t('profile.edit_form.save'), :class => 'btn primary'
     = link_to t('profile.edit_form.cancel'), @profile, :class => 'btn close-btn'

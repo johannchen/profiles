@@ -1,11 +1,14 @@
 - if @profile.location
   = javascript_include_tag "http://maps.googleapis.com/maps/api/js?sensor=false"
   :javascript
-    var opt = {zoom: 10, mapTypeId: google.maps.MapTypeId.ROADMAP, disableDefaultUI: true};
-    geocoder = new google.maps.Geocoder();
-    geocoder.geocode({address: '#{@profile.location}'}, function(results, status) {
-      if (status == google.maps.GeocoderStatus.OK) {
-        opt.center = results[0].geometry.location;
-        var map = new google.maps.Map($(".map")[0], opt);
-      }
-    });
+    function renderMap() {
+      var opt = {zoom: 10, mapTypeId: google.maps.MapTypeId.ROADMAP, disableDefaultUI: true};
+      geocoder = new google.maps.Geocoder();
+      geocoder.geocode({address: '#{@profile.location}'}, function(results, status) {
+        if (status == google.maps.GeocoderStatus.OK) {
+          opt.center = results[0].geometry.location;
+          var map = new google.maps.Map($(".map")[0], opt);
+        }
+      });
+    }
+    renderMap();

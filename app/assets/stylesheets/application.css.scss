@@ -115,6 +115,23 @@ html,body{background:none;}
   .content {
     padding: 15px;
   }
+  .controls {
+    padding: 10px 15px 0 0;
+    float: right;
+    .btn {
+      background: #333;
+      border: 1px solid #777;
+      padding: 2px 5px;
+      &:hover {
+        background: #fff;
+      }
+      span {
+        padding-left: 12px;
+        display: inline-block;
+        height: 20px;
+      }
+    }
+  }
   .name {
     background-color: rgba(0, 0, 0, 0.4);
     @include border-top-radius(5px);
@@ -162,13 +179,23 @@ html,body{background:none;}
   }
 }
 
-.right-controls {
-  text-align: right;
-}
-
-#profile_bio {
-  width: 450px;
-  height: 100px;
+#aux {
+  .content {
+    @include border-radius(5px);
+    background-color: rgba(255, 255, 255, 0.95);
+    border: none;
+    padding: 15px;
+    .simple_form {
+      legend { padding-left: 90px; }
+      label { width: 70px; }
+      .input label { width: auto; }
+      .actions { padding-left: 90px; }
+      .input, .hint { margin-left: 90px; }
+    }
+  }
+  .status {
+    margin-top: 15px;
+  }
 }
 
 /* Forms - - - - - - - - - */
@@ -202,3 +229,40 @@ html,body{background:none;}
   input[type=tel]{-webkit-transition:border linear 0.2s,box-shadow linear 0.2s;-moz-transition:border linear 0.2s,box-shadow linear 0.2s;transition:border linear 0.2s,box-shadow linear 0.2s;-webkit-box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.1);-moz-box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.1);box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.1);}
   input[type=tel]{display:inline-block;width:210px;padding:4px;font-size:13px;line-height:18px;height:18px;color:#808080;border:1px solid #ccc;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
 }
+
+#profile_bio {
+  width: 380px;
+  height: 150px;
+}
+
+/* Icons */
+
+@mixin icon-sprite($x, $y) {
+  padding-left: 15px;
+  background: url(/assets/icons.png) $x $y no-repeat;
+}
+
+.add-icon        { @include icon-sprite(0px,    0px) }
+.edit-icon       { @include icon-sprite(0px,  -20px) }
+.lock-icon       { @include icon-sprite(0px,  -40px) }
+.lock-icon-small { @include icon-sprite(0px,  -45px) }
+.comment-icon    { @include icon-sprite(0px,  -66px) } /* up just a bit */
+.comment2-icon   { @include icon-sprite(0px,  -60px) }
+.dots-icon       { @include icon-sprite(0px,  -80px) }
+.people-icon     { @include icon-sprite(0px, -100px) }
+.money-icon      { @include icon-sprite(0px, -120px) }
+.feed-icon       { @include icon-sprite(0px, -140px) }
+.right-icon      { @include icon-sprite(0px, -160px) }
+.left-icon       { @include icon-sprite(0px, -180px) }
+.picture-icon    { @include icon-sprite(0px, -200px) }
+.file-icon       { @include icon-sprite(0px, -220px) }
+.verse-icon      { @include icon-sprite(0px, -240px) }
+.delete-icon     { @include icon-sprite(0px, -256px) } /* down a bit */
+.email-icon      { @include icon-sprite(0px, -280px) }
+.heart-icon      { @include icon-sprite(0px, -300px) }
+.rotate-cw-icon  { @include icon-sprite(0px, -320px) }
+.rotate-ccw-icon { @include icon-sprite(0px, -340px) }
+.updown-icon     { @include icon-sprite(0px, -360px) }
+.alert-icon      { @include icon-sprite(0px, -380px) }
+.news-icon       { @include icon-sprite(0px, -400px) }
+.podcast-icon    { @include icon-sprite(0px, -420px) }

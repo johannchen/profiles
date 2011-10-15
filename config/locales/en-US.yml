@@ -2,7 +2,6 @@
 
 en-US:
   account:
-    edit_button: Change Email/Password
     edit_form:
       delete_heading: Delete Account
       delete_button: Delete My Account Now!
@@ -65,6 +64,7 @@ en-US:
       </p>
 
   nav:
+    account: Account
     home: Home
     profile: Profile
     search: Search
@@ -80,7 +80,7 @@ en-US:
     edit_button: Edit Profile
     edit_form:
       account_section_heading: Account Settings
-      bio_hint_html: Describe yourself in a few sentences. Some HTML allowed. (<span id="profile_bio_count_remaining">%{count}</span> characters left.)
+      bio_hint_html: Describe yourself in a few sentences. Some HTML allowed.<br/>(<span id="profile_bio_count_remaining">%{count}</span> characters left.)
       cancel: Cancel
       heading: Profile Details
       gender_selection:

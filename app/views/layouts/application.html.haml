@@ -1,55 +1,59 @@
 !!! 5
-%head
-  %title
-    = s('site.name')
-    - if @sub_title
-      == / #{@sub_title}
-  = stylesheet_link_tag    "application"
-  = javascript_include_tag "application"
-  = csrf_meta_tags
-  = yield(:head)
-%body{:class => body_class}
+%html
+  %head
+    %title
+      = s('site.name')
+      - if @sub_title
+        == / #{@sub_title}
+    = stylesheet_link_tag    "application"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+    = yield(:head)
+  %body{:class => body_class}
 
-  .topbar
-    .fill
+    .topbar
+      .fill
+        .container
+          %h3
+            %a{:href => '/'}= s('site.name')
+          - if current_user
+            %ul
+              %li{:class => params[:controller] == 'profiles' && @profile && @profile.user == current_user && 'active'}
+                = link_to t('nav.profile'), my_profile_path
+              %li{:class => params[:controller] == 'users' && 'active'}
+                = link_to t('nav.account'), edit_user_registration_path
+              %li{:class => params[:controller] == 'searches' && 'active'}
+                = link_to t('nav.search'), new_search_path
+              %li
+                = link_to t('nav.log_out'), destroy_user_session_path, :method => :delete
+            %form{:action => search_path, :method => :get, :id => 'search-form'}
+              %input{:name => 'q', :placeholder => t('nav.search_placeholder')}
+          - else
+            %ul
+              %li{:class => params[:controller] == 'homes' && 'active'}
+                = link_to t('nav.home'), root_path
+              %li
+                = link_to t('nav.log_in'), new_user_session_path
+
+    #main
       .container
-        %h3
-          %a{:href => '/'}= s('site.name')
-        - if current_user
-          %ul
-            %li{:class => params[:controller] == 'profiles' && @profile && @profile.user == current_user && 'active'}
-              %a{:href => my_profile_path}= t('nav.profile')
-            %li{:class => params[:controller] == 'searches' && 'active'}
-              %a{:href => new_search_path}= t('nav.search')
-            %li
-              = link_to t('nav.log_out'), destroy_user_session_path, :method => :delete
-          %form{:action => search_path, :method => :get, :id => 'search-form'}
-            %input{:name => 'q', :placeholder => t('nav.search_placeholder')}
-        - else
-          %ul
-            %li{:class => params[:controller] == 'homes' && 'active'}
-              = link_to t('nav.home'), root_path
-            %li
-              = link_to t('nav.log_in'), new_user_session_path
-
-  #main
-    .container
-      - sidebar = yield(:sidebar).to_s
-      - if sidebar.blank?
-        = flash_messages
-        = yield
-      - else
-        .row
-          .span12.columns
+        - sidebar = yield(:sidebar).to_s
+        - if sidebar.blank?
+          #messages
             = flash_messages
-            = yield
-          .span4.columns
-            .sidebar= sidebar
+          = yield
+        - else
+          .row
+            .span12.columns
+              = flash_messages
+              = yield
+            .span4.columns
+              .sidebar= sidebar
 
-  .container
-    #footer
-      .content
-        == &copy; #{Date.today.year}, #{s 'community.name'} &middot;
-        %a{'href' => '/pages/privacy_policy'}= t('pages.privacy_policy')
-        &middot;
-        = t('app.powered_by_html')
+    .container
+      #footer
+        .content
+          == &copy; #{Date.today.year}, #{s 'community.name'} &middot;
+          %a{'href' => '/pages/privacy_policy'}= t('pages.privacy_policy')
+          &middot;
+          = t('app.powered_by_html')

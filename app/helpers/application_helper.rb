@@ -3,8 +3,7 @@ module ApplicationHelper
     [:info, :success, :warning, :error].map do |type|
       if flash[type]
         content_tag(:div, :class => "alert-message #{type}") do
-          link_to('x', '#', :class => 'close') +
-          content_tag(:p, h(flash[type]))
+          close_button + content_tag(:p, h(flash[type]))
         end
       end
     end.join.html_safe
@@ -41,6 +40,10 @@ module ApplicationHelper
         classes << @profile.theme.bg_class if @profile.theme
       end
     end.join(' ')
+  end
+
+  def close_button
+    link_to '&#215;'.html_safe, '#', :class => 'close' 
   end
 
   def sanitize(html)

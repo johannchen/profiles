@@ -37,9 +37,7 @@ module ProfilesHelper
   def alert_block(alert_class, content, actions, options={})
     options.reverse_merge!(:close => true)
     content_tag(:div, :class => "alert-message block-message #{alert_class}", :id => content) do
-      if options[:close]
-        content_tag(:a, '&#215;'.html_safe, :href => '#', :class => 'close')
-      end.to_s +
+      (options[:close] ? close_button : '') +
       content_tag(:h2, t("profile.alert_#{content}.heading")) +
       content_tag(:p,  t("profile.alert_#{content}.body_html")) +
       content_tag(:div, :class => 'alert-actions') do
@@ -61,6 +59,22 @@ module ProfilesHelper
                     link_to(t('profile.alert_new_theme.edit_button'), edit_profile_path(@profile), :class => 'btn small', :onclick => "alert('not working yet'); return false")])
       end
     end.join("\n").html_safe
+  end
+
+  def profile_view(&block)
+    content = capture(&block)
+    if params[:_pjax]
+      content_tag(:div, :class => 'content') do
+        close_button + content
+      end
+    else
+      content_for(:aux) do
+        content_tag(:div, :class => 'content') do
+          close_button + content
+        end
+      end
+      render(:file => 'profiles/show')
+    end
   end
 
 end

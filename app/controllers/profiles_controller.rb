@@ -4,7 +4,7 @@ class ProfilesController < ApplicationController
   load_and_authorize_resource # sets @profile
   before_filter :create_theme_if_missing!
 
-  respond_to :html
+  respond_to :html, :js
 
   def show
   end

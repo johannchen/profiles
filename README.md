@@ -12,16 +12,16 @@ This app was birthed out of [OneBody](https://github.com/seven1m/onebody), a mon
 
 * Login with Facebook or by Email
 * Profile Page
+* Custom Profile Themes (partially complete)
+* Search Directory
 * Send Email (soon)
-* Search Directory (soon)
-* Browse Directory (soon)
 
 ### Backend
 
-* Compatible with Heroku
+* Runnable on Heroku
 * Easy customization via yaml file
-* Localized for US English, with other languages easily added
-* Idiomatic Ruby
+* Localized for US English, with other languages on the way
+* Clean, Understandable Ruby
 
 ## Built With
 
@@ -36,6 +36,8 @@ This app was birthed out of [OneBody](https://github.com/seven1m/onebody), a mon
 * [RSpec](http://relishapp.com/rspec)
 * [Mocha](http://mocha.rubyforge.org/)
 * [FactoryGirl](https://github.com/thoughtbot/factory_girl)
+* [bitmask_attributes](https://github.com/joelmoss/bitmask_attributes)
+* [Sanitize](https://github.com/rgrove/sanitize/)
 
 ...and probably others I'm forgetting.
 

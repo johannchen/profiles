@@ -1,17 +1,24 @@
 module ProfilesHelper
 
   SILHOUETTE_IMAGES = {
-    'm' => 'manoutline.png',
-    'f' => 'womanoutline.png',
-    nil => 'questionoutline.png'
+    :full => {
+      'm' => 'manoutline.png',
+      'f' => 'womanoutline.png',
+      nil => 'questionoutline.png'
+    },
+    :tn => {
+      'm' => 'manoutline.tn.png',
+      'f' => 'womanoutline.tn.png',
+      nil => 'questionoutline.tn.png'
+    }
   }
 
-  def profile_pic_tag(profile)
+  def profile_pic_tag(profile, type=:full)
     content_tag(:div, :class => 'pic') do
-      if profile.full_image_url
-        image_tag(profile.full_image_url, :alt => profile.name)
+      if url = {:full => profile.full_image_url, :tn => profile.small_image_url}[type]
+        image_tag(url, :alt => profile.name)
       else
-        image_tag(SILHOUETTE_IMAGES[profile.gender], :alt => profile.name)
+        image_tag(SILHOUETTE_IMAGES[type][profile.gender], :alt => profile.name)
       end
     end
   end

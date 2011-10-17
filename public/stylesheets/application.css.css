@@ -34,33 +34,38 @@ html, body {
   font-weight: bold;
 }
 
+/* line 37, ../../app/assets/stylesheets/application.css.scss */
+.colorpicker input {
+  width: auto;
+}
+
 /* Layout - - - - - - - - - */
-/* line 39, ../../app/assets/stylesheets/application.css.scss */
+/* line 43, ../../app/assets/stylesheets/application.css.scss */
 #main {
   padding-top: 40px;
   min-height: 600px;
 }
 
-/* line 44, ../../app/assets/stylesheets/application.css.scss */
+/* line 48, ../../app/assets/stylesheets/application.css.scss */
 #footer {
   margin: 25px auto 0 auto;
 }
-/* line 46, ../../app/assets/stylesheets/application.css.scss */
+/* line 50, ../../app/assets/stylesheets/application.css.scss */
 #footer .content {
   text-align: center;
   padding: 3px;
 }
 
-/* line 53, ../../app/assets/stylesheets/application.css.scss */
+/* line 57, ../../app/assets/stylesheets/application.css.scss */
 .generic #main .container {
   margin-top: 25px;
 }
 
-/* line 59, ../../app/assets/stylesheets/application.css.scss */
+/* line 63, ../../app/assets/stylesheets/application.css.scss */
 .profile #main .container {
   margin-top: 35px;
 }
-/* line 63, ../../app/assets/stylesheets/application.css.scss */
+/* line 67, ../../app/assets/stylesheets/application.css.scss */
 .profile #footer {
   position: fixed;
   left: 0;
@@ -76,58 +81,58 @@ html, body {
   -khtml-border-top-right-radius: 5px;
   border-top-right-radius: 5px;
 }
-/* line 72, ../../app/assets/stylesheets/application.css.scss */
+/* line 76, ../../app/assets/stylesheets/application.css.scss */
 .profile #footer .content a {
   color: #fff;
   text-decoration: underline;
 }
 
-/* line 79, ../../app/assets/stylesheets/application.css.scss */
+/* line 83, ../../app/assets/stylesheets/application.css.scss */
 #search-form {
   float: right;
 }
-/* line 81, ../../app/assets/stylesheets/application.css.scss */
+/* line 85, ../../app/assets/stylesheets/application.css.scss */
 #search-form input {
   width: 275px;
 }
 
-/* line 86, ../../app/assets/stylesheets/application.css.scss */
+/* line 90, ../../app/assets/stylesheets/application.css.scss */
 .sidebar {
   border-left: 1px solid #ccc;
   padding-left: 20px;
 }
 
 /* Home Screen - - - - - - - */
-/* line 93, ../../app/assets/stylesheets/application.css.scss */
+/* line 97, ../../app/assets/stylesheets/application.css.scss */
 #home-container {
   background-color: #eee;
 }
-/* line 95, ../../app/assets/stylesheets/application.css.scss */
+/* line 99, ../../app/assets/stylesheets/application.css.scss */
 #home-container #home-image {
   min-height: 528px;
   background: white url(/assets/tree.jpg) top center no-repeat;
 }
-/* line 98, ../../app/assets/stylesheets/application.css.scss */
+/* line 102, ../../app/assets/stylesheets/application.css.scss */
 #home-container #home-image #welcome {
   margin-top: 80px;
 }
-/* line 100, ../../app/assets/stylesheets/application.css.scss */
+/* line 104, ../../app/assets/stylesheets/application.css.scss */
 #home-container #home-image #welcome h2 {
   margin-bottom: 25px;
 }
-/* line 103, ../../app/assets/stylesheets/application.css.scss */
+/* line 107, ../../app/assets/stylesheets/application.css.scss */
 #home-container #home-image #welcome .login-buttons {
   margin-top: 25px;
   line-height: 2em;
 }
 
 /* Profile - - - - - - - - */
-/* line 113, ../../app/assets/stylesheets/application.css.scss */
+/* line 117, ../../app/assets/stylesheets/application.css.scss */
 .headline {
   font-style: italic;
 }
 
-/* line 117, ../../app/assets/stylesheets/application.css.scss */
+/* line 121, ../../app/assets/stylesheets/application.css.scss */
 #profile-box {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -138,32 +143,32 @@ html, body {
   position: relative;
   z-index: 100;
 }
-/* line 121, ../../app/assets/stylesheets/application.css.scss */
+/* line 125, ../../app/assets/stylesheets/application.css.scss */
 #profile-box .content {
   padding: 15px;
 }
-/* line 124, ../../app/assets/stylesheets/application.css.scss */
+/* line 128, ../../app/assets/stylesheets/application.css.scss */
 #profile-box .controls {
   padding: 10px 15px 0 0;
   float: right;
 }
-/* line 127, ../../app/assets/stylesheets/application.css.scss */
+/* line 131, ../../app/assets/stylesheets/application.css.scss */
 #profile-box .controls .btn {
   background: #333;
   border: 1px solid #777;
   padding: 2px 5px;
 }
-/* line 131, ../../app/assets/stylesheets/application.css.scss */
+/* line 135, ../../app/assets/stylesheets/application.css.scss */
 #profile-box .controls .btn:hover {
   background: #fff;
 }
-/* line 134, ../../app/assets/stylesheets/application.css.scss */
+/* line 138, ../../app/assets/stylesheets/application.css.scss */
 #profile-box .controls .btn span {
   padding-left: 12px;
   display: inline-block;
   height: 20px;
 }
-/* line 141, ../../app/assets/stylesheets/application.css.scss */
+/* line 145, ../../app/assets/stylesheets/application.css.scss */
 #profile-box .name {
   background-color: rgba(0, 0, 0, 0.4);
   -moz-border-radius-topleft: 5px;
@@ -180,31 +185,31 @@ html, body {
   border-top-right-radius: 5px;
   padding: 5px 15px;
 }
-/* line 146, ../../app/assets/stylesheets/application.css.scss */
+/* line 150, ../../app/assets/stylesheets/application.css.scss */
 #profile-box .pic {
   margin-left: 15px;
   float: right;
 }
-/* line 149, ../../app/assets/stylesheets/application.css.scss */
+/* line 153, ../../app/assets/stylesheets/application.css.scss */
 #profile-box .pic img {
   width: 120px;
 }
-/* line 153, ../../app/assets/stylesheets/application.css.scss */
+/* line 157, ../../app/assets/stylesheets/application.css.scss */
 #profile-box .headline {
   margin-bottom: 10px;
 }
-/* line 156, ../../app/assets/stylesheets/application.css.scss */
+/* line 160, ../../app/assets/stylesheets/application.css.scss */
 #profile-box .bio {
   margin-bottom: 10px;
 }
-/* line 159, ../../app/assets/stylesheets/application.css.scss */
+/* line 163, ../../app/assets/stylesheets/application.css.scss */
 #profile-box .map {
   margin-top: 20px;
   width: 370px;
   height: 150px;
 }
 
-/* line 167, ../../app/assets/stylesheets/application.css.scss */
+/* line 171, ../../app/assets/stylesheets/application.css.scss */
 .links a {
   display: inline-block;
   -moz-border-radius: 5px;
@@ -223,16 +228,16 @@ html, body {
   text-overflow: ellipsis;
   text-decoration: none;
 }
-/* line 179, ../../app/assets/stylesheets/application.css.scss */
+/* line 183, ../../app/assets/stylesheets/application.css.scss */
 .links a.facebook {
   background: #eeeeee url(/assets/facebook.png) top left no-repeat;
 }
-/* line 182, ../../app/assets/stylesheets/application.css.scss */
+/* line 186, ../../app/assets/stylesheets/application.css.scss */
 .links a.phone {
   background: #eeeeee url(/assets/phone.png) top left no-repeat;
 }
 
-/* line 189, ../../app/assets/stylesheets/application.css.scss */
+/* line 193, ../../app/assets/stylesheets/application.css.scss */
 #aux .content {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -244,44 +249,44 @@ html, body {
   border: none;
   padding: 15px;
 }
-/* line 195, ../../app/assets/stylesheets/application.css.scss */
+/* line 199, ../../app/assets/stylesheets/application.css.scss */
 #aux .content .simple_form legend {
   padding-left: 90px;
 }
-/* line 196, ../../app/assets/stylesheets/application.css.scss */
+/* line 200, ../../app/assets/stylesheets/application.css.scss */
 #aux .content .simple_form label {
   width: 70px;
 }
-/* line 197, ../../app/assets/stylesheets/application.css.scss */
+/* line 201, ../../app/assets/stylesheets/application.css.scss */
 #aux .content .simple_form .input label {
   width: auto;
 }
-/* line 198, ../../app/assets/stylesheets/application.css.scss */
+/* line 202, ../../app/assets/stylesheets/application.css.scss */
 #aux .content .simple_form .actions {
   padding-left: 90px;
 }
-/* line 199, ../../app/assets/stylesheets/application.css.scss */
+/* line 203, ../../app/assets/stylesheets/application.css.scss */
 #aux .content .simple_form .input, #aux .content .simple_form .hint {
   margin-left: 90px;
 }
-/* line 202, ../../app/assets/stylesheets/application.css.scss */
+/* line 206, ../../app/assets/stylesheets/application.css.scss */
 #aux .status {
   margin-top: 15px;
 }
 
 /* Theme - - - - - - - - - */
-/* line 209, ../../app/assets/stylesheets/application.css.scss */
+/* line 213, ../../app/assets/stylesheets/application.css.scss */
 .bg-selector {
   height: 250px;
   overflow-x: hidden;
   overflow-y: scroll;
 }
-/* line 213, ../../app/assets/stylesheets/application.css.scss */
+/* line 217, ../../app/assets/stylesheets/application.css.scss */
 .bg-selector .bg {
   clear: left;
   margin-bottom: 10px;
 }
-/* line 216, ../../app/assets/stylesheets/application.css.scss */
+/* line 220, ../../app/assets/stylesheets/application.css.scss */
 .bg-selector .bg .img {
   width: 200px;
   height: 113px;
@@ -290,69 +295,69 @@ html, body {
   border: 4px solid #fff;
   margin: 0 5px 5px 0;
 }
-/* line 223, ../../app/assets/stylesheets/application.css.scss */
+/* line 227, ../../app/assets/stylesheets/application.css.scss */
 .bg-selector .bg .img.selected {
   border-color: #0069D6;
 }
-/* line 227, ../../app/assets/stylesheets/application.css.scss */
+/* line 231, ../../app/assets/stylesheets/application.css.scss */
 .bg-selector .bg .details {
   padding-top: 5px;
   margin-left: 210px;
 }
-/* line 230, ../../app/assets/stylesheets/application.css.scss */
+/* line 234, ../../app/assets/stylesheets/application.css.scss */
 .bg-selector .bg .details .name {
   font-weight: bold;
   margin-bottom: 5px;
 }
-/* line 234, ../../app/assets/stylesheets/application.css.scss */
+/* line 238, ../../app/assets/stylesheets/application.css.scss */
 .bg-selector .bg .details .description, .bg-selector .bg .details .credit, .bg-selector .bg .details .license {
   font-size: smaller;
   margin-bottom: 5px;
 }
 
 /* Forms - - - - - - - - - */
-/* line 244, ../../app/assets/stylesheets/application.css.scss */
+/* line 248, ../../app/assets/stylesheets/application.css.scss */
 .simple_form {
   /* temporary until HTML5 elements are included in Bootstrap
      See https://github.com/twitter/bootstrap/pull/28 */
 }
-/* line 245, ../../app/assets/stylesheets/application.css.scss */
+/* line 249, ../../app/assets/stylesheets/application.css.scss */
 .simple_form select.date {
   width: auto;
 }
-/* line 249, ../../app/assets/stylesheets/application.css.scss */
+/* line 253, ../../app/assets/stylesheets/application.css.scss */
 .simple_form .radio input {
   margin-right: 5px;
 }
-/* line 253, ../../app/assets/stylesheets/application.css.scss */
+/* line 257, ../../app/assets/stylesheets/application.css.scss */
 .simple_form .hint, .simple_form .help-inline {
   display: block;
   margin: 5px 0 0 150px;
   font-size: smaller;
   color: #777;
 }
-/* line 259, ../../app/assets/stylesheets/application.css.scss */
+/* line 263, ../../app/assets/stylesheets/application.css.scss */
 .simple_form .error .error {
   display: block;
   margin-left: 150px;
   color: red;
   font-weight: bold;
 }
-/* line 267, ../../app/assets/stylesheets/application.css.scss */
+/* line 271, ../../app/assets/stylesheets/application.css.scss */
 .simple_form form div.error input[type=tel] {
   border-color: #c87872;
   -webkit-box-shadow: 0 0 3px rgba(171, 41, 32, 0.25);
   -moz-box-shadow: 0 0 3px rgba(171, 41, 32, 0.25);
   box-shadow: 0 0 3px rgba(171, 41, 32, 0.25);
 }
-/* line 268, ../../app/assets/stylesheets/application.css.scss */
+/* line 272, ../../app/assets/stylesheets/application.css.scss */
 .simple_form form div.error input[type=tel]:focus {
   border-color: #b9554d;
   -webkit-box-shadow: 0 0 6px rgba(171, 41, 32, 0.5);
   -moz-box-shadow: 0 0 6px rgba(171, 41, 32, 0.5);
   box-shadow: 0 0 6px rgba(171, 41, 32, 0.5);
 }
-/* line 269, ../../app/assets/stylesheets/application.css.scss */
+/* line 273, ../../app/assets/stylesheets/application.css.scss */
 .simple_form input[type=tel]:focus {
   outline: none;
   border-color: rgba(82, 168, 236, 0.8);
@@ -360,7 +365,7 @@ html, body {
   -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
 }
-/* line 270, ../../app/assets/stylesheets/application.css.scss */
+/* line 274, ../../app/assets/stylesheets/application.css.scss */
 .simple_form input[type=tel] {
   -webkit-transition: border linear 0.2s,box-shadow linear 0.2s;
   -moz-transition: border linear 0.2s,box-shadow linear 0.2s;
@@ -369,7 +374,7 @@ html, body {
   -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
 }
-/* line 271, ../../app/assets/stylesheets/application.css.scss */
+/* line 275, ../../app/assets/stylesheets/application.css.scss */
 .simple_form input[type=tel] {
   display: inline-block;
   width: 210px;
@@ -384,154 +389,154 @@ html, body {
   border-radius: 3px;
 }
 
-/* line 274, ../../app/assets/stylesheets/application.css.scss */
+/* line 278, ../../app/assets/stylesheets/application.css.scss */
 #profile_bio {
   width: 380px;
   height: 150px;
 }
 
 /* Icons */
-/* line 286, ../../app/assets/stylesheets/application.css.scss */
+/* line 290, ../../app/assets/stylesheets/application.css.scss */
 .add-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px 0px no-repeat;
 }
 
-/* line 287, ../../app/assets/stylesheets/application.css.scss */
+/* line 291, ../../app/assets/stylesheets/application.css.scss */
 .edit-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -20px no-repeat;
 }
 
-/* line 288, ../../app/assets/stylesheets/application.css.scss */
+/* line 292, ../../app/assets/stylesheets/application.css.scss */
 .lock-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -40px no-repeat;
 }
 
-/* line 289, ../../app/assets/stylesheets/application.css.scss */
+/* line 293, ../../app/assets/stylesheets/application.css.scss */
 .lock-icon-small {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -45px no-repeat;
 }
 
-/* line 290, ../../app/assets/stylesheets/application.css.scss */
+/* line 294, ../../app/assets/stylesheets/application.css.scss */
 .comment-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -66px no-repeat;
 }
 
 /* up just a bit */
-/* line 291, ../../app/assets/stylesheets/application.css.scss */
+/* line 295, ../../app/assets/stylesheets/application.css.scss */
 .comment2-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -60px no-repeat;
 }
 
-/* line 292, ../../app/assets/stylesheets/application.css.scss */
+/* line 296, ../../app/assets/stylesheets/application.css.scss */
 .dots-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -80px no-repeat;
 }
 
-/* line 293, ../../app/assets/stylesheets/application.css.scss */
+/* line 297, ../../app/assets/stylesheets/application.css.scss */
 .people-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -100px no-repeat;
 }
 
-/* line 294, ../../app/assets/stylesheets/application.css.scss */
+/* line 298, ../../app/assets/stylesheets/application.css.scss */
 .money-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -120px no-repeat;
 }
 
-/* line 295, ../../app/assets/stylesheets/application.css.scss */
+/* line 299, ../../app/assets/stylesheets/application.css.scss */
 .feed-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -140px no-repeat;
 }
 
-/* line 296, ../../app/assets/stylesheets/application.css.scss */
+/* line 300, ../../app/assets/stylesheets/application.css.scss */
 .right-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -160px no-repeat;
 }
 
-/* line 297, ../../app/assets/stylesheets/application.css.scss */
+/* line 301, ../../app/assets/stylesheets/application.css.scss */
 .left-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -180px no-repeat;
 }
 
-/* line 298, ../../app/assets/stylesheets/application.css.scss */
+/* line 302, ../../app/assets/stylesheets/application.css.scss */
 .picture-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -200px no-repeat;
 }
 
-/* line 299, ../../app/assets/stylesheets/application.css.scss */
+/* line 303, ../../app/assets/stylesheets/application.css.scss */
 .file-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -220px no-repeat;
 }
 
-/* line 300, ../../app/assets/stylesheets/application.css.scss */
+/* line 304, ../../app/assets/stylesheets/application.css.scss */
 .verse-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -240px no-repeat;
 }
 
-/* line 301, ../../app/assets/stylesheets/application.css.scss */
+/* line 305, ../../app/assets/stylesheets/application.css.scss */
 .delete-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -256px no-repeat;
 }
 
 /* down a bit */
-/* line 302, ../../app/assets/stylesheets/application.css.scss */
+/* line 306, ../../app/assets/stylesheets/application.css.scss */
 .email-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -280px no-repeat;
 }
 
-/* line 303, ../../app/assets/stylesheets/application.css.scss */
+/* line 307, ../../app/assets/stylesheets/application.css.scss */
 .heart-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -300px no-repeat;
 }
 
-/* line 304, ../../app/assets/stylesheets/application.css.scss */
+/* line 308, ../../app/assets/stylesheets/application.css.scss */
 .rotate-cw-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -320px no-repeat;
 }
 
-/* line 305, ../../app/assets/stylesheets/application.css.scss */
+/* line 309, ../../app/assets/stylesheets/application.css.scss */
 .rotate-ccw-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -340px no-repeat;
 }
 
-/* line 306, ../../app/assets/stylesheets/application.css.scss */
+/* line 310, ../../app/assets/stylesheets/application.css.scss */
 .updown-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -360px no-repeat;
 }
 
-/* line 307, ../../app/assets/stylesheets/application.css.scss */
+/* line 311, ../../app/assets/stylesheets/application.css.scss */
 .alert-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -380px no-repeat;
 }
 
-/* line 308, ../../app/assets/stylesheets/application.css.scss */
+/* line 312, ../../app/assets/stylesheets/application.css.scss */
 .news-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -400px no-repeat;
 }
 
-/* line 309, ../../app/assets/stylesheets/application.css.scss */
+/* line 313, ../../app/assets/stylesheets/application.css.scss */
 .podcast-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -420px no-repeat;

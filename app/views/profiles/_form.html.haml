@@ -47,7 +47,20 @@
     = link_to t('profile.edit_form.cancel'), @profile, :class => 'btn close-btn'
   .status
 
+= stylesheet_link_tag 'colorpicker'
+= javascript_include_tag 'colorpicker'
+
 :javascript
+  $('#profile_theme_attributes_bg_color_top').ColorPicker({
+    onChange: function(hsb, hex, rgb, el) {
+      $('#profile_theme_attributes_bg_color_top').val('#'+hex);
+    },
+    onBeforeShow: function () {
+      $(this).ColorPickerSetColor(this.value);
+    }
+  }).bind('keyup', function() {
+    $(this).ColorPickerSetColor(this.value);
+  });
   $('.bg-selector .img').click(function(e) {
     $('#profile_theme_attributes_bg_color_top').val('');
     $('.bg-selector .img').removeClass('selected');

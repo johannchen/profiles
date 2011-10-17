@@ -1,5 +1,6 @@
-.controls
-  = link_to content_tag(:span, '', :class => 'edit-icon'), edit_profile_path(@profile), 'data-pjax' => '#aux', :title => t('profile.edit_button'), :class => 'btn small'
+- if can? :edit, @profile
+  .controls
+    = link_to content_tag(:span, '', :class => 'edit-icon'), edit_profile_path(@profile), 'data-pjax' => '#aux', :title => t('profile.edit_button'), :class => 'btn small'
 
 %h2.name= @profile.name
 

@@ -32,10 +32,11 @@
   .mixed #bg-byline { color: #fff; @include single-text-shadow(#000, 1px, 1px, 0); }
 <% elsif @theme.bg_color_top %>
   html, body {
-    height: 100%;
+    min-height: 100%;
   }
   body {
-    @include background-image(linear-gradient(<%= @theme.bg_color_top %>, <%= @theme.bg_color_bottom || "lighten(#{@theme.bg_color_top}, 15%)" %>))
+    background-color: <%= bg_color_bottom = @theme.bg_color_bottom || "lighten(#{@theme.bg_color_top}, 15%)" %>;
+    @include background-image(linear-gradient(<%= @theme.bg_color_top %>, <%= bg_color_bottom %>))
   }
 <% end %>
 

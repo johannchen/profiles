@@ -23,6 +23,8 @@ class Profile < ActiveRecord::Base
   has_many :friends, :through => :friendships
   has_one :theme, :order => 'id', :dependent => :destroy
 
+  accepts_nested_attributes_for :theme
+
   validates_presence_of :name
   validates_length_of :name, :maximum => 255
   validates_length_of :headline, :maximum => 50
@@ -31,7 +33,7 @@ class Profile < ActiveRecord::Base
   validates_length_of :phone, :maximum => 50
   validates_uniqueness_of :user_id
 
-  attr_accessible :name, :headline, :bio, :gender, :birthday, :location, :phone, :facebook_id, :facebook_url, :small_image_url, :full_image_url
+  attr_accessible :name, :headline, :bio, :gender, :birthday, :location, :phone, :facebook_id, :facebook_url, :small_image_url, :full_image_url, :theme_attributes
 
   blank_to_nil
 

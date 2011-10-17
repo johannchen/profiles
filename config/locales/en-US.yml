@@ -21,6 +21,9 @@ en-US:
         birthday: Birthday
         phone: Phone
         bio: Bio
+      theme:
+        bg_color_top: Color
+        box_pos: Overlay Position
       user:
         current_password: Current Password
         email: Email
@@ -93,6 +96,14 @@ en-US:
       tabs:
         profile: Profile
         theme: Theme
+      theme:
+        box_pos:
+          left: Left
+          right: Right
+        tabs:
+          scaled: Scaled
+          tiled: Tiled
+          color: Color
     friends: Friends
     not_visible_warning_html: Your profile isn't visible yet, because it's pending review by an administrator.
     theme:

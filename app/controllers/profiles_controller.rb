@@ -20,6 +20,7 @@ class ProfilesController < ApplicationController
   end
 
   def edit
+    @backgrounds = Theme.backgrounds
   end
 
   def update

@@ -1,7 +1,8 @@
 .controls
   = link_to content_tag(:span, '', :class => 'edit-icon'), edit_profile_path(@profile), 'data-pjax' => '#aux', :title => t('profile.edit_button'), :class => 'btn small'
-%h2.name
-  = @profile.name
+
+%h2.name= @profile.name
+
 .content
   = profile_pic_tag(@profile)
 

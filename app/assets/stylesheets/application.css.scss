@@ -204,6 +204,41 @@ html,body{background:none;}
   }
 }
 
+/* Theme - - - - - - - - - */
+
+.bg-selector {
+  height: 250px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  .bg {
+    clear: left;
+    margin-bottom: 10px;
+    .img {
+      width: 200px;
+      height: 113px;
+      float: left;
+      cursor: pointer;
+      border: 4px solid #fff;
+      margin: 0 5px 5px 0;
+      &.selected {
+        border-color: #0069D6;
+      }
+    }
+    .details {
+      padding-top: 5px;
+      margin-left: 210px;
+      .name {
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      .description, .credit, .license {
+        font-size: smaller;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
 /* Forms - - - - - - - - - */
 
 .simple_form {

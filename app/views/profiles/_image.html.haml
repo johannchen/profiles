@@ -1,0 +1,7 @@
+.bg
+  .img{:style => "background: url(#{image['tn_filename'] || image['filename']}) center #{image['format'] == 'tiled' ? 'no-repeat' : ''};", :class => @profile.theme.bg_image == image['filename'] && 'selected', 'data-filename' => image['filename']}
+  .details
+    .name= image['name']
+    .description= image['description']
+    .credit
+      =raw "#{image['credit']} (#{raw image['license-short']})"

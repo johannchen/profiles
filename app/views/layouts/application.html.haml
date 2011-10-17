@@ -9,7 +9,7 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
     = yield(:head)
-  %body{:class => body_class}
+  %body{:class => body_class, 'data-profile-path' => @profile && profile_path(@profile)}
 
     .topbar
       .fill

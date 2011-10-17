@@ -1,6 +1,6 @@
 $ ->
   # close alerts
-  resource = (m = location.pathname.match(/^\/profiles\/\d+/)) && m[0]
+  resource = $('body').data('profile-path')
   $('.alert-message .close').live 'click', ->
     id = $(@).parents('.alert-message').hide().attr('id')
     $.ajax("#{resource}/alerts/#{id}", {type: 'delete'}) if id

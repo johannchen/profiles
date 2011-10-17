@@ -21,10 +21,14 @@
   - if @profile.birthday
     %p= t('profile.birthday', :birthday => l(@profile.birthday, :format => :short))
 
-  .map
+  - if @profile.location
+    .map
+
   -# needs styling work...
   -#- if @profile.friends.any?
     -#%h3= t('profile.friends')
     -#%p
       -#- @profile.friends.each do |friend|
         -#= link_to(image_tag(friend.small_image_url, :alt => friend.name), friend)
+
+= render :partial => 'map_js'

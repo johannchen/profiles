@@ -41,8 +41,11 @@ $(document).bind 'ajaxSend', (event, request) ->
 $(document).bind 'ajaxComplete', (event, request) ->
   for type in ['Info', 'Success', 'Warning', 'Error']
     if msg = request.getResponseHeader("X-Message-#{type}")
-      box = "<div class='alert-message #{type}'><a href='#' class='close'>&#215;</a><p>#{msg}</p></div>"
-      if $('form .status').length
-        $('form .status').html(box).show().fadeOut(5000);
-      else
-        $('#messages').append(box)
+      showAlert(type, msg)
+
+window.showAlert = (type, msg)->
+  box = "<div class='alert-message #{type}'><a href='#' class='close'>&#215;</a><p>#{msg}</p></div>"
+  if $('form .status').length
+    $('form .status').html(box).show().fadeOut(10000);
+  else
+    $('#messages').append(box)

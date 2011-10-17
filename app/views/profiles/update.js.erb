@@ -1,2 +1,5 @@
-$('#profile-box').html("<%=j render :partial => 'box' %>");
-renderMap();
+<% if @profile.errors.any? %>
+  showAlert('error', '<%=j @profile.errors.full_messages.join('; ') %>');
+<% else %>
+  $('#profile-box').html("<%=j render :partial => 'box' %>");
+<% end %>

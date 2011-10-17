@@ -40,7 +40,7 @@ class Theme < ActiveRecord::Base
 
   def bg_color_top=(color)
     write_attribute(:bg_color_top, color)
-    self.bg_class = nil
+    self.bg_class = nil unless color.to_s.blank?
   end
 
   class << self

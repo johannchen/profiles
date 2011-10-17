@@ -208,6 +208,26 @@ html,body{background:none;}
   }
 }
 
+/* Search Results - - - - -*/
+
+#search-results {
+  h2 {
+    margin-bottom: 20px;
+  }
+  .profile {
+    .pic {
+      float: left;
+      margin-right: 10px;
+    }
+    .name {
+      font-size: larger;
+    }
+  }
+  .empty {
+    font-style: italic;
+  }
+}
+
 /* Theme - - - - - - - - - */
 
 .bg-selector {

@@ -7,7 +7,7 @@
     - if 'profile-box' == part
       .span7.columns
         #profile-box
-          = render :partial => 'box'
+          = render :partial => 'profiles/box'
     - if 'alerts' == part
       .span9.columns
         #aux
@@ -22,3 +22,12 @@
 - content_for(:head) do
   = theme_head_markup(@profile.theme)
   = theme_stylesheet_link_tag
+
+:javascript
+  $('#search-form').live('submit', function(e) {
+    e.preventDefault()
+    $.pjax({
+      container: '#aux',
+      url: this.action + '?' + $(this).serialize()
+    });
+  });

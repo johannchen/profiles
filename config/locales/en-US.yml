@@ -127,6 +127,11 @@ en-US:
     sign_up_with_email_intro: Optionally, you can sign up by providing your email address and choosing a password.
     sign_up_with_facebook: Log in with Facebook
 
+  search:
+    results:
+      none: No profiles found.
+      heading: Search Results
+
   session:
     log_in_button: Log In
     log_in_heading: Log In

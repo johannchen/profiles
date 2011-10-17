@@ -22,12 +22,10 @@
                 = link_to t('nav.profile'), my_profile_path
               %li{:class => params[:controller] == 'users' && 'active'}
                 = link_to t('nav.account'), edit_user_registration_path
-              %li{:class => params[:controller] == 'searches' && 'active'}
-                = link_to t('nav.search'), new_search_path
               %li
                 = link_to t('nav.log_out'), destroy_user_session_path, :method => :delete
             %form{:action => search_path, :method => :get, :id => 'search-form'}
-              %input{:name => 'q', :placeholder => t('nav.search_placeholder')}
+              = text_field_tag :q, params[:q], :placeholder => t('nav.search_placeholder')
           - else
             %ul
               %li{:class => params[:controller] == 'homes' && 'active'}

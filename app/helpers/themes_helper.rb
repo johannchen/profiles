@@ -1,5 +1,15 @@
 module ThemesHelper
 
+  # use this in the template
+  def theme_markup(theme)
+    content_for(:head) do
+      theme_head_markup(@profile.theme) +
+      theme_stylesheet_link_tag
+    end
+    theme_body_markup(theme)
+  end
+
+  # use theme_markup
   def theme_head_markup(theme)
     # font inclusion
     if theme
@@ -8,6 +18,7 @@ module ThemesHelper
     end
   end
 
+  # use theme_markup
   def theme_body_markup(theme)
     # image byline
     if theme && theme.bg_image_byline
@@ -17,6 +28,7 @@ module ThemesHelper
     end
   end
 
+  # use theme_markup
   def theme_stylesheet_link_tag
     return unless @profile && @profile.theme
     stylesheet_link_tag(profile_theme_path(@profile, :m => @profile.theme.updated_at.to_f))

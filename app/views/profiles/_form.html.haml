@@ -49,22 +49,4 @@
 
 = stylesheet_link_tag 'jquery.miniColors.css'
 = javascript_include_tag 'jquery.miniColors.js'
-
-:javascript
-  $('.color').miniColors({
-    change: function() {
-      $('.bg-selector .img').removeClass('selected');
-      $('#profile_theme_attributes_bg_image').val('')
-    }
-  });
-  $('.bg-selector .img').click(function(e) {
-    $('#profile_theme_attributes_bg_color_top').val('');
-    $('.bg-selector .img').removeClass('selected');
-    $('#profile_theme_attributes_bg_image').val($(e.target).addClass('selected').data('filename'));
-  });
-  $('#profile_theme_attributes_bg_color_top').change(function(e) {
-    if($(e.target).val() != '') {
-      $('.bg-selector .img').removeClass('selected');
-      $('#profile_theme_attributes_bg_image').val('');
-    }
-  });
+= javascript_include_tag 'profile_form'

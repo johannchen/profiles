@@ -8,4 +8,5 @@
 //= require jquery_ujs
 //= require jquery.pjax
 //= require bootstrap-tabs
-//= require_tree .
+//= require controls
+//= require forms

@@ -25,6 +25,9 @@
 
   - if @profile.location
     .map
+    = hidden_field_tag :location, @profile.location
+    = javascript_include_tag 'http://maps.googleapis.com/maps/api/js?sensor=false'
+    = javascript_include_tag 'map'
 
   -# needs styling work...
   -#- if @profile.friends.any?
@@ -32,5 +35,3 @@
     -#%p
       -#- @profile.friends.each do |friend|
         -#= link_to(image_tag(friend.small_image_url, :alt => friend.name), friend)
-
-= render :partial => 'profiles/map_js'

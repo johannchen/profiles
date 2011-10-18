@@ -40,6 +40,11 @@ en-US:
   app:
     powered_by_html: Powered by <a href="http://church.io">Church.IO Profiles</a>
 
+  devise:
+    users:
+      user:
+        destroyed: Your account has been deleted.
+
   feedback:
     form_errors_heading: There were errors.
 
@@ -75,6 +80,9 @@ en-US:
     search_placeholder: Search by name
     log_in: Log In
     log_out: Log Out
+
+  pages:
+    privacy_policy: Privacy Policy
 
   profile:
     attributes:

@@ -39,33 +39,38 @@ html, body {
   width: auto;
 }
 
+/* line 41, ../../app/assets/stylesheets/application.css.scss */
+.actions .right {
+  float: right;
+}
+
 /* Layout - - - - - - - - -*/
-/* line 43, ../../app/assets/stylesheets/application.css.scss */
+/* line 47, ../../app/assets/stylesheets/application.css.scss */
 #main {
   padding-top: 40px;
   min-height: 600px;
 }
 
-/* line 48, ../../app/assets/stylesheets/application.css.scss */
+/* line 52, ../../app/assets/stylesheets/application.css.scss */
 #footer {
   margin: 25px auto 0 auto;
 }
-/* line 50, ../../app/assets/stylesheets/application.css.scss */
+/* line 54, ../../app/assets/stylesheets/application.css.scss */
 #footer .content {
   text-align: center;
   padding: 3px;
 }
 
-/* line 57, ../../app/assets/stylesheets/application.css.scss */
+/* line 61, ../../app/assets/stylesheets/application.css.scss */
 .generic #main .container {
   margin-top: 25px;
 }
 
-/* line 63, ../../app/assets/stylesheets/application.css.scss */
+/* line 67, ../../app/assets/stylesheets/application.css.scss */
 .profile #main .container {
   margin-top: 35px;
 }
-/* line 67, ../../app/assets/stylesheets/application.css.scss */
+/* line 71, ../../app/assets/stylesheets/application.css.scss */
 .profile #footer {
   position: fixed;
   left: 0;
@@ -81,58 +86,58 @@ html, body {
   -khtml-border-top-right-radius: 5px;
   border-top-right-radius: 5px;
 }
-/* line 76, ../../app/assets/stylesheets/application.css.scss */
+/* line 80, ../../app/assets/stylesheets/application.css.scss */
 .profile #footer .content a {
   color: #fff;
   text-decoration: underline;
 }
 
-/* line 83, ../../app/assets/stylesheets/application.css.scss */
+/* line 87, ../../app/assets/stylesheets/application.css.scss */
 #search-form {
   float: right;
 }
-/* line 85, ../../app/assets/stylesheets/application.css.scss */
+/* line 89, ../../app/assets/stylesheets/application.css.scss */
 #search-form input {
   width: 275px;
 }
 
-/* line 90, ../../app/assets/stylesheets/application.css.scss */
+/* line 94, ../../app/assets/stylesheets/application.css.scss */
 .sidebar {
   border-left: 1px solid #ccc;
   padding-left: 20px;
 }
 
 /* Home Screen - - - - - - */
-/* line 97, ../../app/assets/stylesheets/application.css.scss */
+/* line 101, ../../app/assets/stylesheets/application.css.scss */
 #home-container {
   background-color: #eee;
 }
-/* line 99, ../../app/assets/stylesheets/application.css.scss */
+/* line 103, ../../app/assets/stylesheets/application.css.scss */
 #home-container #home-image {
   min-height: 528px;
   background: white url(/assets/tree.jpg) top center no-repeat;
 }
-/* line 102, ../../app/assets/stylesheets/application.css.scss */
+/* line 106, ../../app/assets/stylesheets/application.css.scss */
 #home-container #home-image #welcome {
   margin-top: 80px;
 }
-/* line 104, ../../app/assets/stylesheets/application.css.scss */
+/* line 108, ../../app/assets/stylesheets/application.css.scss */
 #home-container #home-image #welcome h2 {
   margin-bottom: 25px;
 }
-/* line 107, ../../app/assets/stylesheets/application.css.scss */
+/* line 111, ../../app/assets/stylesheets/application.css.scss */
 #home-container #home-image #welcome .login-buttons {
   margin-top: 25px;
   line-height: 2em;
 }
 
 /* Profile - - - - - - - - */
-/* line 117, ../../app/assets/stylesheets/application.css.scss */
+/* line 121, ../../app/assets/stylesheets/application.css.scss */
 .headline {
   font-style: italic;
 }
 
-/* line 121, ../../app/assets/stylesheets/application.css.scss */
+/* line 125, ../../app/assets/stylesheets/application.css.scss */
 #profile-box {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -143,32 +148,32 @@ html, body {
   position: relative;
   z-index: 100;
 }
-/* line 125, ../../app/assets/stylesheets/application.css.scss */
+/* line 129, ../../app/assets/stylesheets/application.css.scss */
 #profile-box .content {
   padding: 15px;
 }
-/* line 128, ../../app/assets/stylesheets/application.css.scss */
+/* line 132, ../../app/assets/stylesheets/application.css.scss */
 #profile-box .controls {
   padding: 10px 15px 0 0;
   float: right;
 }
-/* line 131, ../../app/assets/stylesheets/application.css.scss */
+/* line 135, ../../app/assets/stylesheets/application.css.scss */
 #profile-box .controls .btn {
   background: #333;
   border: 1px solid #777;
   padding: 2px 5px;
 }
-/* line 135, ../../app/assets/stylesheets/application.css.scss */
+/* line 139, ../../app/assets/stylesheets/application.css.scss */
 #profile-box .controls .btn:hover {
   background: #fff;
 }
-/* line 138, ../../app/assets/stylesheets/application.css.scss */
+/* line 142, ../../app/assets/stylesheets/application.css.scss */
 #profile-box .controls .btn span {
   padding-left: 12px;
   display: inline-block;
   height: 20px;
 }
-/* line 145, ../../app/assets/stylesheets/application.css.scss */
+/* line 149, ../../app/assets/stylesheets/application.css.scss */
 #profile-box .name {
   background-color: rgba(0, 0, 0, 0.4);
   -moz-border-radius-topleft: 5px;
@@ -185,31 +190,31 @@ html, body {
   border-top-right-radius: 5px;
   padding: 5px 15px;
 }
-/* line 150, ../../app/assets/stylesheets/application.css.scss */
+/* line 154, ../../app/assets/stylesheets/application.css.scss */
 #profile-box .pic {
   margin-left: 15px;
   float: right;
 }
-/* line 153, ../../app/assets/stylesheets/application.css.scss */
+/* line 157, ../../app/assets/stylesheets/application.css.scss */
 #profile-box .pic img {
   width: 120px;
 }
-/* line 157, ../../app/assets/stylesheets/application.css.scss */
+/* line 161, ../../app/assets/stylesheets/application.css.scss */
 #profile-box .headline {
   margin-bottom: 10px;
 }
-/* line 160, ../../app/assets/stylesheets/application.css.scss */
+/* line 164, ../../app/assets/stylesheets/application.css.scss */
 #profile-box .bio {
   margin-bottom: 10px;
 }
-/* line 163, ../../app/assets/stylesheets/application.css.scss */
+/* line 167, ../../app/assets/stylesheets/application.css.scss */
 #profile-box .map {
   margin-top: 20px;
   width: 370px;
   height: 150px;
 }
 
-/* line 171, ../../app/assets/stylesheets/application.css.scss */
+/* line 175, ../../app/assets/stylesheets/application.css.scss */
 .links a {
   display: inline-block;
   -moz-border-radius: 5px;
@@ -228,16 +233,16 @@ html, body {
   text-overflow: ellipsis;
   text-decoration: none;
 }
-/* line 183, ../../app/assets/stylesheets/application.css.scss */
+/* line 187, ../../app/assets/stylesheets/application.css.scss */
 .links a.facebook {
   background: #eeeeee url(/assets/facebook.png) top left no-repeat;
 }
-/* line 186, ../../app/assets/stylesheets/application.css.scss */
+/* line 190, ../../app/assets/stylesheets/application.css.scss */
 .links a.phone {
   background: #eeeeee url(/assets/phone.png) top left no-repeat;
 }
 
-/* line 193, ../../app/assets/stylesheets/application.css.scss */
+/* line 197, ../../app/assets/stylesheets/application.css.scss */
 #aux .content {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -250,63 +255,63 @@ html, body {
   padding: 15px;
   margin-bottom: 25px;
 }
-/* line 200, ../../app/assets/stylesheets/application.css.scss */
+/* line 204, ../../app/assets/stylesheets/application.css.scss */
 #aux .content .simple_form legend {
   padding-left: 90px;
 }
-/* line 201, ../../app/assets/stylesheets/application.css.scss */
+/* line 205, ../../app/assets/stylesheets/application.css.scss */
 #aux .content .simple_form label {
   width: 70px;
 }
-/* line 202, ../../app/assets/stylesheets/application.css.scss */
+/* line 206, ../../app/assets/stylesheets/application.css.scss */
 #aux .content .simple_form .input label {
   width: auto;
 }
-/* line 203, ../../app/assets/stylesheets/application.css.scss */
+/* line 207, ../../app/assets/stylesheets/application.css.scss */
 #aux .content .simple_form .actions {
   padding-left: 90px;
 }
-/* line 204, ../../app/assets/stylesheets/application.css.scss */
+/* line 208, ../../app/assets/stylesheets/application.css.scss */
 #aux .content .simple_form .input, #aux .content .simple_form .hint {
   margin-left: 90px;
 }
-/* line 207, ../../app/assets/stylesheets/application.css.scss */
+/* line 211, ../../app/assets/stylesheets/application.css.scss */
 #aux .status {
   margin-top: 15px;
 }
 
 /* Search Results - - - - -*/
-/* line 215, ../../app/assets/stylesheets/application.css.scss */
+/* line 219, ../../app/assets/stylesheets/application.css.scss */
 #search-results h2 {
   margin-bottom: 20px;
 }
-/* line 219, ../../app/assets/stylesheets/application.css.scss */
+/* line 223, ../../app/assets/stylesheets/application.css.scss */
 #search-results .profile .pic {
   float: left;
   margin-right: 10px;
 }
-/* line 223, ../../app/assets/stylesheets/application.css.scss */
+/* line 227, ../../app/assets/stylesheets/application.css.scss */
 #search-results .profile .name {
   font-size: larger;
 }
-/* line 227, ../../app/assets/stylesheets/application.css.scss */
+/* line 231, ../../app/assets/stylesheets/application.css.scss */
 #search-results .empty {
   font-style: italic;
 }
 
 /* Theme - - - - - - - - - */
-/* line 234, ../../app/assets/stylesheets/application.css.scss */
+/* line 238, ../../app/assets/stylesheets/application.css.scss */
 .bg-selector {
   height: 250px;
   overflow-x: hidden;
   overflow-y: scroll;
 }
-/* line 238, ../../app/assets/stylesheets/application.css.scss */
+/* line 242, ../../app/assets/stylesheets/application.css.scss */
 .bg-selector .bg {
   clear: left;
   margin-bottom: 10px;
 }
-/* line 241, ../../app/assets/stylesheets/application.css.scss */
+/* line 245, ../../app/assets/stylesheets/application.css.scss */
 .bg-selector .bg .img {
   width: 200px;
   height: 113px;
@@ -315,74 +320,74 @@ html, body {
   border: 4px solid #fff;
   margin: 0 5px 5px 0;
 }
-/* line 248, ../../app/assets/stylesheets/application.css.scss */
+/* line 252, ../../app/assets/stylesheets/application.css.scss */
 .bg-selector .bg .img.selected {
   border-color: #0069D6;
 }
-/* line 252, ../../app/assets/stylesheets/application.css.scss */
+/* line 256, ../../app/assets/stylesheets/application.css.scss */
 .bg-selector .bg .details {
   padding-top: 5px;
   margin-left: 210px;
 }
-/* line 255, ../../app/assets/stylesheets/application.css.scss */
+/* line 259, ../../app/assets/stylesheets/application.css.scss */
 .bg-selector .bg .details .name {
   font-weight: bold;
   margin-bottom: 5px;
 }
-/* line 259, ../../app/assets/stylesheets/application.css.scss */
+/* line 263, ../../app/assets/stylesheets/application.css.scss */
 .bg-selector .bg .details .description, .bg-selector .bg .details .credit, .bg-selector .bg .details .license {
   font-size: smaller;
   margin-bottom: 5px;
 }
 
-/* line 267, ../../app/assets/stylesheets/application.css.scss */
+/* line 271, ../../app/assets/stylesheets/application.css.scss */
 .color {
   width: 70px;
 }
 
 /* Forms - - - - - - - - - */
-/* line 273, ../../app/assets/stylesheets/application.css.scss */
+/* line 277, ../../app/assets/stylesheets/application.css.scss */
 .simple_form {
   /* temporary until HTML5 elements are included in Bootstrap
      See https://github.com/twitter/bootstrap/pull/28 */
 }
-/* line 274, ../../app/assets/stylesheets/application.css.scss */
+/* line 278, ../../app/assets/stylesheets/application.css.scss */
 .simple_form select.date {
   width: auto;
 }
-/* line 278, ../../app/assets/stylesheets/application.css.scss */
+/* line 282, ../../app/assets/stylesheets/application.css.scss */
 .simple_form .radio input {
   margin-right: 5px;
 }
-/* line 282, ../../app/assets/stylesheets/application.css.scss */
+/* line 286, ../../app/assets/stylesheets/application.css.scss */
 .simple_form .hint, .simple_form .help-inline {
   display: block;
   margin: 5px 0 0 150px;
   font-size: smaller;
   color: #777;
 }
-/* line 288, ../../app/assets/stylesheets/application.css.scss */
+/* line 292, ../../app/assets/stylesheets/application.css.scss */
 .simple_form .error .error {
   display: block;
   margin-left: 150px;
   color: red;
   font-weight: bold;
 }
-/* line 296, ../../app/assets/stylesheets/application.css.scss */
+/* line 300, ../../app/assets/stylesheets/application.css.scss */
 .simple_form form div.error input[type=tel] {
   border-color: #c87872;
   -webkit-box-shadow: 0 0 3px rgba(171, 41, 32, 0.25);
   -moz-box-shadow: 0 0 3px rgba(171, 41, 32, 0.25);
   box-shadow: 0 0 3px rgba(171, 41, 32, 0.25);
 }
-/* line 297, ../../app/assets/stylesheets/application.css.scss */
+/* line 301, ../../app/assets/stylesheets/application.css.scss */
 .simple_form form div.error input[type=tel]:focus {
   border-color: #b9554d;
   -webkit-box-shadow: 0 0 6px rgba(171, 41, 32, 0.5);
   -moz-box-shadow: 0 0 6px rgba(171, 41, 32, 0.5);
   box-shadow: 0 0 6px rgba(171, 41, 32, 0.5);
 }
-/* line 298, ../../app/assets/stylesheets/application.css.scss */
+/* line 302, ../../app/assets/stylesheets/application.css.scss */
 .simple_form input[type=tel]:focus {
   outline: none;
   border-color: rgba(82, 168, 236, 0.8);
@@ -390,7 +395,7 @@ html, body {
   -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
 }
-/* line 299, ../../app/assets/stylesheets/application.css.scss */
+/* line 303, ../../app/assets/stylesheets/application.css.scss */
 .simple_form input[type=tel] {
   -webkit-transition: border linear 0.2s,box-shadow linear 0.2s;
   -moz-transition: border linear 0.2s,box-shadow linear 0.2s;
@@ -399,7 +404,7 @@ html, body {
   -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
 }
-/* line 300, ../../app/assets/stylesheets/application.css.scss */
+/* line 304, ../../app/assets/stylesheets/application.css.scss */
 .simple_form input[type=tel] {
   display: inline-block;
   width: 210px;
@@ -414,154 +419,154 @@ html, body {
   border-radius: 3px;
 }
 
-/* line 303, ../../app/assets/stylesheets/application.css.scss */
+/* line 307, ../../app/assets/stylesheets/application.css.scss */
 #profile_bio {
   width: 380px;
   height: 150px;
 }
 
 /* Icons */
-/* line 315, ../../app/assets/stylesheets/application.css.scss */
+/* line 319, ../../app/assets/stylesheets/application.css.scss */
 .add-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px 0px no-repeat;
 }
 
-/* line 316, ../../app/assets/stylesheets/application.css.scss */
+/* line 320, ../../app/assets/stylesheets/application.css.scss */
 .edit-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -20px no-repeat;
 }
 
-/* line 317, ../../app/assets/stylesheets/application.css.scss */
+/* line 321, ../../app/assets/stylesheets/application.css.scss */
 .lock-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -40px no-repeat;
 }
 
-/* line 318, ../../app/assets/stylesheets/application.css.scss */
+/* line 322, ../../app/assets/stylesheets/application.css.scss */
 .lock-icon-small {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -45px no-repeat;
 }
 
-/* line 319, ../../app/assets/stylesheets/application.css.scss */
+/* line 323, ../../app/assets/stylesheets/application.css.scss */
 .comment-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -66px no-repeat;
 }
 
 /* up just a bit */
-/* line 320, ../../app/assets/stylesheets/application.css.scss */
+/* line 324, ../../app/assets/stylesheets/application.css.scss */
 .comment2-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -60px no-repeat;
 }
 
-/* line 321, ../../app/assets/stylesheets/application.css.scss */
+/* line 325, ../../app/assets/stylesheets/application.css.scss */
 .dots-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -80px no-repeat;
 }
 
-/* line 322, ../../app/assets/stylesheets/application.css.scss */
+/* line 326, ../../app/assets/stylesheets/application.css.scss */
 .people-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -100px no-repeat;
 }
 
-/* line 323, ../../app/assets/stylesheets/application.css.scss */
+/* line 327, ../../app/assets/stylesheets/application.css.scss */
 .money-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -120px no-repeat;
 }
 
-/* line 324, ../../app/assets/stylesheets/application.css.scss */
+/* line 328, ../../app/assets/stylesheets/application.css.scss */
 .feed-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -140px no-repeat;
 }
 
-/* line 325, ../../app/assets/stylesheets/application.css.scss */
+/* line 329, ../../app/assets/stylesheets/application.css.scss */
 .right-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -160px no-repeat;
 }
 
-/* line 326, ../../app/assets/stylesheets/application.css.scss */
+/* line 330, ../../app/assets/stylesheets/application.css.scss */
 .left-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -180px no-repeat;
 }
 
-/* line 327, ../../app/assets/stylesheets/application.css.scss */
+/* line 331, ../../app/assets/stylesheets/application.css.scss */
 .picture-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -200px no-repeat;
 }
 
-/* line 328, ../../app/assets/stylesheets/application.css.scss */
+/* line 332, ../../app/assets/stylesheets/application.css.scss */
 .file-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -220px no-repeat;
 }
 
-/* line 329, ../../app/assets/stylesheets/application.css.scss */
+/* line 333, ../../app/assets/stylesheets/application.css.scss */
 .verse-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -240px no-repeat;
 }
 
-/* line 330, ../../app/assets/stylesheets/application.css.scss */
+/* line 334, ../../app/assets/stylesheets/application.css.scss */
 .delete-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -256px no-repeat;
 }
 
 /* down a bit */
-/* line 331, ../../app/assets/stylesheets/application.css.scss */
+/* line 335, ../../app/assets/stylesheets/application.css.scss */
 .email-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -280px no-repeat;
 }
 
-/* line 332, ../../app/assets/stylesheets/application.css.scss */
+/* line 336, ../../app/assets/stylesheets/application.css.scss */
 .heart-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -300px no-repeat;
 }
 
-/* line 333, ../../app/assets/stylesheets/application.css.scss */
+/* line 337, ../../app/assets/stylesheets/application.css.scss */
 .rotate-cw-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -320px no-repeat;
 }
 
-/* line 334, ../../app/assets/stylesheets/application.css.scss */
+/* line 338, ../../app/assets/stylesheets/application.css.scss */
 .rotate-ccw-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -340px no-repeat;
 }
 
-/* line 335, ../../app/assets/stylesheets/application.css.scss */
+/* line 339, ../../app/assets/stylesheets/application.css.scss */
 .updown-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -360px no-repeat;
 }
 
-/* line 336, ../../app/assets/stylesheets/application.css.scss */
+/* line 340, ../../app/assets/stylesheets/application.css.scss */
 .alert-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -380px no-repeat;
 }
 
-/* line 337, ../../app/assets/stylesheets/application.css.scss */
+/* line 341, ../../app/assets/stylesheets/application.css.scss */
 .news-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -400px no-repeat;
 }
 
-/* line 338, ../../app/assets/stylesheets/application.css.scss */
+/* line 342, ../../app/assets/stylesheets/application.css.scss */
 .podcast-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -420px no-repeat;

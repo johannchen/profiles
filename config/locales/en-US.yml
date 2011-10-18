@@ -3,7 +3,6 @@
 en-US:
   account:
     edit_form:
-      delete_heading: Delete Account
       delete_button: Delete My Account Now!
       delete_action_confirm: Are you sure? (There's no going back.)
       heading: Edit Account

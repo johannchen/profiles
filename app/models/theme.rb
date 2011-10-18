@@ -81,7 +81,7 @@ class Theme < ActiveRecord::Base
 
     def build_from_image_info(info)
       build_with_defaults.tap do |theme|
-        theme.bg = info
+        theme.bg_image = info
       end
     end
 

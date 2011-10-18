@@ -248,64 +248,65 @@ html, body {
   background-color: rgba(255, 255, 255, 0.95);
   border: none;
   padding: 15px;
+  margin-bottom: 25px;
 }
-/* line 199, ../../app/assets/stylesheets/application.css.scss */
+/* line 200, ../../app/assets/stylesheets/application.css.scss */
 #aux .content .simple_form legend {
   padding-left: 90px;
 }
-/* line 200, ../../app/assets/stylesheets/application.css.scss */
+/* line 201, ../../app/assets/stylesheets/application.css.scss */
 #aux .content .simple_form label {
   width: 70px;
 }
-/* line 201, ../../app/assets/stylesheets/application.css.scss */
+/* line 202, ../../app/assets/stylesheets/application.css.scss */
 #aux .content .simple_form .input label {
   width: auto;
 }
-/* line 202, ../../app/assets/stylesheets/application.css.scss */
+/* line 203, ../../app/assets/stylesheets/application.css.scss */
 #aux .content .simple_form .actions {
   padding-left: 90px;
 }
-/* line 203, ../../app/assets/stylesheets/application.css.scss */
+/* line 204, ../../app/assets/stylesheets/application.css.scss */
 #aux .content .simple_form .input, #aux .content .simple_form .hint {
   margin-left: 90px;
 }
-/* line 206, ../../app/assets/stylesheets/application.css.scss */
+/* line 207, ../../app/assets/stylesheets/application.css.scss */
 #aux .status {
   margin-top: 15px;
 }
 
 /* Search Results - - - - -*/
-/* line 214, ../../app/assets/stylesheets/application.css.scss */
+/* line 215, ../../app/assets/stylesheets/application.css.scss */
 #search-results h2 {
   margin-bottom: 20px;
 }
-/* line 218, ../../app/assets/stylesheets/application.css.scss */
+/* line 219, ../../app/assets/stylesheets/application.css.scss */
 #search-results .profile .pic {
   float: left;
   margin-right: 10px;
 }
-/* line 222, ../../app/assets/stylesheets/application.css.scss */
+/* line 223, ../../app/assets/stylesheets/application.css.scss */
 #search-results .profile .name {
   font-size: larger;
 }
-/* line 226, ../../app/assets/stylesheets/application.css.scss */
+/* line 227, ../../app/assets/stylesheets/application.css.scss */
 #search-results .empty {
   font-style: italic;
 }
 
 /* Theme - - - - - - - - - */
-/* line 233, ../../app/assets/stylesheets/application.css.scss */
+/* line 234, ../../app/assets/stylesheets/application.css.scss */
 .bg-selector {
   height: 250px;
   overflow-x: hidden;
   overflow-y: scroll;
 }
-/* line 237, ../../app/assets/stylesheets/application.css.scss */
+/* line 238, ../../app/assets/stylesheets/application.css.scss */
 .bg-selector .bg {
   clear: left;
   margin-bottom: 10px;
 }
-/* line 240, ../../app/assets/stylesheets/application.css.scss */
+/* line 241, ../../app/assets/stylesheets/application.css.scss */
 .bg-selector .bg .img {
   width: 200px;
   height: 113px;
@@ -314,74 +315,74 @@ html, body {
   border: 4px solid #fff;
   margin: 0 5px 5px 0;
 }
-/* line 247, ../../app/assets/stylesheets/application.css.scss */
+/* line 248, ../../app/assets/stylesheets/application.css.scss */
 .bg-selector .bg .img.selected {
   border-color: #0069D6;
 }
-/* line 251, ../../app/assets/stylesheets/application.css.scss */
+/* line 252, ../../app/assets/stylesheets/application.css.scss */
 .bg-selector .bg .details {
   padding-top: 5px;
   margin-left: 210px;
 }
-/* line 254, ../../app/assets/stylesheets/application.css.scss */
+/* line 255, ../../app/assets/stylesheets/application.css.scss */
 .bg-selector .bg .details .name {
   font-weight: bold;
   margin-bottom: 5px;
 }
-/* line 258, ../../app/assets/stylesheets/application.css.scss */
+/* line 259, ../../app/assets/stylesheets/application.css.scss */
 .bg-selector .bg .details .description, .bg-selector .bg .details .credit, .bg-selector .bg .details .license {
   font-size: smaller;
   margin-bottom: 5px;
 }
 
-/* line 266, ../../app/assets/stylesheets/application.css.scss */
+/* line 267, ../../app/assets/stylesheets/application.css.scss */
 .color {
   width: 70px;
 }
 
 /* Forms - - - - - - - - - */
-/* line 272, ../../app/assets/stylesheets/application.css.scss */
+/* line 273, ../../app/assets/stylesheets/application.css.scss */
 .simple_form {
   /* temporary until HTML5 elements are included in Bootstrap
      See https://github.com/twitter/bootstrap/pull/28 */
 }
-/* line 273, ../../app/assets/stylesheets/application.css.scss */
+/* line 274, ../../app/assets/stylesheets/application.css.scss */
 .simple_form select.date {
   width: auto;
 }
-/* line 277, ../../app/assets/stylesheets/application.css.scss */
+/* line 278, ../../app/assets/stylesheets/application.css.scss */
 .simple_form .radio input {
   margin-right: 5px;
 }
-/* line 281, ../../app/assets/stylesheets/application.css.scss */
+/* line 282, ../../app/assets/stylesheets/application.css.scss */
 .simple_form .hint, .simple_form .help-inline {
   display: block;
   margin: 5px 0 0 150px;
   font-size: smaller;
   color: #777;
 }
-/* line 287, ../../app/assets/stylesheets/application.css.scss */
+/* line 288, ../../app/assets/stylesheets/application.css.scss */
 .simple_form .error .error {
   display: block;
   margin-left: 150px;
   color: red;
   font-weight: bold;
 }
-/* line 295, ../../app/assets/stylesheets/application.css.scss */
+/* line 296, ../../app/assets/stylesheets/application.css.scss */
 .simple_form form div.error input[type=tel] {
   border-color: #c87872;
   -webkit-box-shadow: 0 0 3px rgba(171, 41, 32, 0.25);
   -moz-box-shadow: 0 0 3px rgba(171, 41, 32, 0.25);
   box-shadow: 0 0 3px rgba(171, 41, 32, 0.25);
 }
-/* line 296, ../../app/assets/stylesheets/application.css.scss */
+/* line 297, ../../app/assets/stylesheets/application.css.scss */
 .simple_form form div.error input[type=tel]:focus {
   border-color: #b9554d;
   -webkit-box-shadow: 0 0 6px rgba(171, 41, 32, 0.5);
   -moz-box-shadow: 0 0 6px rgba(171, 41, 32, 0.5);
   box-shadow: 0 0 6px rgba(171, 41, 32, 0.5);
 }
-/* line 297, ../../app/assets/stylesheets/application.css.scss */
+/* line 298, ../../app/assets/stylesheets/application.css.scss */
 .simple_form input[type=tel]:focus {
   outline: none;
   border-color: rgba(82, 168, 236, 0.8);
@@ -389,7 +390,7 @@ html, body {
   -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
 }
-/* line 298, ../../app/assets/stylesheets/application.css.scss */
+/* line 299, ../../app/assets/stylesheets/application.css.scss */
 .simple_form input[type=tel] {
   -webkit-transition: border linear 0.2s,box-shadow linear 0.2s;
   -moz-transition: border linear 0.2s,box-shadow linear 0.2s;
@@ -398,7 +399,7 @@ html, body {
   -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
 }
-/* line 299, ../../app/assets/stylesheets/application.css.scss */
+/* line 300, ../../app/assets/stylesheets/application.css.scss */
 .simple_form input[type=tel] {
   display: inline-block;
   width: 210px;
@@ -413,154 +414,154 @@ html, body {
   border-radius: 3px;
 }
 
-/* line 302, ../../app/assets/stylesheets/application.css.scss */
+/* line 303, ../../app/assets/stylesheets/application.css.scss */
 #profile_bio {
   width: 380px;
   height: 150px;
 }
 
 /* Icons */
-/* line 314, ../../app/assets/stylesheets/application.css.scss */
+/* line 315, ../../app/assets/stylesheets/application.css.scss */
 .add-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px 0px no-repeat;
 }
 
-/* line 315, ../../app/assets/stylesheets/application.css.scss */
+/* line 316, ../../app/assets/stylesheets/application.css.scss */
 .edit-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -20px no-repeat;
 }
 
-/* line 316, ../../app/assets/stylesheets/application.css.scss */
+/* line 317, ../../app/assets/stylesheets/application.css.scss */
 .lock-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -40px no-repeat;
 }
 
-/* line 317, ../../app/assets/stylesheets/application.css.scss */
+/* line 318, ../../app/assets/stylesheets/application.css.scss */
 .lock-icon-small {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -45px no-repeat;
 }
 
-/* line 318, ../../app/assets/stylesheets/application.css.scss */
+/* line 319, ../../app/assets/stylesheets/application.css.scss */
 .comment-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -66px no-repeat;
 }
 
 /* up just a bit */
-/* line 319, ../../app/assets/stylesheets/application.css.scss */
+/* line 320, ../../app/assets/stylesheets/application.css.scss */
 .comment2-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -60px no-repeat;
 }
 
-/* line 320, ../../app/assets/stylesheets/application.css.scss */
+/* line 321, ../../app/assets/stylesheets/application.css.scss */
 .dots-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -80px no-repeat;
 }
 
-/* line 321, ../../app/assets/stylesheets/application.css.scss */
+/* line 322, ../../app/assets/stylesheets/application.css.scss */
 .people-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -100px no-repeat;
 }
 
-/* line 322, ../../app/assets/stylesheets/application.css.scss */
+/* line 323, ../../app/assets/stylesheets/application.css.scss */
 .money-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -120px no-repeat;
 }
 
-/* line 323, ../../app/assets/stylesheets/application.css.scss */
+/* line 324, ../../app/assets/stylesheets/application.css.scss */
 .feed-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -140px no-repeat;
 }
 
-/* line 324, ../../app/assets/stylesheets/application.css.scss */
+/* line 325, ../../app/assets/stylesheets/application.css.scss */
 .right-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -160px no-repeat;
 }
 
-/* line 325, ../../app/assets/stylesheets/application.css.scss */
+/* line 326, ../../app/assets/stylesheets/application.css.scss */
 .left-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -180px no-repeat;
 }
 
-/* line 326, ../../app/assets/stylesheets/application.css.scss */
+/* line 327, ../../app/assets/stylesheets/application.css.scss */
 .picture-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -200px no-repeat;
 }
 
-/* line 327, ../../app/assets/stylesheets/application.css.scss */
+/* line 328, ../../app/assets/stylesheets/application.css.scss */
 .file-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -220px no-repeat;
 }
 
-/* line 328, ../../app/assets/stylesheets/application.css.scss */
+/* line 329, ../../app/assets/stylesheets/application.css.scss */
 .verse-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -240px no-repeat;
 }
 
-/* line 329, ../../app/assets/stylesheets/application.css.scss */
+/* line 330, ../../app/assets/stylesheets/application.css.scss */
 .delete-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -256px no-repeat;
 }
 
 /* down a bit */
-/* line 330, ../../app/assets/stylesheets/application.css.scss */
+/* line 331, ../../app/assets/stylesheets/application.css.scss */
 .email-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -280px no-repeat;
 }
 
-/* line 331, ../../app/assets/stylesheets/application.css.scss */
+/* line 332, ../../app/assets/stylesheets/application.css.scss */
 .heart-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -300px no-repeat;
 }
 
-/* line 332, ../../app/assets/stylesheets/application.css.scss */
+/* line 333, ../../app/assets/stylesheets/application.css.scss */
 .rotate-cw-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -320px no-repeat;
 }
 
-/* line 333, ../../app/assets/stylesheets/application.css.scss */
+/* line 334, ../../app/assets/stylesheets/application.css.scss */
 .rotate-ccw-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -340px no-repeat;
 }
 
-/* line 334, ../../app/assets/stylesheets/application.css.scss */
+/* line 335, ../../app/assets/stylesheets/application.css.scss */
 .updown-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -360px no-repeat;
 }
 
-/* line 335, ../../app/assets/stylesheets/application.css.scss */
+/* line 336, ../../app/assets/stylesheets/application.css.scss */
 .alert-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -380px no-repeat;
 }
 
-/* line 336, ../../app/assets/stylesheets/application.css.scss */
+/* line 337, ../../app/assets/stylesheets/application.css.scss */
 .news-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -400px no-repeat;
 }
 
-/* line 337, ../../app/assets/stylesheets/application.css.scss */
+/* line 338, ../../app/assets/stylesheets/application.css.scss */
 .podcast-icon {
   padding-left: 15px;
   background: url(/assets/icons.png) 0px -420px no-repeat;

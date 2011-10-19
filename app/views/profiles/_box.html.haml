@@ -12,9 +12,10 @@
 
   .links
     - if @profile.facebook_url
-      = link_to simple_url(@profile.facebook_url), @profile.facebook_url, :class => 'facebook'
+      = link_to simple_url(@profile.facebook_url), @profile.facebook_url, :class => 'fb-icon'
     - if @profile.phone
-      = link_to @profile.phone, "tel:#{@profile.phone}", :class => 'phone'
+      = link_to @profile.phone, "tel:#{@profile.phone}", :class => 'phone-icon'
+
   %br{:clear => 'left'}
 
   .bio

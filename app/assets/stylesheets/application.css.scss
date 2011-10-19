@@ -178,18 +178,13 @@ html,body{background:none;}
     color: #555;
     height: 18px;
     padding: 5px 10px 5px 37px;
-    margin-bottom: 5px;
+    margin: 0 5px 5px 0;
     max-width: 185px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
     text-decoration: none;
-    &.facebook {
-      background: #eee url(/assets/facebook.png) top left no-repeat;
-    }
-    &.phone {
-      background: #eee url(/assets/phone.png) top left no-repeat;
-    }
+    background-color: #eee;
   }
 }
 
@@ -309,34 +304,17 @@ html,body{background:none;}
   height: 150px;
 }
 
-/* Icons */
+/* Icons - - - - - - - - - */
 
-@mixin icon-sprite($x, $y) {
+@mixin icon-sprite($pos) {
+  $y: ($pos - 1) * -28px;
   padding-left: 15px;
-  background: url(/assets/icons.png) $x $y no-repeat;
+  background-image: url(/assets/icons.png);
+  background-position: 0 $y;
+  background-repeat: no-repeat;
 }
 
-.add-icon        { @include icon-sprite(0px,    0px) }
-.edit-icon       { @include icon-sprite(0px,  -20px) }
-.lock-icon       { @include icon-sprite(0px,  -40px) }
-.lock-icon-small { @include icon-sprite(0px,  -45px) }
-.comment-icon    { @include icon-sprite(0px,  -66px) } /* up just a bit */
-.comment2-icon   { @include icon-sprite(0px,  -60px) }
-.dots-icon       { @include icon-sprite(0px,  -80px) }
-.people-icon     { @include icon-sprite(0px, -100px) }
-.money-icon      { @include icon-sprite(0px, -120px) }
-.feed-icon       { @include icon-sprite(0px, -140px) }
-.right-icon      { @include icon-sprite(0px, -160px) }
-.left-icon       { @include icon-sprite(0px, -180px) }
-.picture-icon    { @include icon-sprite(0px, -200px) }
-.file-icon       { @include icon-sprite(0px, -220px) }
-.verse-icon      { @include icon-sprite(0px, -240px) }
-.delete-icon     { @include icon-sprite(0px, -256px) } /* down a bit */
-.email-icon      { @include icon-sprite(0px, -280px) }
-.heart-icon      { @include icon-sprite(0px, -300px) }
-.rotate-cw-icon  { @include icon-sprite(0px, -320px) }
-.rotate-ccw-icon { @include icon-sprite(0px, -340px) }
-.updown-icon     { @include icon-sprite(0px, -360px) }
-.alert-icon      { @include icon-sprite(0px, -380px) }
-.news-icon       { @include icon-sprite(0px, -400px) }
-.podcast-icon    { @include icon-sprite(0px, -420px) }
+.fb-icon    { @include icon-sprite(1) }
+.phone-icon { @include icon-sprite(2) }
+.bday-icon  { @include icon-sprite(3) }
+.edit-icon  { @include icon-sprite(4) }

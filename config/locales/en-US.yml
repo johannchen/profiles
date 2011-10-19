@@ -86,7 +86,7 @@ en-US:
   profile:
     attributes:
       phone: 
-    birthday: born on %{birthday}
+    birthday: Birthday of %{name}
     default_headline: Christ Follower
     edit_button: Edit Profile
     edit_form:

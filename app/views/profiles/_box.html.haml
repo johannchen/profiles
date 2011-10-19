@@ -15,14 +15,13 @@
       = link_to simple_url(@profile.facebook_url), @profile.facebook_url, :class => 'fb-icon'
     - if @profile.phone
       = link_to @profile.phone, "tel:#{@profile.phone}", :class => 'phone-icon'
+    - if @profile.birthday
+      = link_to @profile.birthday.to_s(:short), event_url(@profile.next_birthday, t('profile.birthday', :name => @profile.name)), :class => 'bday-icon', :target => '_blank'
 
   %br{:clear => 'left'}
 
   .bio
     = profile_bio(@profile)
-
-  - if @profile.birthday
-    %p= t('profile.birthday', :birthday => l(@profile.birthday, :format => :short))
 
   - if @profile.location
     .map

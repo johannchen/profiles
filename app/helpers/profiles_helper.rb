@@ -84,4 +84,20 @@ module ProfilesHelper
     end
   end
 
+  def event_url(date, title, url=nil)
+    "https://www.google.com/calendar/b/0/render?" +
+    {
+      action:   'TEMPLATE',
+      text:     title,
+      dates:    "#{date.strftime('%Y%m%d')}/#{(date + 1).strftime('%Y%m%d')}",
+      details:  '',
+      location: '',
+      trp:      false,
+      sprop:    url || request.url,
+      pli:      1,
+      sf:       true,
+      output:   'xml'
+    }.to_param
+  end
+
 end

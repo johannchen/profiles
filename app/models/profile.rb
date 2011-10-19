@@ -85,4 +85,12 @@ class Profile < ActiveRecord::Base
     theme.save!
     reload
   end
+
+  def next_birthday
+    if birthday
+      d = birthday
+      d = Date.new(d.year + 1, d.month, d.day) until d >= Date.today
+      return d
+    end
+  end
 end

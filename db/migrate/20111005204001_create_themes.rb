@@ -3,6 +3,7 @@ class CreateThemes < ActiveRecord::Migration
     create_table :themes do |t|
       t.integer :profile_id
       t.string  :bg_image,              :limit => 255
+      t.string :bg_image_name,          :limit => 100
       t.boolean :bg_image_tiled,                      :default => false
       t.string  :bg_image_byline,       :limit => 100
       t.string  :bg_class,              :limit => 25

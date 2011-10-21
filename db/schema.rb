@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111010140204) do
+ActiveRecord::Schema.define(:version => 20111005204001) do
 
   create_table "friendships", :force => true do |t|
     t.integer  "profile_id"
@@ -26,29 +26,25 @@ ActiveRecord::Schema.define(:version => 20111010140204) do
     t.string   "headline",        :limit => 50
     t.string   "gender",          :limit => 1
     t.date     "birthday"
+    t.text     "bio"
     t.string   "phone",           :limit => 50
     t.string   "location",        :limit => 50
     t.string   "small_image_url"
+    t.string   "full_image_url"
     t.string   "facebook_id"
     t.string   "facebook_url"
     t.string   "twitter_id"
     t.string   "twitter_url"
     t.string   "workflow_state"
+    t.integer  "alerts"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "full_image_url"
-    t.string   "address",         :limit => 100
-    t.string   "address2",        :limit => 100
-    t.string   "city",            :limit => 100
-    t.string   "state",           :limit => 2
-    t.string   "postal_code",     :limit => 10
-    t.integer  "alerts"
-    t.text     "bio"
   end
 
   create_table "themes", :force => true do |t|
     t.integer  "profile_id"
     t.string   "bg_image"
+    t.string   "bg_image_name",         :limit => 100
     t.boolean  "bg_image_tiled",                       :default => false
     t.string   "bg_image_byline",       :limit => 100
     t.string   "bg_class",              :limit => 25
@@ -80,7 +76,6 @@ ActiveRecord::Schema.define(:version => 20111010140204) do
     t.string   "bio_color",             :limit => 7
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "bg_image_name",         :limit => 100
   end
 
   create_table "users", :force => true do |t|

@@ -7,12 +7,13 @@
 %hr
 
 = simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |form|
-  %p= t('session.log_in_with_email_intro')
+  %p= t('session.log_in_with_email_intro_html', :sign_up_path => new_registration_path(resource_name))
   = form.input :email
   = form.input :password, :required => true
   - if devise_mapping.rememberable?
     = form.input :remember_me, :as => :b_boolean
   %fieldset.actions
+    .right
+      = link_to t('registration.sign_up_button'), new_registration_path(resource_name), :class => 'btn'
+      = link_to t('registration.forgot_password_button'), new_password_path(resource_name), :class => 'btn'
     = form.submit t('session.log_in_button'), :class => 'btn primary'
-
-= render :partial => "devise/shared/links"

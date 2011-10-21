@@ -129,7 +129,8 @@ en-US:
   registration:
     create_profile_message: Please create your profile in order to continue.
     forgot_password_heading: Forgot your password?
-    forgot_password_button: Send me reset password instructions.
+    forgot_password_button: Forgot your password?
+    forgot_password_submit_button: Send me reset password instructions.
     sign_up_button: Sign Up
     sign_up_heading: Sign Up
     sign_up_with_email_intro: Optionally, you can sign up by providing your email address and choosing a password.
@@ -143,6 +144,6 @@ en-US:
   session:
     log_in_button: Log In
     log_in_heading: Log In
-    log_in_with_email_intro: Optionally, you can log in with your email address and password.
+    log_in_with_email_intro_html: Optionally, you can log in with your email address and password. If you don't have an account, <a href="%{sign_up_path}">sign up</a>.
     log_in_with_facebook: Log in with Facebook
     success: You are now logged in.

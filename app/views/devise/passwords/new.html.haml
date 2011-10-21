@@ -4,6 +4,4 @@
   = devise_error_messages!
   = form.input :email
   %fieldset.actions
-    = form.submit t('registration.forgot_password_button'), :class => 'btn primary'
-
-= render :partial => "devise/shared/links"
+    = form.submit t('registration.forgot_password_submit_button'), :class => 'btn primary'

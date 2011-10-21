@@ -18,18 +18,14 @@
     - if @profile.birthday
       = link_to @profile.birthday.to_s(:short), event_url(@profile.next_birthday, t('profile.birthday', :name => @profile.name)), :class => 'bday-icon', :target => '_blank'
 
-  %br{:clear => 'left'}
-
   .bio
     = profile_bio(@profile)
 
   - if @profile.location
     .map
     = hidden_field_tag :location, @profile.location
-    = javascript_include_tag 'http://maps.googleapis.com/maps/api/js?sensor=false'
-    = javascript_include_tag 'map'
 
-  -# needs styling work...
+  -# TODO
   -#- if @profile.friends.any?
     -#%h3= t('profile.friends')
     -#%p

@@ -33,15 +33,19 @@ class Profile < ActiveRecord::Base
   validates_length_of :phone, :maximum => 50
   validates_uniqueness_of :user_id
 
-  attr_accessible :name, :headline, :bio, :gender, :birthday, :location, :phone, :facebook_id, :facebook_url, :small_image_url, :full_image_url, :theme_attributes
+  attr_accessible :name, :headline, :bio, :gender, :birthday, :location, :phone, :facebook_id, :facebook_url, :small_image_url, :full_image_url, :theme_attributes, :alerts
 
   blank_to_nil
 
   # alerts
   bitmask :alerts, :as => [:new, :new_theme]
   before_create { alerts << :new }
-  def new_theme_alert!
-    alerts << :new_theme
+  def new_theme_alert!(a=true)
+    if a
+      alerts << :new_theme
+    else
+      alerts.delete(:new_theme)
+    end
     save(:validate => false)
   end
 
@@ -79,7 +83,8 @@ class Profile < ActiveRecord::Base
     self.friends = profiles
   end
 
-  def create_theme!
+  def create_theme_if_missing!
+    return if new_record? || theme
     theme = Theme.build_random
     theme.profile = self
     theme.save!

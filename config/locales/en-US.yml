@@ -43,6 +43,7 @@ en-US:
     users:
       user:
         destroyed: Your account has been deleted.
+        signed_up: You have been signed up.
 
   feedback:
     form_errors_heading: There were errors.

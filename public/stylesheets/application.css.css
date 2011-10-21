@@ -206,7 +206,7 @@ html, body {
 }
 /* line 165, ../../app/assets/stylesheets/application.css.scss */
 #profile-box .bio {
-  margin-bottom: 10px;
+  margin: 10px 0;
 }
 /* line 168, ../../app/assets/stylesheets/application.css.scss */
 #profile-box .map {

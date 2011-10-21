@@ -45,7 +45,7 @@ class ProfilesController < ApplicationController
   end
 
   def create_theme_if_missing!
-    @profile.create_theme! unless @profile.theme
+    @profile.create_theme_if_missing!
   end
 
 end

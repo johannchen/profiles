@@ -17,7 +17,8 @@ class Theme < ActiveRecord::Base
 
   attr_protected :profile_id, :created_at, :updated_at
 
-  after_create { profile.new_theme_alert! }
+  after_create                   { profile.new_theme_alert!        }
+  after_update(:if => :changed?) { profile.new_theme_alert!(false) }
 
   blank_to_nil
 
@@ -40,7 +41,7 @@ class Theme < ActiveRecord::Base
 
   def bg_color_top=(color)
     write_attribute(:bg_color_top, color)
-    self.bg_class = nil unless color.to_s.blank?
+    self.bg_class = 'light' unless color.to_s.blank?
   end
 
   class << self

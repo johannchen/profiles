@@ -35,7 +35,7 @@ module ApplicationHelper
 
   def body_class
     [].tap do |classes|
-      if @profile
+      if @profile && @profile.theme
         classes << 'profile'
         classes << @profile.theme.bg_class if @profile.theme
       elsif request.path == '/'

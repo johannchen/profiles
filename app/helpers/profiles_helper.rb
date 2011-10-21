@@ -63,7 +63,7 @@ module ProfilesHelper
       if @profile.alerts?(:new_theme)
         alerts << alert_block(:info, :new_theme, [
                     link_to(t('profile.alert_new_theme.new_button'), profile_theme_path(@profile), :method => :delete, :class => 'btn small'),
-                    link_to(t('profile.alert_new_theme.edit_button'), edit_profile_path(@profile), :class => 'btn small', :onclick => "alert('not working yet'); return false")])
+                    link_to(t('profile.alert_new_theme.edit_button'), edit_profile_path(@profile, :tab => 'theme'), :class => 'btn small')])
       end
     end.join("\n").html_safe
   end

@@ -58,7 +58,7 @@ html, body {
 /* line 54, ../../app/assets/stylesheets/application.css.scss */
 #footer .content {
   text-align: center;
-  padding: 3px;
+  padding: 3px 10px;
 }
 
 /* line 61, ../../app/assets/stylesheets/application.css.scss */
@@ -78,7 +78,7 @@ html, body {
   bottom: 0;
   background-color: rgba(8, 8, 8, 0.5);
   color: #fff;
-  width: 500px;
+  text-align: left;
   -moz-border-radius-topright: 5px;
   -webkit-border-top-right-radius: 5px;
   -o-border-top-right-radius: 5px;

@@ -128,6 +128,7 @@ html,body{background:none;}
   z-index: 100;
   .content {
     padding: 15px;
+    overflow: auto;
   }
   .controls {
     padding: 10px 15px 0 0;
@@ -165,6 +166,7 @@ html,body{background:none;}
     margin-bottom: 10px;
   }
   .map {
+    clear: right;
     margin-top: 20px;
     width: 370px;
     height: 150px;

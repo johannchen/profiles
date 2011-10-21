@@ -5,7 +5,7 @@ class SearchesController < ApplicationController
   respond_to :html, :js
 
   def show
-    @search = Search.new(params)
+    @search = Search.new(params, current_user)
   end
 
   private

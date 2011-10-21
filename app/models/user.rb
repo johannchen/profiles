@@ -1,6 +1,24 @@
 class User < ActiveRecord::Base
   extend ActiveSupport::Memoizable
 
+  include Workflow
+  workflow do
+    state :pending_review do
+      event :activate,   :transitions_to => :active
+      event :reject,     :transitions_to => :rejected
+    end
+    state :active do
+      event :inactivate, :transitions_to => :inactive
+      event :reject,     :transitions_to => :rejected
+    end
+    state :inactive do
+      event :activate,   :transitions_to => :active
+    end
+    state :rejected do
+      event :activate,   :transitions_to => :active
+    end
+  end
+
   has_one :profile, :dependent => :destroy
 
   validates_presence_of :email
@@ -12,6 +30,8 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me, :timezone
 
   blank_to_nil
+
+  bitmask :roles, :as => [:admin]
 
   # assumes a fresh fb_token (set when user logs in)
   def graph

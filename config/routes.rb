@@ -3,7 +3,7 @@ Profiles::Application.routes.draw do
 
   devise_for :users,
     :controllers => {:omniauth_callbacks => 'sessions',
-                     :registrations      => 'users'}
+                     :registrations      => 'users'} rescue nil
 
   get '/users/auth/:provider' => 'sessions#passthru'
 

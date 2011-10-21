@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(:version => 20111005204001) do
     t.string   "facebook_url"
     t.string   "twitter_id"
     t.string   "twitter_url"
-    t.string   "workflow_state"
+    t.string   "workflow_state",                :default => "hidden"
     t.integer  "alerts"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -83,8 +83,8 @@ ActiveRecord::Schema.define(:version => 20111005204001) do
     t.string   "uid",                    :limit => 50
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "email",                                 :default => "",    :null => false
-    t.string   "encrypted_password",     :limit => 128, :default => "",    :null => false
+    t.string   "email",                                 :default => "",               :null => false
+    t.string   "encrypted_password",     :limit => 128, :default => "",               :null => false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -94,7 +94,8 @@ ActiveRecord::Schema.define(:version => 20111005204001) do
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
     t.string   "authentication_token"
-    t.boolean  "validated",                             :default => false
+    t.string   "workflow_state",                        :default => "pending_review"
+    t.integer  "roles"
     t.string   "timezone",               :limit => 50
     t.string   "fb_token",               :limit => 100
   end

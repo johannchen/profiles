@@ -13,7 +13,7 @@ class CreateProfiles < ActiveRecord::Migration
       t.string :full_image_url,             :limit => 255
       t.string :facebook_id, :facebook_url, :limit => 255
       t.string :twitter_id, :twitter_url,   :limit => 255
-      t.string :workflow_state,             :limit => 255
+      t.string :workflow_state,             :limit => 255, :default => 'hidden'
       t.integer :alerts
       t.timestamps
     end

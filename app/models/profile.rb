@@ -2,19 +2,11 @@ class Profile < ActiveRecord::Base
 
   include Workflow
   workflow do
-    state :pending_review do
-      event :approve, :transitions_to => :visible
-      event :reject,  :transitions_to => :rejected
-    end
     state :visible do
-      event :hide,    :transitions_to => :hidden
-      event :reject,  :transitions_to => :rejected
+      event :hide, :transitions_to => :hidden
     end
     state :hidden do
-      event :unhide,  :transitions_to => :visible
-    end
-    state :rejected do
-      event :approve, :transitions_to => :visible
+      event :unhide, :transitions_to => :visible
     end
   end
 
@@ -22,6 +14,8 @@ class Profile < ActiveRecord::Base
   has_many :friendships, :dependent => :destroy
   has_many :friends, :through => :friendships
   has_one :theme, :order => 'id', :dependent => :destroy
+
+  scope :visible, :where => {:workflow_state => 'visible'}
 
   accepts_nested_attributes_for :theme
 

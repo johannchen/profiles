@@ -113,7 +113,6 @@ en-US:
           tiled: Tiled
           color: Color
     friends: Friends
-    not_visible_warning_html: Your profile isn't visible yet, because it's pending review by an administrator.
     theme:
       bg_image_byline_html: "%{name} by %{byline}"
     alert_new:
@@ -140,6 +139,7 @@ en-US:
     results:
       none: No profiles found.
       heading: Search Results
+      account_limited_warning_html: Your account hasn't been validated by an admin yet, so you can only see your own profile.
 
   session:
     log_in_button: Log In

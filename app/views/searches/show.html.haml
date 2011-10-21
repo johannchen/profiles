@@ -11,3 +11,6 @@
     - if @search.profiles.empty?
       .empty
         = t('search.results.none')
+    - unless @search.user.active?
+      .alert-message.block-message.warning
+        = t('search.results.account_limited_warning_html')

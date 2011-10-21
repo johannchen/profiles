@@ -1,6 +1,3 @@
-- unless @profile.visible?
-  .alert-message.warning= t('profile.not_visible_warning_html')
-
 .row
   - layout_order(@profile.theme).each do |part|
     -# align profile-box on left or right depending on theme selection...

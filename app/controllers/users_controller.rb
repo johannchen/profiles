@@ -9,10 +9,4 @@ class UsersController < Devise::RegistrationsController
       respond_with_navigational(resource){ render_with_scope :edit }
     end
   end
-
-  private
-
-  def after_update_path_for(resource)
-    resource ? resource.profile : '/'
-  end
 end

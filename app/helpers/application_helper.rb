@@ -54,4 +54,32 @@ module ApplicationHelper
     Sanitize.clean(html, Sanitize::Config::BASIC).html_safe
   end
 
+  # tab_link ['text',] url, [default=false]
+  def tab_link(*args, &block)
+    if [Symbol, TrueClass, FalseClass].include?(args.last.class)
+      default = args.pop 
+    else
+      default = false
+    end
+    if args.length == 1
+      content = capture(&block)
+      href = args[0]
+    else
+      content, href = args
+    end
+    class_name = (params[:tab].nil? && default) || params[:tab] == href.to_s.sub(/^#/, '') ? 'active' : ''
+    content_tag(:li, :class => class_name) do
+      link_to(content, href)
+    end
+  end
+
+  def tab_content(id, default=false, &block)
+    id.sub!(/^#/, '')
+    content = capture(&block)
+    class_name = (params[:tab].nil? && default) || params[:tab] == id ? 'active' : ''
+    content_tag(:div, :id => id, :class => class_name) do
+      content
+    end
+  end
+
 end

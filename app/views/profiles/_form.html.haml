@@ -1,14 +1,13 @@
-= simple_form_for @profile, :remote => true do |form|
+= simple_form_for @profile, :remote => !@profile.new_record? do |form|
   = errors_for form, :only => [:base]
 
   %ul.tabs{'data-tabs' => 'tabs'}
-    %li.active
-      %a{:href => '#profile_details'}= t('profile.edit_form.tabs.profile')
-    %li
-      %a{:href => '#theme'}= t('profile.edit_form.tabs.theme')
+    = tab_link t('profile.edit_form.tabs.profile'), '#profile_details', :default
+    - if @profile.theme
+      = tab_link t('profile.edit_form.tabs.theme'), '#theme'
 
   .tab-content
-    #profile_details.active
+    = tab_content '#profile_details', :default do
       = form.input :name
       = form.input :headline
       = form.input :bio, :hint => t('profile.edit_form.bio_hint_html', :count => s('profile.bio_max_length') - @profile.bio.to_s.size), :input_html => {'data-maxlength' => "#{s('profile.bio_max_length')} #profile_bio_count_remaining"}
@@ -16,30 +15,31 @@
       = form.input :birthday, :start_year => 1900, :end_year => Date.today.year, :include_blank => true
       = form.input :location
       = form.input :phone
-    #theme
-      = form.simple_fields_for :theme do |theme|
-        = theme.input :bg_image, :as => :hidden
-        .clearfix
-          %label{:style => 'padding-top:10px;'} Background
-          .input
-            %ul.pills{'data-pills' => 'pills'}
-              %li
-                %a{:href => '#scaled_images'}= t('profile.edit_form.theme.tabs.scaled')
-              %li
-                %a{:href => '#tiled_images'}= t('profile.edit_form.theme.tabs.tiled')
-              %li
-                %a{:href => '#color'}= t('profile.edit_form.theme.tabs.color')
-        .pill-content
-          #scaled_images
-            .input.bg-selector
-              = render :partial => 'image', :collection => @backgrounds[:scaled]
-          #tiled_images
-            .input.bg-selector
-              = render :partial => 'image', :collection => @backgrounds[:tiled]
-          #color
-            = theme.input :bg_color_top, :input_html => {:class => 'color'}
-            = theme.input :box_pos, :include_blank => false, |
-              :collection => {t('profile.edit_form.theme.box_pos.left') => 'left', t('profile.edit_form.theme.box_pos.right') => 'right'}
+    - if @profile.theme
+      = tab_content '#theme' do
+        = form.simple_fields_for :theme do |theme|
+          = theme.input :bg_image, :as => :hidden
+          .clearfix
+            %label{:style => 'padding-top:10px;'} Background
+            .input
+              %ul.pills{'data-pills' => 'pills'}
+                %li
+                  %a{:href => '#scaled_images'}= t('profile.edit_form.theme.tabs.scaled')
+                %li
+                  %a{:href => '#tiled_images'}= t('profile.edit_form.theme.tabs.tiled')
+                %li
+                  %a{:href => '#color'}= t('profile.edit_form.theme.tabs.color')
+          .pill-content
+            #scaled_images
+              .input.bg-selector
+                = render :partial => 'image', :collection => @backgrounds[:scaled]
+            #tiled_images
+              .input.bg-selector
+                = render :partial => 'image', :collection => @backgrounds[:tiled]
+            #color
+              = theme.input :bg_color_top, :input_html => {:class => 'color'}
+              = theme.input :box_pos, :include_blank => false, |
+                :collection => {t('profile.edit_form.theme.box_pos.left') => 'left', t('profile.edit_form.theme.box_pos.right') => 'right'}
 
 
   .actions

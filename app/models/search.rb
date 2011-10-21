@@ -12,7 +12,7 @@ class Search < Struct.new(:q, :user)
 
   def profiles
     if show_all?
-      Profile.visible.where(['lower(name) like ?', "%#{self.q.downcase}%"]).all
+      Profile.visible_or_user(user).where(['lower(name) like ?', "%#{self.q.downcase}%"]).all
     else
       [user.profile].compact
     end

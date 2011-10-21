@@ -15,7 +15,8 @@ class Profile < ActiveRecord::Base
   has_many :friends, :through => :friendships
   has_one :theme, :order => 'id', :dependent => :destroy
 
-  scope :visible, :where => {:workflow_state => 'visible'}
+  scope :visible, where(:workflow_state => 'visible')
+  scope :visible_or_user, lambda { |user| where('workflow_state = ? or user_id = ?', 'visible', user) }
 
   accepts_nested_attributes_for :theme
 

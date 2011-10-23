@@ -9,9 +9,9 @@ class Ability
         can :read, user.profile
       end
       if user.roles?(:admin)
-        can [:create, :update], Profile
+        can [:create, :update], [Profile, User]
       else
-        can [:create, :update], Profile, :user => user
+        can [:create, :update], [Profile, User], :user => user
       end
     end
   end

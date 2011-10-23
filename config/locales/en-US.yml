@@ -36,6 +36,13 @@ en-US:
             user_id: 
               taken: This user already has a profile.
 
+  admin:
+    dashboard:
+      heading: Admin Dashboard
+      actions:
+        activate: Activate
+        reject: Reject
+
   app:
     powered_by_html: Powered by <a href="http://church.io">Church.IO Profiles</a>
 
@@ -74,6 +81,7 @@ en-US:
 
   nav:
     account: Account
+    admin: Admin
     home: Home
     profile: Profile
     search: Search

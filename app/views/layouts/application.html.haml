@@ -22,6 +22,8 @@
                 = link_to t('nav.profile'), my_profile_path
               %li{:class => params[:controller] == 'users' && 'active'}
                 = link_to t('nav.account'), edit_user_registration_path
+              %li{:class => params[:controller] =~ /^admin/ && 'active'}
+                = link_to t('nav.admin'), admin_dashboard_path
               %li
                 = link_to t('nav.log_out'), destroy_user_session_path, :method => :delete
             %form{:action => search_path, :method => :get, :id => 'search-form'}

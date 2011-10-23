@@ -6,7 +6,7 @@ class Profile < ActiveRecord::Base
       event :hide, :transitions_to => :hidden
     end
     state :hidden do
-      event :unhide, :transitions_to => :visible
+      event :show, :transitions_to => :visible
     end
   end
 

@@ -2,24 +2,40 @@ class User < ActiveRecord::Base
   extend ActiveSupport::Memoizable
 
   include Workflow
+
   workflow do
     state :pending_review do
       event :activate,   :transitions_to => :active
       event :reject,     :transitions_to => :rejected
     end
+
     state :active do
       event :inactivate, :transitions_to => :inactive
       event :reject,     :transitions_to => :rejected
     end
+
     state :inactive do
       event :activate,   :transitions_to => :active
     end
+
     state :rejected do
       event :activate,   :transitions_to => :active
+    end
+
+    on_transition do |from, to|
+      if profile
+        if :active == to
+          profile.show!
+        else
+          profile.hide!
+        end
+      end
     end
   end
 
   has_one :profile, :dependent => :destroy
+
+  scope :pending_review, where(:workflow_state => 'pending_review')
 
   validates_presence_of :email
 
@@ -32,6 +48,8 @@ class User < ActiveRecord::Base
   blank_to_nil
 
   bitmask :roles, :as => [:admin]
+
+  delegate :name, :to => :profile, :allow_nil => true
 
   # assumes a fresh fb_token (set when user logs in)
   def graph

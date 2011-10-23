@@ -15,4 +15,9 @@ Profiles::Application.routes.draw do
 
   resource :search
   resource :home
+
+  namespace :admin do
+    resource :dashboard
+    resources :users
+  end
 end

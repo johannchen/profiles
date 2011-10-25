@@ -27,4 +27,11 @@ class ApplicationController < ActionController::Base
       flash.discard
     end
   end
+
+  def authorize_admin!
+    unless current_user && current_user.roles?(:admin)
+      render :text => 'not authorized', :status => :unauthorized
+      return false
+    end
+  end
 end

@@ -51,7 +51,7 @@ class Profile < ActiveRecord::Base
   end
 
   def bio=(b)
-    write_attribute(:bio, b.to_s[0...Setting.s('profile.bio_max_length')])
+    write_attribute(:bio, b.to_s[0...Setting.s('profile.bio_max_length').to_i])
   end
 
   def update_from_oauth_access_token!(access_token)

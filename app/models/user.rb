@@ -25,9 +25,9 @@ class User < ActiveRecord::Base
     on_transition do |from, to|
       if profile
         if :active == to
-          profile.show!
+          profile.update_attribute(:workflow_state, 'visible')
         else
-          profile.hide!
+          profile.update_attribute(:workflow_state, 'hidden')
         end
       end
     end

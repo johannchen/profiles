@@ -30,7 +30,7 @@ module ApplicationHelper
   end
 
   def simple_url(url)
-    url.sub(/^https?:\/\/(www\.)?/, '')
+    url.to_s.sub(/^https?:\/\/(www\.)?/, '')
   end
 
   def body_class

@@ -54,7 +54,7 @@ module ProfilesHelper
   end
 
   def profile_alerts
-    return unless @profile
+    return unless @profile && @profile.user == current_user
     [].tap do |alerts|
       if @profile.alerts?(:new)
         alerts << alert_block(:success, :new, [

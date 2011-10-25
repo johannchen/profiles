@@ -51,6 +51,8 @@ class User < ActiveRecord::Base
 
   delegate :name, :to => :profile, :allow_nil => true
 
+  before_create :make_admin_if_only_user
+
   # assumes a fresh fb_token (set when user logs in)
   def graph
     FbGraph::User.me(fb_token)
@@ -78,5 +80,11 @@ class User < ActiveRecord::Base
   def update_profile_from_oauth_access_token!(access_token)
     profile = self.profile || build_profile
     profile.update_from_oauth_access_token!(access_token)
+  end
+
+  private
+
+  def make_admin_if_only_user
+    self.roles << :admin if User.count == 0
   end
 end

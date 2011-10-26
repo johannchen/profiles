@@ -62,7 +62,7 @@ Check out the wonderful [installation instructions](http://church.io/profiles/in
 
 Catch Tim in the #church.io IRC channel on freenode, on Twitter at [@seven1m](https://twitter.com/seven1m), or by email at [tim@timmorgan.org](http://timmorgan.org).
 
-[http://church.io](http://church.io) currently hosts a blog that should correlate loosely with this and other church software projects.
+[http://church.io](http://church.io) hosts additional information avout this and other church software projects.
 
 ## Copyright & License
 

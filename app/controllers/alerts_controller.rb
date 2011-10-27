@@ -4,7 +4,7 @@ class AlertsController < ApplicationController
   def destroy
     @profile.alerts.delete(params[:id].to_sym)
     @profile.save(:validate => false)
-    render :text => 'deleted' # TODO what status code?
+    render :text => 'deleted', :status => :ok
   end
 
 end

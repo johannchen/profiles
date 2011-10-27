@@ -31,22 +31,47 @@ describe User do
   end
 
   context 'given an existing facebook uid' do
+    before do
+      @user = Factory.create(:user, :provider => 'facebook', :uid => @token['uid'])
+    end
+
+    subject { User.find_and_update(@token) }
+
+    it 'reuses the existing user record' do
+      subject.id.should eq(@user.id)
+    end
+
     it 'updates the profile' do
-      @user = User.find_for_facebook_oauth(@token)
-      @user.profile.name.should eq('John Doe')
+      subject.profile.name.should eq('John Doe')
+    end
+
+    it 'updates the email' do
+      subject.email.should eq('john@example.com')
     end
   end
 
   context 'given a new facebook uid with an existing email address' do
     before do
-      @existing_user = Factory.create(:user)
-      @token_with_same_email = @token.dup
-      @token_with_same_email['extra']['user_hash']['email'] = @existing_user.email
+      @user = Factory.create(:user, :email => 'john@example.com')
     end
 
+    subject { User.find_and_update(@token) }
+
     it 'reuses the existing user record' do
-      @user = User.find_for_facebook_oauth(@token)
-      @user.id.should eq(@existing_user.id)
+      subject.id.should eq(@user.id)
+    end
+
+    it 'updates the uid' do
+      subject.provider.should eq('facebook')
+      subject.uid.should eq('000000001')
+    end
+  end
+
+  context 'given a new facebook uid and new email address' do
+    it 'creates a new user' do
+      lambda {
+        User.find_and_update(@token)
+      }.should change(User, :count).by(1)
     end
   end
 end

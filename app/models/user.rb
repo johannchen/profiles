@@ -59,18 +59,15 @@ class User < ActiveRecord::Base
   end
   memoize :graph
 
-  # FIXME this should not have side effects
-  def self.find_for_facebook_oauth(access_token, signed_in_resource=nil)
+  def self.find_and_update(access_token)
     data = access_token['extra']['user_hash']
     user = User.find_by_provider_and_uid('facebook', access_token["uid"]) ||
-      User.find_by_email(data["email"]) ||
-      User.new do |u|
-        u.provider = 'facebook'
-        u.uid      = access_token["uid"]
-        u.email    = data["email"]
-        u.password = Devise.friendly_token[0,20]
-      end
-    user.fb_token = access_token["credentials"]["token"]
+      User.find_by_email(data['email']) ||
+      User.new(:password => Devise.friendly_token[0,20])
+    user.fb_token = access_token['credentials']['token']
+    user.provider = 'facebook'
+    user.uid      = access_token['uid']
+    user.email    = data['email']
     user.save!
     user.update_profile_from_oauth_access_token!(access_token)
     user.profile.update_friends!

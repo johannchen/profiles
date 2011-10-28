@@ -1,13 +1,13 @@
 community:
   name: OneChurch
   main_site_url: http://example.com
+  url: http://something.herokuapp.com
 site:
   name: OneChurch
   tagline: Welcome home.
   default_timezone: Central Time (US & Canada)
 auth:
-  facebook:
-    app_id: 
-    secret:
+  facebook_app_id: 
+  facebook_secret: 
 profile:
   bio_max_length: 500

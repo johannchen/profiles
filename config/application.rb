@@ -49,5 +49,8 @@ module Profiles
 
     # Enable the asset pipeline
     config.assets.enabled = true
+
+    # Load migrations from vendor/plugins
+    config.paths['db/migrate'] += Dir[Rails.root.join('vendor/plugins/*/db/migrate')].to_a
   end
 end

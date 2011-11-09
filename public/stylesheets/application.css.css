@@ -466,3 +466,11 @@ html, body {
   background-position: 0 -84px;
   background-repeat: no-repeat;
 }
+
+/* line 338, ../../app/assets/stylesheets/application.css.scss */
+.email-icon {
+  padding-left: 15px;
+  background-image: url(/assets/icons.png);
+  background-position: 0 -112px;
+  background-repeat: no-repeat;
+}

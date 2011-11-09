@@ -60,6 +60,7 @@ class Profile < ActiveRecord::Base
     self.full_image_url  = "http://graph.facebook.com/#{access_token['uid']}/picture?type=large"
     self.gender          = {"male" => "m", "female" => "f"}[data["gender"].downcase]
     self.facebook_url    = data["link"]
+    self.facebook_id     = access_token["uid"]
     self.name            = data["name"]
     self.location        = data["location"] && data["location"]["name"]
     self.phone           = data["phone"] if data["phone"]

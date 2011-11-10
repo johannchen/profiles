@@ -11,6 +11,7 @@
     .headline= @profile.headline
 
   .links
+    .email= @profile.user.email
     - if @profile.facebook_url
       = link_to simple_url(@profile.facebook_url), @profile.facebook_url, :class => 'fb-icon'
     - if @profile.phone

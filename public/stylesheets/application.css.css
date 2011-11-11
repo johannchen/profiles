@@ -368,51 +368,6 @@ html, body {
   color: red;
   font-weight: bold;
 }
-/* line 297, ../../app/assets/stylesheets/application.css.scss */
-.simple_form form div.error input[type=tel] {
-  border-color: #c87872;
-  -webkit-box-shadow: 0 0 3px rgba(171, 41, 32, 0.25);
-  -moz-box-shadow: 0 0 3px rgba(171, 41, 32, 0.25);
-  box-shadow: 0 0 3px rgba(171, 41, 32, 0.25);
-}
-/* line 298, ../../app/assets/stylesheets/application.css.scss */
-.simple_form form div.error input[type=tel]:focus {
-  border-color: #b9554d;
-  -webkit-box-shadow: 0 0 6px rgba(171, 41, 32, 0.5);
-  -moz-box-shadow: 0 0 6px rgba(171, 41, 32, 0.5);
-  box-shadow: 0 0 6px rgba(171, 41, 32, 0.5);
-}
-/* line 299, ../../app/assets/stylesheets/application.css.scss */
-.simple_form input[type=tel]:focus {
-  outline: none;
-  border-color: rgba(82, 168, 236, 0.8);
-  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
-  -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
-}
-/* line 300, ../../app/assets/stylesheets/application.css.scss */
-.simple_form input[type=tel] {
-  -webkit-transition: border linear 0.2s,box-shadow linear 0.2s;
-  -moz-transition: border linear 0.2s,box-shadow linear 0.2s;
-  transition: border linear 0.2s,box-shadow linear 0.2s;
-  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-/* line 301, ../../app/assets/stylesheets/application.css.scss */
-.simple_form input[type=tel] {
-  display: inline-block;
-  width: 210px;
-  padding: 4px;
-  font-size: 13px;
-  line-height: 18px;
-  height: 18px;
-  color: #808080;
-  border: 1px solid #ccc;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-}
 
 /* line 304, ../../app/assets/stylesheets/application.css.scss */
 #profile_bio {

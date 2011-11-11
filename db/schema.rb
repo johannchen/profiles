@@ -104,7 +104,7 @@ ActiveRecord::Schema.define(:version => 20111027233853) do
     t.string   "workflow_state",                        :default => "pending_review"
     t.integer  "roles"
     t.string   "timezone",               :limit => 50
-    t.string   "fb_token",               :limit => 100
+    t.string   "fb_token"
   end
 
   add_index "users", ["authentication_token"], :name => "index_users_on_authentication_token", :unique => true

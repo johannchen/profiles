@@ -341,11 +341,6 @@ html, body {
 }
 
 /* Forms - - - - - - - - - */
-/* line 274, ../../app/assets/stylesheets/application.css.scss */
-.simple_form {
-  /* temporary until HTML5 elements are included in Bootstrap
-     See https://github.com/twitter/bootstrap/pull/28 */
-}
 /* line 275, ../../app/assets/stylesheets/application.css.scss */
 .simple_form select.date {
   width: auto;
@@ -369,19 +364,19 @@ html, body {
   font-weight: bold;
 }
 
-/* line 304, ../../app/assets/stylesheets/application.css.scss */
+/* line 297, ../../app/assets/stylesheets/application.css.scss */
 #profile_bio {
   width: 380px;
   height: 150px;
 }
 
 /* Admin - - - - - - - - - */
-/* line 312, ../../app/assets/stylesheets/application.css.scss */
+/* line 305, ../../app/assets/stylesheets/application.css.scss */
 .admin-actions td .pic {
   float: left;
   margin: 0 10px 0 0;
 }
-/* line 316, ../../app/assets/stylesheets/application.css.scss */
+/* line 309, ../../app/assets/stylesheets/application.css.scss */
 .admin-actions td.buttons {
   width: 200px;
   text-align: center;
@@ -390,7 +385,7 @@ html, body {
 }
 
 /* Icons - - - - - - - - - */
-/* line 334, ../../app/assets/stylesheets/application.css.scss */
+/* line 327, ../../app/assets/stylesheets/application.css.scss */
 .fb-icon {
   padding-left: 15px;
   background-image: url(/assets/icons.png);
@@ -398,7 +393,7 @@ html, body {
   background-repeat: no-repeat;
 }
 
-/* line 335, ../../app/assets/stylesheets/application.css.scss */
+/* line 328, ../../app/assets/stylesheets/application.css.scss */
 .phone-icon {
   padding-left: 15px;
   background-image: url(/assets/icons.png);
@@ -406,7 +401,7 @@ html, body {
   background-repeat: no-repeat;
 }
 
-/* line 336, ../../app/assets/stylesheets/application.css.scss */
+/* line 329, ../../app/assets/stylesheets/application.css.scss */
 .bday-icon {
   padding-left: 15px;
   background-image: url(/assets/icons.png);
@@ -414,7 +409,7 @@ html, body {
   background-repeat: no-repeat;
 }
 
-/* line 337, ../../app/assets/stylesheets/application.css.scss */
+/* line 330, ../../app/assets/stylesheets/application.css.scss */
 .edit-icon {
   padding-left: 15px;
   background-image: url(/assets/icons.png);
@@ -422,7 +417,7 @@ html, body {
   background-repeat: no-repeat;
 }
 
-/* line 338, ../../app/assets/stylesheets/application.css.scss */
+/* line 331, ../../app/assets/stylesheets/application.css.scss */
 .email-icon {
   padding-left: 15px;
   background-image: url(/assets/icons.png);

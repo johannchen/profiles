@@ -1,11 +1,11 @@
 require File.expand_path('../boot', __FILE__)
 
 # Pick the frameworks you want:
- require "active_record/railtie"
+require "active_record/railtie"
 require "action_controller/railtie"
 require "action_mailer/railtie"
 require "active_resource/railtie"
- require "sprockets/railtie"
+require "sprockets/railtie"
 # require "rails/test_unit/railtie"
 
 # If you have a Gemfile, require the default gems, the ones in the
@@ -16,6 +16,8 @@ Bundler.require *Rails.groups(:assets) if defined?(Bundler)
 require File.expand_path('../../app/models/setting', __FILE__)
 
 module Profiles
+  VERSION = '0.2.0.pre'
+
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
@@ -49,5 +51,8 @@ module Profiles
 
     # Enable the asset pipeline
     config.assets.enabled = true
+
+    # Load migrations from vendor/plugins
+    config.paths['db/migrate'] += Dir[Rails.root.join('vendor/plugins/*/db/migrate')].to_a
   end
 end

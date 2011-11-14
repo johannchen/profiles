@@ -36,7 +36,7 @@ This app was birthed out of [OneBody](https://github.com/seven1m/onebody), a mon
 
 ## Development
 
-This app is still under heavy development, so instructions below are meant for running the app **locally** (not on a server). Later, this app should easily run on Heroku.
+Instructions below are meant for running the app **locally** (not on a server).
 
 1. Install Ruby 1.9.2 and bundler (`gem install bundler`).
 2. Create your database (PostgreSQL recommended).
@@ -54,11 +54,15 @@ rake db:reset
 rails server
 ```
 
+## Server Deployment
+
+Check out the wonderful [installation instructions](http://church.io/profiles/install.html) on the website.
+
 ## Contact
 
-Catch Tim in the #church.io IRC channel on Freenode, on Twitter at [@seven1m](https://twitter.com/seven1m), or by email at [tim@timmorgan.org](http://timmorgan.org).
+Catch Tim in the #church.io IRC channel on freenode, on Twitter at [@seven1m](https://twitter.com/seven1m), or by email at [tim@timmorgan.org](http://timmorgan.org).
 
-[http://church.io](http://church.io) currently hosts a blog that should correlate loosely with this and other church software projects.
+[http://church.io](http://church.io) hosts additional information avout this and other church software projects.
 
 ## Copyright & License
 

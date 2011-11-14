@@ -341,11 +341,6 @@ html, body {
 }
 
 /* Forms - - - - - - - - - */
-/* line 274, ../../app/assets/stylesheets/application.css.scss */
-.simple_form {
-  /* temporary until HTML5 elements are included in Bootstrap
-     See https://github.com/twitter/bootstrap/pull/28 */
-}
 /* line 275, ../../app/assets/stylesheets/application.css.scss */
 .simple_form select.date {
   width: auto;
@@ -368,65 +363,20 @@ html, body {
   color: red;
   font-weight: bold;
 }
-/* line 297, ../../app/assets/stylesheets/application.css.scss */
-.simple_form form div.error input[type=tel] {
-  border-color: #c87872;
-  -webkit-box-shadow: 0 0 3px rgba(171, 41, 32, 0.25);
-  -moz-box-shadow: 0 0 3px rgba(171, 41, 32, 0.25);
-  box-shadow: 0 0 3px rgba(171, 41, 32, 0.25);
-}
-/* line 298, ../../app/assets/stylesheets/application.css.scss */
-.simple_form form div.error input[type=tel]:focus {
-  border-color: #b9554d;
-  -webkit-box-shadow: 0 0 6px rgba(171, 41, 32, 0.5);
-  -moz-box-shadow: 0 0 6px rgba(171, 41, 32, 0.5);
-  box-shadow: 0 0 6px rgba(171, 41, 32, 0.5);
-}
-/* line 299, ../../app/assets/stylesheets/application.css.scss */
-.simple_form input[type=tel]:focus {
-  outline: none;
-  border-color: rgba(82, 168, 236, 0.8);
-  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
-  -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
-}
-/* line 300, ../../app/assets/stylesheets/application.css.scss */
-.simple_form input[type=tel] {
-  -webkit-transition: border linear 0.2s,box-shadow linear 0.2s;
-  -moz-transition: border linear 0.2s,box-shadow linear 0.2s;
-  transition: border linear 0.2s,box-shadow linear 0.2s;
-  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-/* line 301, ../../app/assets/stylesheets/application.css.scss */
-.simple_form input[type=tel] {
-  display: inline-block;
-  width: 210px;
-  padding: 4px;
-  font-size: 13px;
-  line-height: 18px;
-  height: 18px;
-  color: #808080;
-  border: 1px solid #ccc;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-}
 
-/* line 304, ../../app/assets/stylesheets/application.css.scss */
+/* line 297, ../../app/assets/stylesheets/application.css.scss */
 #profile_bio {
   width: 380px;
   height: 150px;
 }
 
 /* Admin - - - - - - - - - */
-/* line 312, ../../app/assets/stylesheets/application.css.scss */
+/* line 305, ../../app/assets/stylesheets/application.css.scss */
 .admin-actions td .pic {
   float: left;
   margin: 0 10px 0 0;
 }
-/* line 316, ../../app/assets/stylesheets/application.css.scss */
+/* line 309, ../../app/assets/stylesheets/application.css.scss */
 .admin-actions td.buttons {
   width: 200px;
   text-align: center;
@@ -435,7 +385,7 @@ html, body {
 }
 
 /* Icons - - - - - - - - - */
-/* line 334, ../../app/assets/stylesheets/application.css.scss */
+/* line 327, ../../app/assets/stylesheets/application.css.scss */
 .fb-icon {
   padding-left: 15px;
   background-image: url(/assets/icons.png);
@@ -443,7 +393,7 @@ html, body {
   background-repeat: no-repeat;
 }
 
-/* line 335, ../../app/assets/stylesheets/application.css.scss */
+/* line 328, ../../app/assets/stylesheets/application.css.scss */
 .phone-icon {
   padding-left: 15px;
   background-image: url(/assets/icons.png);
@@ -451,7 +401,7 @@ html, body {
   background-repeat: no-repeat;
 }
 
-/* line 336, ../../app/assets/stylesheets/application.css.scss */
+/* line 329, ../../app/assets/stylesheets/application.css.scss */
 .bday-icon {
   padding-left: 15px;
   background-image: url(/assets/icons.png);
@@ -459,10 +409,18 @@ html, body {
   background-repeat: no-repeat;
 }
 
-/* line 337, ../../app/assets/stylesheets/application.css.scss */
+/* line 330, ../../app/assets/stylesheets/application.css.scss */
 .edit-icon {
   padding-left: 15px;
   background-image: url(/assets/icons.png);
   background-position: 0 -84px;
+  background-repeat: no-repeat;
+}
+
+/* line 331, ../../app/assets/stylesheets/application.css.scss */
+.email-icon {
+  padding-left: 15px;
+  background-image: url(/assets/icons.png);
+  background-position: 0 -112px;
   background-repeat: no-repeat;
 }

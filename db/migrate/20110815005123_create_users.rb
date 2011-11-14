@@ -11,7 +11,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :workflow_state, :limit => 255, :default => 'pending_review'
       t.integer :roles
       t.string :timezone, :limit => 50
-      t.string :fb_token, :limit => 255 
+      t.string :fb_token, :limit => 255
     end
 
     add_index :users, :email,                :unique => true

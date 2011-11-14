@@ -93,6 +93,15 @@ en-US:
     privacy_policy: Privacy Policy
 
   profile:
+    alert_new:
+      heading: Welcome!
+      body_html: <strong>Your profile has been created.</strong> Now would be a great time to edit your profile and add other information you want people to know about you.
+      edit_profile_button: Edit your profile...
+    alert_new_theme:
+      heading: Your Profile Design
+      body_html: <strong>We've selected a profile design for you.</strong> You can select a different random design or make your own...
+      new_button: Another design please!
+      edit_button: Let me make my own...
     attributes:
       phone: 
     birthday: Birthday of %{name}
@@ -121,17 +130,9 @@ en-US:
           tiled: Tiled
           color: Color
     friends: Friends
+    send_message: Send Message
     theme:
       bg_image_byline_html: "%{name} by %{byline}"
-    alert_new:
-      heading: Welcome!
-      body_html: <strong>Your profile has been created.</strong> Now would be a great time to edit your profile and add other information you want people to know about you.
-      edit_profile_button: Edit your profile...
-    alert_new_theme:
-      heading: Your Profile Design
-      body_html: <strong>We've selected a profile design for you.</strong> You can select a different random design or make your own...
-      new_button: Another design please!
-      edit_button: Let me make my own...
   
   registration:
     create_profile_message: Please create your profile in order to continue.

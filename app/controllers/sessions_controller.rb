@@ -3,7 +3,8 @@ class SessionsController < ApplicationController
   # omniauth callbacks
   
   def facebook
-    @user = User.find_and_update(env["omniauth.auth"])
+    auth = request.env["omniauth.auth"]
+    @user = User.find_and_update(auth)
 
     if @user.persisted?
       flash[:notice] = I18n.t('session.success')

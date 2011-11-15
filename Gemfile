@@ -5,6 +5,7 @@ gem 'rails', '~> 3.1.0'
 gem 'pg'
 gem 'devise'
 gem 'omniauth'
+gem 'omniauth-facebook', '~> 1.0.0.rc1'
 gem 'fb_graph'
 gem 'haml'
 gem 'workflow'
@@ -26,6 +27,7 @@ group :assets do
 end
 
 group :development do
+  gem 'pry'
 end
 
 group :testing do

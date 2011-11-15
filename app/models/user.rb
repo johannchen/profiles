@@ -60,7 +60,8 @@ class User < ActiveRecord::Base
   memoize :graph
 
   def self.find_and_update(access_token)
-    data = access_token['extra']['user_hash']
+    #data = access_token['extra']['user_hash']
+    data = access_token['extra']['raw_info']
     user = User.find_by_provider_and_uid('facebook', access_token["uid"]) ||
       User.find_by_email(data['email']) ||
       User.new(:password => Devise.friendly_token[0,20])

@@ -28,6 +28,7 @@ end
 
 group :development do
   gem 'pry'
+  gem 'traceroute'
 end
 
 group :testing do

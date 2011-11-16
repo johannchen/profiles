@@ -6,6 +6,8 @@ class Admin::UsersController < ApplicationController
   def update
     if params[:do] == 'activate'
       @user.activate!
+      # send email notification to user
+      UserMailer.activation_email(current_user, @user).deliver
     elsif params[:do] == 'reject'
       @user.reject!
     end

@@ -11,7 +11,9 @@ class Search < Struct.new(:q, :user)
   end
 
   def profiles
-    if show_all?
+    if user.roles?(:admin) && show_all?
+      Profile.where(['lower(name) like ?', "%#{self.q.downcase}%"]).all
+    elsif show_all?
       Profile.visible_or_user(user).where(['lower(name) like ?', "%#{self.q.downcase}%"]).all
     else
       [user.profile].compact

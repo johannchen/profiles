@@ -30,6 +30,14 @@
     .map
     = hidden_field_tag :location, @profile.location
 
+  - if current_user.roles?(:admin)
+    .buttons
+      - if @profile.user.workflow_state == "active"
+        = link_to t('admin.dashboard.actions.inactivate'),   admin_user_path(@profile.user, :do => :inactivate), :method => :put, :class => 'btn danger'
+      - else
+        = link_to t('admin.dashboard.actions.activate'), admin_user_path(@profile.user, :do => :activate), :method => :put, :class => 'btn success'
+
+
   -# TODO
   -#- if @profile.friends.any?
     -#%h3= t('profile.friends')

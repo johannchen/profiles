@@ -10,6 +10,9 @@ class Admin::UsersController < ApplicationController
       UserMailer.activation_email(current_user, @user).deliver
     elsif params[:do] == 'reject'
       @user.reject!
+      UserMailer.rejection_email(current_user, @user).deliver
+    elsif params[:do] == 'inactivate'
+      @user.inactivate!
     end
     respond_with @user do |format|
       format.html { redirect_to admin_dashboard_path }

@@ -82,7 +82,7 @@ class User < ActiveRecord::Base
 
   def update_profile_from_oauth_access_token!(access_token)
     profile = self.profile || build_profile
-    profile.update_from_oauth_access_token!(access_token)
+    profile.update_from_oauth!(access_token)
   end
 
   private

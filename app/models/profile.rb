@@ -55,7 +55,7 @@ class Profile < ActiveRecord::Base
     write_attribute(:bio, b.to_s[0...Setting.s('profile.bio_max_length').to_i])
   end
 
-  def update_from_oauth_access_token!(access_token)
+  def update_from_oauth!(access_token)
     data = access_token['extra']['raw_info']
     self.small_image_url = "http://graph.facebook.com/#{access_token['uid']}/picture?type=square"
     self.full_image_url  = "http://graph.facebook.com/#{access_token['uid']}/picture?type=large"

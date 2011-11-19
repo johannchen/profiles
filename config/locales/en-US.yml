@@ -28,6 +28,7 @@ en-US:
         email: Email
         password: New Password
         password_confirmation: Repeat Password
+        thirteen_or_older: Thirteen or Older
         timezone: Time Zone
     errors: 
       models: 
@@ -156,3 +157,8 @@ en-US:
     log_in_with_email_intro_html: Optionally, you can log in with your email address and password. If you don't have an account, <a href="%{sign_up_path}">sign up</a>.
     log_in_with_facebook: Log in with Facebook
     success: You are now logged in.
+
+  simple_form:
+    labels:
+      user:
+        thirteen_or_older: I am thirteen (13) years of age or older.

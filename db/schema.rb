@@ -105,6 +105,7 @@ ActiveRecord::Schema.define(:version => 20111118224452) do
     t.integer  "roles"
     t.string   "timezone",               :limit => 50
     t.string   "fb_token"
+    t.boolean  "thirteen_or_older"
   end
 
   add_index "users", ["authentication_token"], :name => "index_users_on_authentication_token", :unique => true

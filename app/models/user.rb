@@ -39,11 +39,17 @@ class User < ActiveRecord::Base
 
   validates_presence_of :email
 
+  validates_each :thirteen_or_older do |record, attr, val|
+    if record.provider.nil? and not val
+      record.errors.add(attr, :invalid)
+    end
+  end
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
          :token_authenticatable, :omniauthable
 
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :timezone
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :timezone, :thirteen_or_older
 
   blank_to_nil
 

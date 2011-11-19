@@ -74,4 +74,24 @@ describe User do
       }.should change(User, :count).by(1)
     end
   end
+
+  context 'given a new user with provider=nil and thirteen_or_older=false' do
+    before do
+      @user = Factory.build(:user, :thirteen_or_older => false)
+    end
+
+    it 'validates thirteen or older' do
+      @user.errors[:thirteen_or_older].should be_true
+    end
+  end
+
+  context 'given a new user with provider=nil and thirteen_or_older=nil' do
+    before do
+      @user = Factory.build(:user, :thirteen_or_older => nil)
+    end
+
+    it 'validates thirteen or older' do
+      @user.errors[:thirteen_or_older].should be_true
+    end
+  end
 end

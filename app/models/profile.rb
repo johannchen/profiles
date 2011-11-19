@@ -55,7 +55,7 @@ class Profile < ActiveRecord::Base
   end
 
   def update_from_oauth_access_token!(access_token)
-    data = access_token['extra']['user_hash']
+    data = access_token['extra']['raw_info']
     self.small_image_url = "http://graph.facebook.com/#{access_token['uid']}/picture?type=square"
     self.full_image_url  = "http://graph.facebook.com/#{access_token['uid']}/picture?type=large"
     self.gender          = {"male" => "m", "female" => "f"}[data["gender"].downcase]

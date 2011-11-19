@@ -2,14 +2,54 @@ require 'spec_helper'
 
 describe User do
   before do
+    #{
+      #:credentials=>{
+        #:expires=>false,
+        #:token=>"AAAC6CMHwKnsBAOCb2QgxCKzfCVrl2mEPJZCYMveN3VkxqQn0TFan7SyQm1b6A0z9tpKz7f9hCZCkUw5x4eAj5676Cq1RgZD"
+      #},
+      #:extra=>{
+        #:raw_info=>{
+          #:email=>"tim@timmorgan.org",
+          #:first_name=>"Tim",
+          #:gender=>"male",
+          #:id=>"502335050",
+          #:last_name=>"Morgan",
+          #:link=>"http://www.facebook.com/seven1m",
+          #:locale=>"en_US",
+          #:location=>{
+            #:id=>"109436565740998",
+            #:name=>"Tulsa, Oklahoma"
+          #},
+          #:name=>"Tim Morgan",
+          #:timezone=>-6,
+          #:updated_time=>"2011-10-03T17:38:38+0000",
+          #:username=>"seven1m",
+          #:verified=true
+        #}
+      #},
+      #:info=>{
+        #:email=>"tim@timmorgan.org"
+        #:first_name=>"Tim",
+        #:image=>"http://graph.facebook.com/502335050/picture?type=square",
+        #:last_name=>"Morgan",
+        #:location=>"Tulsa, Oklahoma",
+        #:name=>"Tim Morgan",
+        #:nickname=>"seven1m",
+        #:urls=>{
+          #:Facebook=>"http://www.facebook.com/seven1m"
+        #}
+      #},
+      #:provider=>"facebook",
+      #:uid=>"502335050"
+    #}
     @token = {
       "provider"     => "facebook",
       "uid"          => "000000001",
-      "user_info"    => {
+      "info"    => {
         "image"      => "http://graph.facebook.com/000000001/picture?type=square"
       },
       "extra"        => {
-        "user_hash"  => {
+        "raw_info"   => {
           "id"       => "502335050",
           "name"     => "John Doe",
           "link"     => "http://www.facebook.com/seven1m",

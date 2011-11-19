@@ -49,5 +49,5 @@ Profiles::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 
-  config.action_mailer.default_url_options = { :host => Setting.s('community.url') }
+  config.action_mailer.default_url_options = { :host => URI.parse(Setting.s('community.url') || 'example.com').host }
 end

@@ -11,3 +11,5 @@ auth:
   facebook_secret: 
 profile:
   bio_max_length: 500
+smtp:
+  from_address: no-reply@example.com

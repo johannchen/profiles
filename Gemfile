@@ -33,6 +33,7 @@ group :testing do
   gem 'mocha'
   gem 'bourne'
   gem 'factory_girl_rails'
+  gem 'steak'
   gem 'spork'
   gem 'watchr'
 end

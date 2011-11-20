@@ -18,7 +18,6 @@
     - if @profile.theme
       = tab_content '#theme' do
         = form.simple_fields_for :theme do |theme|
-          = theme.input :bg_image, :as => :hidden
           .clearfix
             %label{:style => 'padding-top:10px;'} Background
             .input
@@ -40,6 +39,7 @@
               = theme.input :bg_color_top, :input_html => {:class => 'color'}
               = theme.input :box_pos, :include_blank => false, |
                 :collection => {t('profile.edit_form.theme.box_pos.left') => 'left', t('profile.edit_form.theme.box_pos.right') => 'right'}
+          = theme.input :bg_image, :as => :hidden
 
 
   .actions

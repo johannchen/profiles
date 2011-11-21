@@ -30,7 +30,7 @@
     .map
     = hidden_field_tag :location, @profile.location
 
-  - if current_user.roles?(:admin)
+  - if current_user.roles?(:admin) && current_user != @profile.user 
     .buttons
       - if @profile.user.workflow_state == "active"
         = link_to t('admin.dashboard.actions.inactivate'),   admin_user_path(@profile.user, :do => :inactivate), :method => :put, :class => 'btn danger'

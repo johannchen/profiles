@@ -1,8 +1,11 @@
-Factory.define(:user) do |f|
-  f.sequence(:email) { |n| "user#{n}@example.com" }
-  f.password 'password'
-end
+FactoryGirl.define do
+  factory :user do
+    sequence(:email) { |n| "user#{n}@example.com" }
+    password 'password'
+    thirteen_or_older true
+  end
 
-Factory.define(:profile) do |f|
-  f.name 'John Doe'
+  factory :profile do
+    name 'John Doe'
+  end
 end

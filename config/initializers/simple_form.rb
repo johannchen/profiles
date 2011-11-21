@@ -34,15 +34,23 @@ module SimpleForm::Inputs
     def input
       template.content_tag(:div, :class => 'input') do
         template.content_tag(:ul, :class => 'inputs-list') do
-          template.content_tag(:li) do
-            @builder.check_box(attribute_name, input_html_options)
+          template.content_tag(:li, :class => options[:inline] && 'inline') do
+            if options[:inline]
+              @builder.label(label_target, @builder.check_box(attribute_name, input_html_options) + template.content_tag(:span, label_text), label_html_options)
+            else
+              @builder.check_box(attribute_name, input_html_options)
+            end
           end
         end
       end
     end
 
     def label_input
-      (options[:label] == false ? "" : label) + input
+      if options[:inline]
+        input
+      else
+        (options[:label] == false ? "" : label) + input
+      end
     end
   end
 end

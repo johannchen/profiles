@@ -11,6 +11,7 @@
   = form.input :email
   = form.input :password, :required => true
   = form.input :password_confirmation, :required => true
+  = form.input :thirteen_or_older, :as => :b_boolean, :inline => true
   %fieldset.actions
     .right
       = link_to t('registration.forgot_password_button'), new_password_path(resource_name), :class => 'btn'

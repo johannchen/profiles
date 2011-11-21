@@ -13,6 +13,7 @@ class ProfilesController < ApplicationController
   end
 
   def create
+    @profile = current_user.build_profile
     if @profile.update_attributes(params[:profile])
       flash[:success] = t('profile.edit_form.save_success')
     end

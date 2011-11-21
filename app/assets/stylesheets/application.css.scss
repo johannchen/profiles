@@ -15,6 +15,8 @@ body {
 
 // override bootstrap weirdness
 html,body{background:none;}
+.inputs-list input[type=radio],.inputs-list input[type=checkbox]{margin-bottom:0;margin-left:0;float:none;}
+.inputs-list li.inline label { display: inline; margin-left: 0 }
 
 .alert-message.block-message {
   h2 {

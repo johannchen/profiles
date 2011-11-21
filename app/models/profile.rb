@@ -26,6 +26,7 @@ class Profile < ActiveRecord::Base
   validates_inclusion_of :gender, :in => %w(m f), :allow_nil => true
   validates_length_of :location, :maximum => 50
   validates_length_of :phone, :maximum => 50
+  validates_presence_of :user_id
   validates_uniqueness_of :user_id
 
   attr_accessible :name, :headline, :bio, :gender, :birthday, :location, :phone, :facebook_id, :facebook_url, :small_image_url, :full_image_url, :theme_attributes, :alerts
@@ -54,8 +55,7 @@ class Profile < ActiveRecord::Base
     write_attribute(:bio, b.to_s[0...Setting.s('profile.bio_max_length').to_i])
   end
 
-  def update_from_oauth_access_token!(access_token)
-    # data = access_token['extra']['user_hash']
+  def update_from_oauth!(access_token)
     data = access_token['extra']['raw_info']
     self.small_image_url = "http://graph.facebook.com/#{access_token['uid']}/picture?type=square"
     self.full_image_url  = "http://graph.facebook.com/#{access_token['uid']}/picture?type=large"

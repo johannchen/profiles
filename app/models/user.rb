@@ -39,11 +39,17 @@ class User < ActiveRecord::Base
 
   validates_presence_of :email
 
+  validates_each :thirteen_or_older do |record, attr, val|
+    if record.provider.nil? and not val
+      record.errors.add(attr, :invalid)
+    end
+  end
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
          :token_authenticatable, :omniauthable
 
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :timezone
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :timezone, :thirteen_or_older
 
   blank_to_nil
 
@@ -60,7 +66,6 @@ class User < ActiveRecord::Base
   memoize :graph
 
   def self.find_and_update(access_token)
-    #data = access_token['extra']['user_hash']
     data = access_token['extra']['raw_info']
     user = User.find_by_provider_and_uid('facebook', access_token["uid"]) ||
       User.find_by_email(data['email']) ||
@@ -77,7 +82,7 @@ class User < ActiveRecord::Base
 
   def update_profile_from_oauth_access_token!(access_token)
     profile = self.profile || build_profile
-    profile.update_from_oauth_access_token!(access_token)
+    profile.update_from_oauth!(access_token)
   end
 
   private

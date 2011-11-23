@@ -397,8 +397,44 @@ html, body {
   background-color: #eee;
 }
 
+/* line 319, ../../app/assets/stylesheets/application.css.scss */
+.dashboard-heading {
+  margin-bottom: 20px;
+}
+
+/* line 323, ../../app/assets/stylesheets/application.css.scss */
+.stat {
+  background: #eee;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  padding: 15px;
+  width: 400px;
+}
+/* line 328, ../../app/assets/stylesheets/application.css.scss */
+.stat .chart {
+  height: 200px;
+  margin-bottom: 20px;
+}
+/* line 332, ../../app/assets/stylesheets/application.css.scss */
+.stat .data {
+  display: none;
+}
+/* line 335, ../../app/assets/stylesheets/application.css.scss */
+.stat a.show-data {
+  padding-left: 15px;
+  background: url(/assets/arrow_collapse.gif) top left no-repeat;
+}
+/* line 339, ../../app/assets/stylesheets/application.css.scss */
+.stat a.expanded {
+  background: url(/assets/arrow_expand.gif) top left no-repeat;
+}
+
 /* Icons - - - - - - - - - */
-/* line 329, ../../app/assets/stylesheets/application.css.scss */
+/* line 354, ../../app/assets/stylesheets/application.css.scss */
 .fb-icon {
   padding-left: 15px;
   background-image: url(/assets/icons.png);
@@ -406,7 +442,7 @@ html, body {
   background-repeat: no-repeat;
 }
 
-/* line 330, ../../app/assets/stylesheets/application.css.scss */
+/* line 355, ../../app/assets/stylesheets/application.css.scss */
 .phone-icon {
   padding-left: 15px;
   background-image: url(/assets/icons.png);
@@ -414,7 +450,7 @@ html, body {
   background-repeat: no-repeat;
 }
 
-/* line 331, ../../app/assets/stylesheets/application.css.scss */
+/* line 356, ../../app/assets/stylesheets/application.css.scss */
 .bday-icon {
   padding-left: 15px;
   background-image: url(/assets/icons.png);
@@ -422,7 +458,7 @@ html, body {
   background-repeat: no-repeat;
 }
 
-/* line 332, ../../app/assets/stylesheets/application.css.scss */
+/* line 357, ../../app/assets/stylesheets/application.css.scss */
 .edit-icon {
   padding-left: 15px;
   background-image: url(/assets/icons.png);
@@ -430,7 +466,7 @@ html, body {
   background-repeat: no-repeat;
 }
 
-/* line 333, ../../app/assets/stylesheets/application.css.scss */
+/* line 358, ../../app/assets/stylesheets/application.css.scss */
 .email-icon {
   padding-left: 15px;
   background-image: url(/assets/icons.png);

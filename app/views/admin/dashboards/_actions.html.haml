@@ -1,0 +1,21 @@
+%h3 Profiles Pending Activation
+
+- if @actions.pending_review.any?
+  %table.admin-actions
+    %tbody
+      - @actions.pending_review.each do |user|
+        %tr{:id => "user-#{user.id}"}
+          %td
+            - if user.profile
+              = link_to profile_pic_tag(user.profile, :tn), user.profile
+              %strong= link_to user.profile.name, user.profile
+              %br
+              = link_to simple_url(user.profile.facebook_url), user.profile.facebook_url
+              = user.profile.phone
+            - else
+              = user.id
+          %td.buttons
+            = link_to t('admin.dashboard.actions.activate'), admin_user_path(user, :do => :activate), :method => :put, :remote => true, :class => 'btn success'
+            = link_to t('admin.dashboard.actions.reject'),   admin_user_path(user, :do => :reject  ), :method => :put, :remote => true, :class => 'btn danger'
+- else
+  %em= t('admin.dashboard.actions.none')

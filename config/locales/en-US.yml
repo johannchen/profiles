@@ -39,10 +39,16 @@ en-US:
 
   admin:
     dashboard:
-      heading: Admin Dashboard
       actions:
         activate: Activate
         reject: Reject
+        none: No profiles pending activation.
+      charts:
+        detail_link: Details
+        sign_ups_by_date:
+          heading: Sign Ups by Date
+          no_data: none
+      heading: Admin Dashboard
 
   app:
     powered_by_html: Powered by <a href="http://church.io">Church.IO Profiles</a>

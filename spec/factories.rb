@@ -7,5 +7,6 @@ FactoryGirl.define do
 
   factory :profile do
     name 'John Doe'
+    association :user
   end
 end

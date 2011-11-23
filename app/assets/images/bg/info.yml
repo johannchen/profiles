@@ -262,14 +262,6 @@
   class: dark
   box_pos: left
 
-- filename: /assets/bg/concrete_wall_2.png
-  format: tiled
-  license: This work is licensed under a Creative Commons Attribution 3.0 Unported License. The patterns can be used freely in both personal and commercial projects with no attribution required, but always appreciated.
-  license-short: CC-BY-3.0
-  credit: Atle Mo
-  class: light
-  box_pos: left
-
 - filename: /assets/bg/concrete_wall_3.png
   format: tiled
   license: This work is licensed under a Creative Commons Attribution 3.0 Unported License. The patterns can be used freely in both personal and commercial projects with no attribution required, but always appreciated.
@@ -479,14 +471,6 @@
   box_pos: left
 
 - filename: /assets/bg/smooth_wall.png
-  format: tiled
-  license: This work is licensed under a Creative Commons Attribution 3.0 Unported License. The patterns can be used freely in both personal and commercial projects with no attribution required, but always appreciated.
-  license-short: CC-BY-3.0
-  credit: Atle Mo
-  class: light
-  box_pos: left
-
-- filename: /assets/bg/soft_wallpaper.png
   format: tiled
   license: This work is licensed under a Creative Commons Attribution 3.0 Unported License. The patterns can be used freely in both personal and commercial projects with no attribution required, but always appreciated.
   license-short: CC-BY-3.0

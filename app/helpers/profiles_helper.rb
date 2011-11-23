@@ -87,16 +87,16 @@ module ProfilesHelper
   def event_url(date, title, url=nil)
     "https://www.google.com/calendar/b/0/render?" +
     {
-      action:   'TEMPLATE',
-      text:     title,
-      dates:    "#{date.strftime('%Y%m%d')}/#{(date + 1).strftime('%Y%m%d')}",
-      details:  '',
-      location: '',
-      trp:      false,
-      sprop:    url || request.url,
-      pli:      1,
-      sf:       true,
-      output:   'xml'
+      :action   => 'TEMPLATE',
+      :text     => title,
+      :dates    => "#{date.strftime('%Y%m%d')}/#{(date + 1).strftime('%Y%m%d')}",
+      :details  => '',
+      :location => '',
+      :trp      => false,
+      :sprop    => url || request.url,
+      :pli      => 1,
+      :sf       => true,
+      :output   => 'xml'
     }.to_param
   end
 
@@ -104,9 +104,9 @@ module ProfilesHelper
     return '' unless profile.facebook_id
     "https://www.facebook.com/dialog/send?" +
     {
-      app_id:       Setting.s('auth.facebook.app.id'),
-      to:           profile.facebook_id,
-      redirect_uri: profile_url(profile)
+      :app_id       => Setting.s('auth.facebook.app.id'),
+      :to           => profile.facebook_id,
+      :redirect_uri => profile_url(profile)
     }.to_param
   end
 

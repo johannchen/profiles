@@ -16,7 +16,7 @@ module ApplicationHelper
       obj = form_or_resource
     end
     if obj.errors.any?
-      content_tag(:div, class: 'error_explanation') do
+      content_tag(:div, :class => 'error_explanation') do
         content_tag(:h3, t('feedback.form_errors_heading')) +
         content_tag(:ul) do
           obj.errors.map do |attribute, message|

@@ -301,46 +301,6 @@ html,body{background:none;}
   height: 150px;
 }
 
-/* Admin - - - - - - - - - */
-
-.admin-actions {
-  td .pic {
-    float: left;
-    margin: 0 10px 0 0;
-  }
-  td.buttons {
-    width: 200px;
-    text-align: center;
-    vertical-align: middle;
-    background-color: #eee;
-  }
-}
-
-.dashboard-heading {
-  margin-bottom: 20px;
-}
-
-.stat {
-  background: #eee;
-  @include border-radius(5px);
-  padding: 15px;
-  width: 400px;
-  .chart {
-    height: 200px;
-    margin-bottom: 20px;
-  }
-  .data {
-    display: none;
-  }
-  a.show-data {
-    padding-left: 15px;
-    background: url(/assets/arrow_collapse.gif) top left no-repeat;
-  }
-  a.expanded {
-    background: url(/assets/arrow_expand.gif) top left no-repeat;
-  }
-}
-
 /* Icons - - - - - - - - - */
 
 @mixin icon-sprite($pos) {

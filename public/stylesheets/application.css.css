@@ -383,22 +383,8 @@ html, body {
   height: 150px;
 }
 
-/* Admin - - - - - - - - - */
-/* line 307, ../../app/assets/stylesheets/application.css.scss */
-.admin-actions td .pic {
-  float: left;
-  margin: 0 10px 0 0;
-}
-/* line 311, ../../app/assets/stylesheets/application.css.scss */
-.admin-actions td.buttons {
-  width: 200px;
-  text-align: center;
-  vertical-align: middle;
-  background-color: #eee;
-}
-
 /* Icons - - - - - - - - - */
-/* line 329, ../../app/assets/stylesheets/application.css.scss */
+/* line 314, ../../app/assets/stylesheets/application.css.scss */
 .fb-icon {
   padding-left: 15px;
   background-image: url(/assets/icons.png);
@@ -406,7 +392,7 @@ html, body {
   background-repeat: no-repeat;
 }
 
-/* line 330, ../../app/assets/stylesheets/application.css.scss */
+/* line 315, ../../app/assets/stylesheets/application.css.scss */
 .phone-icon {
   padding-left: 15px;
   background-image: url(/assets/icons.png);
@@ -414,7 +400,7 @@ html, body {
   background-repeat: no-repeat;
 }
 
-/* line 331, ../../app/assets/stylesheets/application.css.scss */
+/* line 316, ../../app/assets/stylesheets/application.css.scss */
 .bday-icon {
   padding-left: 15px;
   background-image: url(/assets/icons.png);
@@ -422,7 +408,7 @@ html, body {
   background-repeat: no-repeat;
 }
 
-/* line 332, ../../app/assets/stylesheets/application.css.scss */
+/* line 317, ../../app/assets/stylesheets/application.css.scss */
 .edit-icon {
   padding-left: 15px;
   background-image: url(/assets/icons.png);
@@ -430,7 +416,7 @@ html, body {
   background-repeat: no-repeat;
 }
 
-/* line 333, ../../app/assets/stylesheets/application.css.scss */
+/* line 318, ../../app/assets/stylesheets/application.css.scss */
 .email-icon {
   padding-left: 15px;
   background-image: url(/assets/icons.png);

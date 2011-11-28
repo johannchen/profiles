@@ -1,10 +1,3 @@
-GIT
-  remote: git://github.com/mkdynamic/omniauth-facebook.git
-  revision: 188e3799f6b7a7ee51106e37cef77cdafea69d8a
-  specs:
-    omniauth-facebook (1.0.0.rc2)
-      omniauth-oauth2 (~> 1.0.0)
-
 GEM
   remote: http://rubygems.org/
   specs:
@@ -118,6 +111,8 @@ GEM
     omniauth (1.0.0)
       hashie (~> 1.2)
       rack
+    omniauth-facebook (1.0.0)
+      omniauth-oauth2 (~> 1.0.0)
     omniauth-oauth2 (1.0.0)
       oauth2 (~> 0.5.0)
       omniauth (~> 1.0)
@@ -241,7 +236,7 @@ DEPENDENCIES
   jquery-rails
   mocha
   omniauth
-  omniauth-facebook!
+  omniauth-facebook
   pg
   pry
   rails (~> 3.1.0)

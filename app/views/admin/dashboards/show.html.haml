@@ -1,19 +1,10 @@
-%h2= t('admin.dashboard.heading')
+%h2.dashboard-heading= t('admin.dashboard.heading')
 
-- if @actions.pending_review.any?
-  %table.admin-actions
-    %tbody
-      - @actions.pending_review.each do |user|
-        %tr{:id => "user-#{user.id}"}
-          %td
-            - if user.profile
-              = link_to profile_pic_tag(user.profile, :tn), user.profile
-              %strong= link_to user.profile.name, user.profile
-              %br
-              = link_to simple_url(user.profile.facebook_url), user.profile.facebook_url
-              = user.profile.phone
-            - else
-              = user.id
-          %td.buttons
-            = link_to t('admin.dashboard.actions.activate'), admin_user_path(user, :do => :activate), :method => :put, :remote => true, :class => 'btn success'
-            = link_to t('admin.dashboard.actions.reject'),   admin_user_path(user, :do => :reject  ), :method => :put, :remote => true, :class => 'btn danger'
+.row
+  .span8
+    = render :partial => 'admin/dashboards/charts/sign_ups_by_date'
+  .span8
+    = render :partial => 'actions'
+
+= javascript_include_tag 'admin/dashboard'
+= stylesheet_link_tag 'admin/dashboard'

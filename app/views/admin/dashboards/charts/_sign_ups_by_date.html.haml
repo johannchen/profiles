@@ -1,0 +1,16 @@
+#sign_ups_by_date.admin-box.stat
+  .inner
+    %h3= t('admin.dashboard.charts.sign_ups_by_date.heading')
+    .chart
+    %p
+      %a.show-data{:href => '#'}= t('admin.dashboard.charts.detail_link')
+    %table.data
+      - @stats.sign_ups_by_date.each do |date, profiles|
+        %tr
+          %th= date.to_s(:short)
+          %td
+            - profiles.each do |profile|
+              .profile
+                = link_to profile.name, profile
+            - if profiles.empty?
+              %em= t('admin.dashboard.charts.sign_ups_by_date.no_data')

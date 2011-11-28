@@ -4,5 +4,6 @@ class Admin::DashboardsController < ApplicationController
 
   def show
     @actions = AdminActionsPresenter.new
+    @stats = AdminStatsPresenter.new
   end
 end

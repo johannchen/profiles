@@ -1,12 +1,11 @@
 $ ->
-  labels = ($(row).find('th').html() for row in $('#sign_ups_by_date .data tr'))
-  counts = ($(row).find('td .profile').length for row in $('#sign_ups_by_date .data tr'))
+  rows = $('#sign_ups_by_date .data tr')
+  labels = ($(row).find('th').html() for row in rows)
+  counts = ($(row).find('td .profile').length for row in rows)
   chart = $('#sign_ups_by_date .chart').chart
     template: 'analytics'
     tooltips: ("#{labels[index]}: #{count}" for count, index in counts)
-    values:
-      serie1: counts
+    values: serie1: counts
   $('.show-data').click (e) ->
-    table =  $(e.target).parent().next('.data')
-    table.toggle()
-    $(e.target).toggleClass('expanded')
+    e.preventDefault()
+    $(e.target).toggleClass('expanded').parent().next('.data').toggle()

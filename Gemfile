@@ -29,7 +29,7 @@ end
 group :development do
 end
 
-group :testing do
+group :test do
   gem 'rspec-rails'
   gem 'mocha'
   gem 'bourne'

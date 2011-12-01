@@ -1,13 +1,15 @@
-= simple_form_for @profile, :remote => !@profile.new_record? do |form|
-  = errors_for form, :only => [:base]
+= errors_for @profile, :only => [:base]
 
-  %ul.tabs{'data-tabs' => 'tabs'}
-    = tab_link t('profile.edit_form.tabs.profile'), '#profile_details', :default
-    - if @profile.theme
-      = tab_link t('profile.edit_form.tabs.theme'), '#theme'
+%ul.tabs{'data-tabs' => 'tabs'}
+  = tab_link t('profile.edit_form.tabs.profile'), '#profile_details', :default
+  - if @profile.theme
+    = tab_link t('profile.edit_form.tabs.theme'), '#theme'
+  - if can? :administrate, @profile
+    = tab_link t('profile.edit_form.tabs.admin'), '#admin'
 
-  .tab-content
-    = tab_content '#profile_details', :default do
+.tab-content
+  = tab_content '#profile_details', :default do
+    = simple_form_for @profile, :remote => !@profile.new_record? do |form|
       = form.input :name
       = form.input :headline
       = form.input :bio, :hint => t('profile.edit_form.bio_hint_html', :count => s('profile.bio_max_length').to_i - @profile.bio.to_s.size), :input_html => {'data-maxlength' => "#{s('profile.bio_max_length')} #profile_bio_count_remaining"}
@@ -15,11 +17,16 @@
       = form.input :birthday, :start_year => 1900, :end_year => Date.today.year, :include_blank => true
       = form.input :location
       = form.input :phone
-    - if @profile.theme
-      = tab_content '#theme' do
+      .actions
+        = form.submit t('profile.edit_form.save'), :class => 'btn primary'
+        = link_to t('profile.edit_form.cancel'), @profile, :class => 'btn close-btn'
+      .status
+  - if @profile.theme
+    = tab_content '#theme' do
+      = simple_form_for @profile, :remote => !@profile.new_record? do |form|
         = form.simple_fields_for :theme do |theme|
           .clearfix
-            %label{:style => 'padding-top:10px;'} Background
+            %label{:style => 'padding-top:10px;'}= t('profile.edit_form.theme.background')
             .input
               %ul.pills{'data-pills' => 'pills'}
                 %li
@@ -40,12 +47,19 @@
               = theme.input :box_pos, :include_blank => false, |
                 :collection => {t('profile.edit_form.theme.box_pos.left') => 'left', t('profile.edit_form.theme.box_pos.right') => 'right'}
           = theme.input :bg_image, :as => :hidden
-
-
-  .actions
-    = form.submit t('profile.edit_form.save'), :class => 'btn primary'
-    = link_to t('profile.edit_form.cancel'), @profile, :class => 'btn close-btn'
-  .status
+        .actions
+          = form.submit t('profile.edit_form.save'), :class => 'btn primary'
+          = link_to t('profile.edit_form.cancel'), @profile, :class => 'btn close-btn'
+        .status
+  - if can? :administrate, @profile
+    = tab_content '#admin' do
+      = simple_form_for @profile.user, :remote => true, :url => admin_user_path(@profile.user) do |user|
+        -#= check_box_field t('profile.edit_form.admin.admin'), 'user[admin]', true, @profile.user.roles?(:admin)
+        = user.input :admin, :as => :b_boolean
+        .actions
+          = user.submit t('profile.edit_form.save'), :class => 'btn primary'
+          = link_to t('profile.edit_form.cancel'), @profile, :class => 'btn close-btn'
+        .status
 
 = stylesheet_link_tag 'jquery.miniColors.css'
 = javascript_include_tag 'jquery.miniColors.js'

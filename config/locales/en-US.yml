@@ -24,6 +24,7 @@ en-US:
         bg_color_top: Color
         box_pos: Overlay Position
       user:
+        admin: Admin
         current_password: Current Password
         email: Email
         password: New Password
@@ -52,6 +53,8 @@ en-US:
           heading: Sign Ups by Date
           no_data: none
       heading: Admin Dashboard
+    user:
+      save_success: The user has been saved.
 
   app:
     powered_by_html: Powered by <a href="http://church.io">Church.IO Profiles</a>
@@ -141,9 +144,11 @@ en-US:
       save: Save
       save_success: Your profile has been saved.
       tabs:
+        admin: Admin
         profile: Profile
         theme: Theme
       theme:
+        background: Background
         box_pos:
           left: Left
           right: Right

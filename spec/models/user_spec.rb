@@ -134,4 +134,27 @@ describe User do
       @user.errors[:thirteen_or_older].should be_true
     end
   end
+
+  context 'given an admin role' do
+    before do
+      @user = Factory.build(:user, :roles => [:admin])
+    end
+
+    it 'allows the new_profile notification flag to be set' do
+      @user.notifications << :new_profile
+      @user.should be_valid
+    end
+  end
+
+  context 'given no admin role' do
+    before do
+      @user = Factory.build(:user)
+    end
+
+    it 'does not allow the new_profile notification flag to be set' do
+      @user.notifications << :new_profile
+      @user.should_not be_valid
+      @user.errors[:notifications].should have(1).error
+    end
+  end
 end

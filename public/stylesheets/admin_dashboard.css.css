@@ -1,0 +1,68 @@
+/* line 5, ../../app/assets/stylesheets/admin_dashboard.css.scss */
+body {
+  background: url(/assets/bg/concrete_wall.png);
+  color: #bbb;
+}
+
+/* line 10, ../../app/assets/stylesheets/admin_dashboard.css.scss */
+h1, h2, h3, h4 {
+  color: #ddd;
+}
+
+/* line 15, ../../app/assets/stylesheets/admin_dashboard.css.scss */
+.admin-actions td .pic {
+  float: left;
+  margin: 0 10px 0 0;
+}
+/* line 19, ../../app/assets/stylesheets/admin_dashboard.css.scss */
+.admin-actions td.buttons {
+  width: 30%;
+  text-align: right;
+  vertical-align: middle;
+  white-space: nowrap;
+  background-color: #eee;
+}
+
+/* line 28, ../../app/assets/stylesheets/admin_dashboard.css.scss */
+.dashboard-heading {
+  margin-bottom: 20px;
+}
+
+/* line 32, ../../app/assets/stylesheets/admin_dashboard.css.scss */
+.admin-box {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  border: 8px solid rgba(255, 255, 255, 0.5);
+  margin-bottom: 25px;
+}
+/* line 36, ../../app/assets/stylesheets/admin_dashboard.css.scss */
+.admin-box h3 {
+  color: #555;
+}
+/* line 39, ../../app/assets/stylesheets/admin_dashboard.css.scss */
+.admin-box .inner {
+  padding: 10px;
+  background-color: #eee;
+}
+/* line 43, ../../app/assets/stylesheets/admin_dashboard.css.scss */
+.admin-box .chart {
+  height: 150px;
+  margin-bottom: 20px;
+}
+/* line 47, ../../app/assets/stylesheets/admin_dashboard.css.scss */
+.admin-box .data {
+  display: none;
+}
+/* line 50, ../../app/assets/stylesheets/admin_dashboard.css.scss */
+.admin-box a.show-data {
+  padding-left: 15px;
+  background: url(/assets/arrow_collapse.gif) top left no-repeat;
+}
+/* line 54, ../../app/assets/stylesheets/admin_dashboard.css.scss */
+.admin-box a.expanded {
+  background: url(/assets/arrow_expand.gif) top left no-repeat;
+}

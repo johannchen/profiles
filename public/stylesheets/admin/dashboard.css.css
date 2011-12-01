@@ -16,18 +16,19 @@ h1, h2, h3, h4 {
 }
 /* line 19, ../../../app/assets/stylesheets/admin/dashboard.css.scss */
 .admin-actions td.buttons {
-  width: 200px;
-  text-align: center;
+  width: 30%;
+  text-align: right;
   vertical-align: middle;
+  white-space: nowrap;
   background-color: #eee;
 }
 
-/* line 27, ../../../app/assets/stylesheets/admin/dashboard.css.scss */
+/* line 28, ../../../app/assets/stylesheets/admin/dashboard.css.scss */
 .dashboard-heading {
   margin-bottom: 20px;
 }
 
-/* line 31, ../../../app/assets/stylesheets/admin/dashboard.css.scss */
+/* line 32, ../../../app/assets/stylesheets/admin/dashboard.css.scss */
 .admin-box {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -38,30 +39,30 @@ h1, h2, h3, h4 {
   border: 8px solid rgba(255, 255, 255, 0.5);
   margin-bottom: 25px;
 }
-/* line 35, ../../../app/assets/stylesheets/admin/dashboard.css.scss */
+/* line 36, ../../../app/assets/stylesheets/admin/dashboard.css.scss */
 .admin-box h3 {
   color: #555;
 }
-/* line 38, ../../../app/assets/stylesheets/admin/dashboard.css.scss */
+/* line 39, ../../../app/assets/stylesheets/admin/dashboard.css.scss */
 .admin-box .inner {
   padding: 10px;
   background-color: #eee;
 }
-/* line 42, ../../../app/assets/stylesheets/admin/dashboard.css.scss */
+/* line 43, ../../../app/assets/stylesheets/admin/dashboard.css.scss */
 .admin-box .chart {
   height: 150px;
   margin-bottom: 20px;
 }
-/* line 46, ../../../app/assets/stylesheets/admin/dashboard.css.scss */
+/* line 47, ../../../app/assets/stylesheets/admin/dashboard.css.scss */
 .admin-box .data {
   display: none;
 }
-/* line 49, ../../../app/assets/stylesheets/admin/dashboard.css.scss */
+/* line 50, ../../../app/assets/stylesheets/admin/dashboard.css.scss */
 .admin-box a.show-data {
   padding-left: 15px;
   background: url(/assets/arrow_collapse.gif) top left no-repeat;
 }
-/* line 53, ../../../app/assets/stylesheets/admin/dashboard.css.scss */
+/* line 54, ../../../app/assets/stylesheets/admin/dashboard.css.scss */
 .admin-box a.expanded {
   background: url(/assets/arrow_expand.gif) top left no-repeat;
 }

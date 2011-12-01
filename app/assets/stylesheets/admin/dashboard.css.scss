@@ -17,9 +17,10 @@ h1, h2, h3, h4 {
     margin: 0 10px 0 0;
   }
   td.buttons {
-    width: 200px;
-    text-align: center;
+    width: 30%;
+    text-align: right;
     vertical-align: middle;
+    white-space: nowrap;
     background-color: #eee;
   }
 }

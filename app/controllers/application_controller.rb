@@ -28,6 +28,9 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def email?() SMTP_OK end
+  helper_method :email?
+
   def authorize_admin!
     unless current_user && current_user.roles?(:admin)
       render :text => 'not authorized', :status => :unauthorized

@@ -9,6 +9,7 @@ Profiles::Application.routes.draw do
 
   match 'profile' => 'profiles#show', :as => :my_profile
   resources :profiles do
+    resources :messages
     resources :alerts
     resource :theme
   end

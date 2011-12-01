@@ -376,15 +376,40 @@ html, body {
   color: red;
   font-weight: bold;
 }
-
+/* line 297, ../../app/assets/stylesheets/application.css.scss */
+.simple_form .text-only {
+  margin-bottom: 10px;
+}
 /* line 299, ../../app/assets/stylesheets/application.css.scss */
+.simple_form .text-only label {
+  padding-top: 0;
+}
+/* line 302, ../../app/assets/stylesheets/application.css.scss */
+.simple_form .text-only .input {
+  margin-left: 150px;
+  font-size: 13px;
+  line-height: 18px;
+  padding-top: 0;
+}
+
+/* line 311, ../../app/assets/stylesheets/application.css.scss */
 #profile_bio {
   width: 380px;
   height: 150px;
 }
 
+/* line 317, ../../app/assets/stylesheets/application.css.scss */
+form.message input[type=text] {
+  width: 500px;
+}
+/* line 320, ../../app/assets/stylesheets/application.css.scss */
+form.message textarea {
+  width: 500px;
+  height: 250px;
+}
+
 /* Icons - - - - - - - - - */
-/* line 314, ../../app/assets/stylesheets/application.css.scss */
+/* line 336, ../../app/assets/stylesheets/application.css.scss */
 .fb-icon {
   padding-left: 15px;
   background-image: url(/assets/icons.png);
@@ -392,7 +417,7 @@ html, body {
   background-repeat: no-repeat;
 }
 
-/* line 315, ../../app/assets/stylesheets/application.css.scss */
+/* line 337, ../../app/assets/stylesheets/application.css.scss */
 .phone-icon {
   padding-left: 15px;
   background-image: url(/assets/icons.png);
@@ -400,7 +425,7 @@ html, body {
   background-repeat: no-repeat;
 }
 
-/* line 316, ../../app/assets/stylesheets/application.css.scss */
+/* line 338, ../../app/assets/stylesheets/application.css.scss */
 .bday-icon {
   padding-left: 15px;
   background-image: url(/assets/icons.png);
@@ -408,7 +433,7 @@ html, body {
   background-repeat: no-repeat;
 }
 
-/* line 317, ../../app/assets/stylesheets/application.css.scss */
+/* line 339, ../../app/assets/stylesheets/application.css.scss */
 .edit-icon {
   padding-left: 15px;
   background-image: url(/assets/icons.png);
@@ -416,7 +441,7 @@ html, body {
   background-repeat: no-repeat;
 }
 
-/* line 318, ../../app/assets/stylesheets/application.css.scss */
+/* line 340, ../../app/assets/stylesheets/application.css.scss */
 .email-icon {
   padding-left: 15px;
   background-image: url(/assets/icons.png);

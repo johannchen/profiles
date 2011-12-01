@@ -13,6 +13,7 @@ class Ability
       else
         can [:create, :update], [Profile, User], :user => user
       end
+      can :create, Message
     end
   end
 end

@@ -1,0 +1,4 @@
+<%= @message.body %>
+
+----
+<%= t('messages.email.footer', :from_name => @message.from.name, :community_name => Setting.s('community.name'), :community_url => Setting.s('community.url')) %>

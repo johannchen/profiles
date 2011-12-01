@@ -88,9 +88,11 @@ module ApplicationHelper
       content_tag(:div, :class => 'input') do
         content_tag(:ul, :class => 'inputs-list') do
           fields.map do |field|
-            content_tag(:li) do
+            content_tag(:li, :class => 'inline') do
               (field[:value] == true ? hidden_field_tag(field[:name], false, :id => nil) : '') +
-              check_box_tag(field[:name], field[:value], field[:checked])
+              check_box_tag(field[:name], field[:value], field[:checked]) +
+              ' ' +
+              label_tag(field[:name], field[:label])
             end
           end.join.html_safe
         end

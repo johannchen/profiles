@@ -58,7 +58,7 @@ class User < ActiveRecord::Base
          :token_authenticatable, :omniauthable
 
   attr_accessible :email, :password, :password_confirmation, :remember_me, :timezone, :thirteen_or_older
-  attr_accessible :admin, :as => :admin
+  attr_accessible :admin, :new_profile_notification, :as => :admin
 
   blank_to_nil
 
@@ -101,6 +101,9 @@ class User < ActiveRecord::Base
   private
 
   def make_admin_if_only_user
-    self.roles << :admin if User.count == 0
+    if User.count == 0
+      roles << :admin
+      notifications << :new_profile
+    end
   end
 end

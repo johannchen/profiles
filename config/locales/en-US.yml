@@ -27,6 +27,7 @@ en-US:
         admin: Admin
         current_password: Current Password
         email: Email
+        new_profile_notification: New Profiles
         password: New Password
         password_confirmation: Repeat Password
         thirteen_or_older: Thirteen or Older
@@ -134,6 +135,10 @@ en-US:
     edit_button: Edit Profile
     edit_form:
       account_section_heading: Account Settings
+      admin:
+        notifications:
+          label: Notifications
+          new_profile: Send email for new profiles.
       bio_hint_html: Describe yourself in a few sentences. Some HTML allowed.<br/>(<span id="profile_bio_count_remaining">%{count}</span> characters left.)
       cancel: Cancel
       heading: Profile Details

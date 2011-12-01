@@ -143,6 +143,7 @@ en-US:
         nil: Unspecified
       save: Save
       save_success: Your profile has been saved.
+      save_success_refresh: Your profile has been saved. You may need to refresh the page in order to see all your changes.
       tabs:
         admin: Admin
         profile: Profile

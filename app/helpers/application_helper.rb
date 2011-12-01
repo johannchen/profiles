@@ -82,4 +82,23 @@ module ApplicationHelper
     end
   end
 
+  def check_box_fields(label, fields)
+    content_tag(:div, :class => 'clearfix') do
+      label_tag(fields.first[:name], label) +
+      content_tag(:div, :class => 'input') do
+        content_tag(:ul, :class => 'inputs-list') do
+          fields.map do |field|
+            content_tag(:li) do
+              (field[:value] == true ? hidden_field_tag(field[:name], false, :id => nil) : '') +
+              check_box_tag(field[:name], field[:value], field[:checked])
+            end
+          end.join.html_safe
+        end
+      end
+    end
+  end
+
+  def check_box_field(label, name, value, checked)
+    check_box_fields(label, [{:name => name, :value => value, :checked => checked}])
+  end
 end

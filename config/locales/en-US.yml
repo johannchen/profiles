@@ -45,6 +45,9 @@ en-US:
         none: No profiles pending activation.
       charts:
         detail_link: Details
+        messages_by_date:
+          heading: Messages Sent by Date
+          no_data: none
         sign_ups_by_date:
           heading: Sign Ups by Date
           no_data: none
@@ -180,3 +183,7 @@ en-US:
     labels:
       user:
         thirteen_or_older: I am thirteen (13) years of age or older.
+
+  time:
+    formats:
+      hour: "%I%p"

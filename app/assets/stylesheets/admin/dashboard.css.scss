@@ -31,6 +31,7 @@ h1, h2, h3, h4 {
 .admin-box {
   @include border-radius(5px);
   border: 8px solid rgba(#fff, 0.5);
+  margin-bottom: 25px;
   h3 {
     color: #555;
   }

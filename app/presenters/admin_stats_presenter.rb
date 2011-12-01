@@ -11,7 +11,7 @@ class AdminStatsPresenter
   def messages_by_date(days=30)
     days -= 1
     date = Time.zone.now
-    records = Message.where(['created_at >= ?', Time.now - days.days])
+    records = Message.includes(:from, :profile).where(['created_at >= ?', Time.now - days.days])
     records_by_date(records, :created_at, date - days.days, date)
   end
 

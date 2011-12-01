@@ -400,11 +400,11 @@ html, body {
 
 /* line 317, ../../app/assets/stylesheets/application.css.scss */
 form.message input[type=text] {
-  width: 500px;
+  width: 380px;
 }
 /* line 320, ../../app/assets/stylesheets/application.css.scss */
 form.message textarea {
-  width: 500px;
+  width: 380px;
   height: 250px;
 }
 

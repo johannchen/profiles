@@ -8,8 +8,13 @@ class MessagesController < ApplicationController
   def new
     case @message.method
     when 'facebook'
-      @message.save!
-      redirect_to fb_message_url(@profile)
+      if params[:_pjax]
+        # force pjax to do a full request
+        render :text => 'full http request necessary', :status => 500
+      else
+        @message.save!
+        redirect_to fb_message_url(@profile)
+      end
     when 'mailto'
       @message.save!
     end

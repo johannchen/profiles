@@ -13,17 +13,12 @@ Spork.prefork do
 
   RSpec.configure do |config|
     config.include Devise::TestHelpers, :type => :controller
-    config.mock_with :mocha
+    config.mock_with :rspec
     config.use_transactional_fixtures = true
   end
 end
 
 Spork.each_run do
-  require 'factory_girl'
-  FactoryGirl.definition_file_paths = [
-    File.join(Rails.root, 'spec', 'factories')
-  ]
-  FactoryGirl.find_definitions
   ActiveSupport::Dependencies.clear
   ActiveRecord::Base.instantiate_observers
 end

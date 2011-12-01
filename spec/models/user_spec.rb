@@ -27,7 +27,7 @@ describe User do
         "token"      => "abc123"
       }
     }
-    Profile.any_instance.stubs(:update_friends!)
+    Profile.any_instance.stub(:update_friends!)
   end
 
   context 'given an existing facebook uid' do

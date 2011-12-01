@@ -4,7 +4,7 @@ describe MessagesController do
   describe 'GET new' do
     context 'given a facebook profile' do
       before do
-        MessagesController.any_instance.stubs(:fb_message_url).returns('https://www.facebook.com/message')
+        MessagesController.any_instance.stub(:fb_message_url).and_return('https://www.facebook.com/message')
         @profile = Factory.create(:profile, :facebook_id => '1234')
         sign_in @profile.user
         get :new, :profile_id => @profile.id

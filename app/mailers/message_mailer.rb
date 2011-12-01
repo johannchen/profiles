@@ -1,18 +1,16 @@
+require 'mailer_address'
+
 class MessageMailer < ActionMailer::Base
+  include MailerAddress
+
   default :from => Setting.s('smtp.from_address')
 
   def email(message)
     @message = message
-    from_address = Mail::Address.new(Setting.s('smtp.from_address'))
-    from_address.display_name = message.from.name
-    reply_to_address = Mail::Address.new(message.from.email)
-    reply_to_address.display_name = message.from.name
-    to_address = Mail::Address.new(message.profile.email)
-    to_address.display_name = message.profile.name
     mail(
-      :from     => from_address.format,
-      :reply_to => reply_to_address.format,
-      :to       => to_address.format,
+      :from     => address(Setting.s('smtp.from_address'), message.from.name),
+      :reply_to => address(message.from.email, message.from.name),
+      :to       => address(message.profile.email, message.profile.name),
       :subject  => message.subject
     )
   end

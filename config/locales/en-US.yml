@@ -54,6 +54,15 @@ en-US:
           heading: Sign Ups by Date
           no_data: none
       heading: Admin Dashboard
+    notifications:
+      footer: |-
+        You received this notification because you're
+        an admin for the %{community_name} website
+        at %{community_url}
+        Log in there if you wish to change your settings.
+      new_profile:
+        subject: "%{community_name} - New Profile Pending Activation"
+        intro: "The following profiles are pending activation at %{url}"
     user:
       save_success: The user has been saved.
 

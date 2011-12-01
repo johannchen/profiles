@@ -98,4 +98,9 @@ class Profile < ActiveRecord::Base
       return d
     end
   end
+
+  after_create :new_profile_notification
+  def new_profile_notification
+    AdminMailer.new_profile_notifications
+  end
 end

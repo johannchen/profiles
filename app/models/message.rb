@@ -9,10 +9,13 @@ class Message < ActiveRecord::Base
   attr_accessible :subject, :body
   attr_accessor :subject, :body
 
-  def profile=(p)
-    p = Profile.find(p) unless Profile === p
-    write_attribute(:profile_id, p.id)
-    if p.facebook_id
+  def profile=(p)     write_attribute(:profile_id, p.id); set_method end
+  def profile_id=(id) write_attribute(:profile_id,   id); set_method end
+  def from=(f)        write_attribute(:from_id,    f.id); set_method end
+  def from_id=(id)    write_attribute(:from_id,      id); set_method end
+
+  def set_method
+    if profile.try(:facebook_id) && from.try(:facebook_id)
       self.method = 'facebook'
     elsif SMTP_OK
       self.method = 'smtp'
@@ -20,7 +23,6 @@ class Message < ActiveRecord::Base
       self.method = 'mailto'
     end
   end
-  alias_method :profile_id=, :profile=
 
   after_create :send_email
   def send_email

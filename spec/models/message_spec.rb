@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Message do
   describe '#profile=' do
-    context 'given a facebook profile' do
+    context 'given a facebook recipient' do
       before do
         @profile = Factory.create(:profile, :facebook_id => '1234')
         @message = Factory.build(:message, :profile => @profile)
@@ -12,12 +12,22 @@ describe Message do
         @message.profile_id.should eq(@profile.id)
       end
 
-      it 'sets the method to "facebook"' do
-        @message.method.should eq('facebook')
+      it 'sets the method to "mailto"' do
+        @message.method.should eq('mailto')
+      end
+
+      context 'given a facebook sender' do
+        before do
+          @message.from = Factory.create(:profile, :facebook_id => '4321')
+        end
+
+        it 'sets the method to "facebook"' do
+          @message.method.should eq('facebook')
+        end
       end
     end
 
-    context 'given a non-facebook profile and no smtp server' do
+    context 'given a non-facebook recipient and no smtp server' do
       before do
         @profile = Factory.create(:profile)
         @message = Factory.build(:message, :profile => @profile)

@@ -8,7 +8,7 @@ Profiles::Application.routes.draw do
   get '/users/auth/:provider' => 'sessions#passthru'
 
   match 'profile' => 'profiles#show', :as => :my_profile
-  match 'profiles' => redirect('/profile')
+  match 'profiles' => redirect('/profile'), :via => :get
 
   resources :profiles do
     resources :messages

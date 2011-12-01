@@ -51,7 +51,7 @@
           = form.submit t('profile.edit_form.save'), :class => 'btn primary'
           = link_to t('profile.edit_form.cancel'), @profile, :class => 'btn close-btn'
         .status
-  - if can? :administrate, @profile
+  - if !@profile.new_record? && can?(:administrate, @profile)
     = tab_content '#admin' do
       = simple_form_for @profile.user, :remote => true, :url => admin_user_path(@profile.user) do |user|
         = user.input :admin, :as => :b_boolean

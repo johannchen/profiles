@@ -294,11 +294,33 @@ html,body{background:none;}
     color: red;
     font-weight: bold;
   }
+  .text-only {
+    margin-bottom: 10px;
+    label {
+      padding-top: 0;
+    }
+    .input {
+      margin-left: 150px;
+      font-size: 13px;
+      line-height: 18px;
+      padding-top: 0;
+    }
+  }
 }
 
 #profile_bio {
   width: 380px;
   height: 150px;
+}
+
+form.message {
+  input[type=text] {
+    width: 380px;
+  }
+  textarea {
+    width: 380px;
+    height: 250px;
+  }
 }
 
 /* Icons - - - - - - - - - */

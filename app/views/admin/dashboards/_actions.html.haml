@@ -12,8 +12,12 @@
                   = link_to profile_pic_tag(user.profile, :tn), user.profile
                   %strong= link_to user.profile.name, user.profile
                   %br
+                  - if user.email
+                    = mail_to user.email
                   = link_to simple_url(user.profile.facebook_url), user.profile.facebook_url
                   = user.profile.phone
+                  %br
+                  = l(user.created_at, :format => :long)
                 - else
                   = user.id
               %td.buttons

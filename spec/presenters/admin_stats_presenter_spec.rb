@@ -4,7 +4,7 @@ describe AdminStatsPresenter do
   describe '#sign_ups_by_date' do
     before do
       @profile = Factory.build(:profile, :created_at => Time.now)
-      Profile.stubs(:where).returns([@profile])
+      Profile.stub(:where).and_return([@profile])
     end
 
     it 'returns a hash with dates as keys and counts as values' do

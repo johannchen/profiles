@@ -1,3 +1,5 @@
+require 'bitmask_accessor'
+
 class User < ActiveRecord::Base
   extend ActiveSupport::Memoizable
 
@@ -45,15 +47,26 @@ class User < ActiveRecord::Base
     end
   end
 
+  validates_each :notifications do |record, attr, val|
+    if record.notifications?(:new_profile) && !record.roles?(:admin)
+      record.errors.add(attr, :invalid)
+    end
+  end
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
          :token_authenticatable, :omniauthable
 
   attr_accessible :email, :password, :password_confirmation, :remember_me, :timezone, :thirteen_or_older
+  attr_accessible :admin, :new_profile_notification, :as => :admin
 
   blank_to_nil
 
-  bitmask :roles, :as => [:admin]
+  bitmask :roles,         :as => [:admin]
+  bitmask :notifications, :as => [:new_profile]
+
+  bitmask_accessor :roles,         :admin
+  bitmask_accessor :notifications, :new_profile, :suffix => '_notification'
 
   delegate :name, :to => :profile, :allow_nil => true
 
@@ -88,6 +101,9 @@ class User < ActiveRecord::Base
   private
 
   def make_admin_if_only_user
-    self.roles << :admin if User.count == 0
+    if User.count == 0
+      roles << :admin
+      notifications << :new_profile
+    end
   end
 end

@@ -1,0 +1,23 @@
+= profile_view do
+  - if @message.method == 'smtp'
+    = simple_form_for [@profile, @message], :class => 'message' do |form|
+      = errors_for form, :only => [:base, :from, :profile]
+
+      .clearfix.text-only
+        %label From
+        .input
+          = link_to @message.from.name, @message.from
+      .clearfix.text-only
+        %label To
+        .input
+          = link_to @profile.name, @profile
+      = form.input :subject
+      = form.input :body, :as => :text
+      .actions
+        = form.submit t('messages.form.submit_button'), :class => 'btn primary'
+        = link_to t('messages.form.cancel_button'), @profile, :class => 'btn'
+
+  - else
+    %p= t('messages.mailto_intro_html', :name => @profile.name)
+    %p
+      = mail_to @profile.email, t('profile.send_message'), :class => 'btn primary'

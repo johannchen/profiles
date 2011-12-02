@@ -24,8 +24,10 @@ en-US:
         bg_color_top: Color
         box_pos: Overlay Position
       user:
+        admin: Admin
         current_password: Current Password
         email: Email
+        new_profile_notification: New Profiles
         password: New Password
         password_confirmation: Repeat Password
         thirteen_or_older: Thirteen or Older
@@ -45,10 +47,24 @@ en-US:
         none: No profiles pending activation.
       charts:
         detail_link: Details
+        messages_by_date:
+          heading: Messages Sent by Date
+          no_data: none
         sign_ups_by_date:
           heading: Sign Ups by Date
           no_data: none
       heading: Admin Dashboard
+    notifications:
+      footer: |-
+        You received this notification because you're
+        an admin for the %{community_name} website
+        at %{community_url}
+        Log in there if you wish to change your settings.
+      new_profile:
+        subject: "%{community_name} - New Profile Pending Activation"
+        intro: "The following profiles are pending activation at %{url}"
+    user:
+      save_success: The user has been saved.
 
   app:
     powered_by_html: Powered by <a href="http://church.io">Church.IO Profiles</a>
@@ -86,6 +102,18 @@ en-US:
         or <a href="%{login_url}">log in by email...</a>
       </p>
 
+  messages:
+    email:
+      footer: |-
+        %{from_name} sent you this message from the
+        %{community_name} website at %{community_url}
+        Log in there if you wish to change your settings.
+    form:
+      cancel_button: Cancel
+      save_success: Message sent.
+      submit_button: Send Message
+    mailto_intro_html: Click the button below to open your email client and send an email to %{name}.
+
   nav:
     account: Account
     admin: Admin
@@ -116,6 +144,10 @@ en-US:
     edit_button: Edit Profile
     edit_form:
       account_section_heading: Account Settings
+      admin:
+        notifications:
+          label: Notifications
+          new_profile: Send email for new profiles.
       bio_hint_html: Describe yourself in a few sentences. Some HTML allowed.<br/>(<span id="profile_bio_count_remaining">%{count}</span> characters left.)
       cancel: Cancel
       heading: Profile Details
@@ -125,10 +157,13 @@ en-US:
         nil: Unspecified
       save: Save
       save_success: Your profile has been saved.
+      save_success_refresh: Your profile has been saved. You may need to refresh the page in order to see all your changes.
       tabs:
+        admin: Admin
         profile: Profile
         theme: Theme
       theme:
+        background: Background
         box_pos:
           left: Left
           right: Right
@@ -168,3 +203,7 @@ en-US:
     labels:
       user:
         thirteen_or_older: I am thirteen (13) years of age or older.
+
+  time:
+    formats:
+      hour: "%I%p"

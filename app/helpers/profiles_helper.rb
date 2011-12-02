@@ -100,14 +100,4 @@ module ProfilesHelper
     }.to_param
   end
 
-  def fb_message_url(profile)
-    return '' unless profile.facebook_id
-    "https://www.facebook.com/dialog/send?" +
-    {
-      :app_id       => Setting.s('auth.facebook.app.id'),
-      :to           => profile.facebook_id,
-      :redirect_uri => profile_url(profile)
-    }.to_param
-  end
-
 end

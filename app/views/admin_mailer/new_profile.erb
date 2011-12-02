@@ -1,0 +1,7 @@
+<%= t('admin.notifications.new_profile.intro', :url => Setting.s('community.url')) %>
+<%- @profiles.each do |profile| -%>
+  * <%= profile.name %> (created <%= l(profile.created_at, :format => :short) %>)
+<%- end -%>
+
+----
+<%= t('admin.notifications.footer', :community_name => Setting.s('community.name'), :community_url => Setting.s('community.url')) %>

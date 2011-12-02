@@ -35,8 +35,6 @@ GEM
     bcrypt-ruby (3.0.1)
     bitmask_attributes (0.2.3)
       activerecord (~> 3.0)
-    bourne (1.0)
-      mocha (= 0.9.8)
     builder (3.0.0)
     cancan (1.6.7)
     capybara (1.1.2)
@@ -100,8 +98,6 @@ GEM
     method_source (0.6.7)
       ruby_parser (>= 2.3.1)
     mime-types (1.17.2)
-    mocha (0.9.8)
-      rake
     multi_json (1.0.3)
     multipart-post (1.1.3)
     nokogiri (1.5.0)
@@ -173,8 +169,13 @@ GEM
       activesupport (~> 3.0)
       railties (~> 3.0)
       rspec (~> 2.7.0)
+<<<<<<< HEAD
     ruby_parser (2.3.1)
       sexp_processor (~> 3.0)
+=======
+    rspec-spies (2.0.0)
+      rspec (~> 2.0)
+>>>>>>> dev
     rubyzip (0.9.4)
     sanitize (2.0.3)
       nokogiri (>= 1.4.4, < 1.6)
@@ -225,7 +226,6 @@ PLATFORMS
 
 DEPENDENCIES
   bitmask_attributes
-  bourne
   cancan
   coffee-rails (~> 3.1.1)
   compass (>= 0.12.alpha.0)
@@ -234,7 +234,6 @@ DEPENDENCIES
   fb_graph
   haml
   jquery-rails
-  mocha
   omniauth
   omniauth-facebook
   pg
@@ -242,6 +241,7 @@ DEPENDENCIES
   rails (~> 3.1.0)
   rails-i18n
   rspec-rails
+  rspec-spies
   sanitize
   sass-rails (~> 3.1.4)
   simple_form

@@ -13,6 +13,7 @@ class Profile < ActiveRecord::Base
   belongs_to :user
   has_many :friendships, :dependent => :destroy
   has_many :friends, :through => :friendships
+  has_many :messages
   has_one :theme, :order => 'id', :dependent => :destroy
 
   scope :visible, where(:workflow_state => 'visible')
@@ -30,6 +31,8 @@ class Profile < ActiveRecord::Base
   validates_uniqueness_of :user_id
 
   attr_accessible :name, :headline, :bio, :gender, :birthday, :location, :phone, :facebook_id, :facebook_url, :small_image_url, :full_image_url, :theme_attributes, :alerts
+
+  delegate :email, :to => :user
 
   blank_to_nil
 
@@ -94,5 +97,10 @@ class Profile < ActiveRecord::Base
       d = Date.new(d.year + 1, d.month, d.day) until d >= Date.today
       return d
     end
+  end
+
+  after_create :new_profile_notification
+  def new_profile_notification
+    AdminMailer.new_profile_notifications
   end
 end

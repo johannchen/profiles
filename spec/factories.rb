@@ -9,4 +9,9 @@ FactoryGirl.define do
     name 'John Doe'
     association :user
   end
+
+  factory :message do
+    association :profile
+    association :from, :factory => :profile
+  end
 end

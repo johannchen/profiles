@@ -1,0 +1,19 @@
+#messages_by_date.admin-box.stat
+  .inner
+    %h3= t('admin.dashboard.charts.messages_by_date.heading')
+    .chart
+    %p
+      %a.show-data{:href => '#'}= t('admin.dashboard.charts.detail_link')
+    %table.data
+      - @stats.messages_by_date.each do |date, messages|
+        %tr
+          %th= date.to_s(:short)
+          %td
+            - messages.each do |message|
+              .message
+                = l message.created_at, :format => :hour
+                = link_to message.from.name, message.from
+                &raquo;
+                = link_to message.profile.name, message.profile
+            - if messages.empty?
+              %em= t('admin.dashboard.charts.messages_by_date.no_data')

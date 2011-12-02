@@ -18,13 +18,16 @@ class AdminStatsPresenter
   private
 
   def records_by_date(records, date_method, start_date, stop_date)
-    by_date = records.group_by { |p| p.created_at.strftime('%Y-%m-%d') }
-    # fill in gaps
-    {}.tap do |counts|
+    by_date = records.group_by { |p| p[date_method].strftime('%Y-%m-%d') }
+    gap_fill(by_date, start_date, stop_date)
+  end
+
+  def gap_fill(records, start_date, stop_date)
+    {}.tap do |dates|
       date = start_date
       while date <= stop_date
         d = date.strftime('%Y-%m-%d')
-        counts[Date.parse(d)] = by_date[d] || []
+        dates[Date.parse(d)] = records[d] || []
         date += 1.day
       end
     end
